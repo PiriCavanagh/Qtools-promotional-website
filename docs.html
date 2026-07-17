@@ -1,0 +1,248 @@
+<title>Docs — QTools</title>
+<style>
+  :root {
+    --ink: #101014;
+    --body: #43444e;
+    --muted: #8a8b99;
+    --accent: #8d86ff;
+    --accent-strong: #6f66ff;
+    --accent-ink: #5a52d6;
+    --ground: #ffffff;
+    --cloud: #f7f7fa;
+    --line: #e8e8ee;
+    --card: #ffffff;
+    --card-shadow: 0 6px 12px -2px rgba(24, 24, 31, 0.12), 0 3px 7px -3px rgba(0, 0, 0, 0.14);
+    --focus-ring: 0 0 0 3px rgba(141, 134, 255, 0.45);
+  }
+  :root[data-theme="light"], :root[data-theme="dark"] {
+    --ink: #101014;
+    --body: #43444e;
+    --muted: #8a8b99;
+    --accent: #8d86ff;
+    --accent-strong: #6f66ff;
+    --accent-ink: #5a52d6;
+    --ground: #ffffff;
+    --cloud: #f7f7fa;
+    --line: #e8e8ee;
+    --card: #ffffff;
+    --card-shadow: 0 6px 12px -2px rgba(24, 24, 31, 0.12), 0 3px 7px -3px rgba(0, 0, 0, 0.14);
+    --focus-ring: 0 0 0 3px rgba(141, 134, 255, 0.45);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--body);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { color: var(--ink); margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  a { color: var(--accent-ink); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 6px; }
+  code { background: var(--cloud); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 0.88em; color: var(--ink); }
+
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Top nav (shared look with homepage) ---------- */
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .wordmark { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: #18181f; }
+  .wordmark .q { color: #6f66ff; }
+  nav .links { display: flex; gap: 28px; flex: 1; }
+  nav .links a { color: #18181f; font-weight: 600; font-size: 16px; opacity: 0.75; text-decoration: none; transition: opacity 0.15s ease; }
+  nav .links a:hover { opacity: 1; text-decoration: none; }
+  nav .links a.on { opacity: 1; color: var(--accent-ink); }
+  nav .actions { display: flex; gap: 12px; margin-left: auto; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #16123d;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 9px 19px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .btn:hover { background: var(--accent-strong); transform: translateY(-2px); box-shadow: 0 8px 20px -6px rgba(141, 134, 255, 0.55); text-decoration: none; }
+  .btn.dark { background: #18181f; color: #fff; padding: 8px 17px; }
+  .btn.dark:hover { background: #2e2e3a; box-shadow: 0 8px 20px -6px rgba(24, 24, 31, 0.45); }
+  .btn .arr { transition: transform 0.18s ease; }
+  .btn:hover .arr { transform: translateX(3px); }
+
+  /* ---------- Docs header ---------- */
+  .docs-head { padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
+  .docs-head .eyebrow { color: var(--accent-ink); font-weight: 700; font-size: 16px; margin-bottom: 10px; }
+  .docs-head h1 { font-size: clamp(32px, 4.4vw, 48px); letter-spacing: -0.035em; margin-bottom: 14px; }
+  .docs-head p { max-width: 40em; font-size: 18px; }
+
+  /* ---------- Docs layout ---------- */
+  .docs-body { display: grid; grid-template-columns: 220px 1fr; gap: 56px; padding: 48px 0 100px; align-items: start; }
+  .docs-nav { position: sticky; top: 24px; }
+  .docs-nav h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 12px; }
+  .docs-nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  .docs-nav a {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 7px;
+    color: var(--body);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .docs-nav a:hover { background: var(--cloud); color: var(--ink); text-decoration: none; }
+
+  .docs-content article { padding-bottom: 56px; margin-bottom: 56px; border-bottom: 1px solid var(--line); }
+  .docs-content article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .docs-content h2 { font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.03em; margin-bottom: 18px; scroll-margin-top: 24px; }
+  .docs-content h3 { font-size: 19px; letter-spacing: -0.01em; margin: 28px 0 10px; }
+  .docs-content p { margin-bottom: 16px; max-width: 62ch; }
+  .docs-content ol, .docs-content ul { margin: 0 0 16px; padding-left: 22px; max-width: 62ch; display: grid; gap: 8px; }
+  .docs-content li { padding-left: 4px; }
+  .docs-content .note {
+    background: var(--cloud);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 16px;
+    max-width: 62ch;
+    margin-bottom: 16px;
+  }
+  .docs-content .note b { color: var(--ink); }
+
+  /* ---------- Footer (trimmed, matches homepage) ---------- */
+  footer { border-top: 1px solid var(--line); padding: 40px 0 56px; font-size: 15px; }
+  footer .fine { color: var(--muted); }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--accent-ink); }
+
+  @media (max-width: 900px) {
+    .docs-body { grid-template-columns: 1fr; gap: 32px; }
+    .docs-nav { position: static; }
+    nav .links { display: none; }
+  }
+</style>
+
+<div class="container">
+  <nav>
+    <a href="index.html" class="wordmark" style="text-decoration:none;"><span class="q">Q</span>Tools</a>
+    <span class="links">
+      <a href="index.html#pipeline">Features</a>
+      <a href="index.html#platform">How it works</a>
+      <a href="docs.html" class="on">Docs</a>
+      <a href="index.html#support">Support</a>
+    </span>
+    <span class="actions">
+      <a class="btn dark" href="https://admin.shopify.com" target="_blank" rel="noopener">Open in Shopify App Store <span class="arr">→</span></a>
+    </span>
+  </nav>
+</div>
+
+<div class="docs-head">
+  <div class="container">
+    <p class="eyebrow">Documentation</p>
+    <h1>Set up QTools, quote to quote</h1>
+    <p>Everything you need to install QTools, configure your pipeline, build your first quote, and keep your CRM in sync with Shopify.</p>
+  </div>
+</div>
+
+<div class="container docs-body">
+  <aside class="docs-nav">
+    <h4>On this page</h4>
+    <ul>
+      <li><a href="#install">Installation</a></li>
+      <li><a href="#pipeline-setup">Pipeline setup</a></li>
+      <li><a href="#quotes">Building quotes</a></li>
+      <li><a href="#crm">Leads &amp; companies</a></li>
+      <li><a href="#tax-shipping">Tax &amp; shipping</a></li>
+      <li><a href="#salesforce">Salesforce sync</a></li>
+      <li><a href="#uninstalling">Uninstalling</a></li>
+    </ul>
+  </aside>
+
+  <div class="docs-content">
+    <article id="install">
+      <h2>Installation</h2>
+      <p>QTools installs like any other Shopify app — there's no theme code to edit and nothing on your storefront changes.</p>
+      <ol>
+        <li>From your Shopify admin, go to the <strong>Shopify App Store</strong> and search for QTools, or open it directly from your app listing link.</li>
+        <li>Click <strong>Install</strong> and approve the requested permissions (products, customers, orders and draft orders).</li>
+        <li>QTools appears in your admin sidebar. Open it to run the short setup checklist — pipeline stages, tax settings and your quote template.</li>
+      </ol>
+      <div class="note"><b>Note:</b> installing QTools does not modify any existing products, customers or orders. It only reads Shopify data and creates draft orders when you build a quote.</div>
+    </article>
+
+    <article id="pipeline-setup">
+      <h2>Pipeline setup</h2>
+      <p>Your pipeline is made up of stages — the steps a deal moves through from first contact to closed-won. Stages are fully per-shop.</p>
+      <h3>Creating and reordering stages</h3>
+      <p>Go to <strong>QTools → Settings → Pipeline</strong>. Add, rename or remove stages, and drag to reorder them. Common setups use stages like Qualified, Quote sent and Won, but you can match this to however your team actually sells.</p>
+      <h3>Win probability</h3>
+      <p>Each stage carries a win probability (for example, Qualified might be 30%, Quote sent 60%). This weights your forecast — a $50,000 deal at 60% contributes $30,000 to weighted pipeline value.</p>
+      <h3>Owners and filters</h3>
+      <p>Assign a deal owner when a deal is created, or reassign it later — every change is kept in the deal's activity history. Use saved filters to slice the board by owner, company, value or stage.</p>
+    </article>
+
+    <article id="quotes">
+      <h2>Building quotes</h2>
+      <p>Every quote in QTools is a real Shopify draft order underneath, so pricing, inventory and tax are always accurate.</p>
+      <ol>
+        <li>From a deal, click <strong>New quote</strong> and search your product catalog to add line items.</li>
+        <li>Shipping is pulled live from your Shopify shipping zones and any carrier apps you have installed — no manual entry.</li>
+        <li>Review totals, then generate a branded PDF using your configured quote template (logo, terms and layout are set once in <strong>Settings → Quote template</strong>).</li>
+        <li>Send the PDF to your customer. When they accept, mark the deal Won — QTools converts the underlying draft order into a real Shopify order automatically.</li>
+      </ol>
+      <div class="note"><b>Tip:</b> QTools will suggest add-on products based on past pairings, and you can export any quote as a price list.</div>
+    </article>
+
+    <article id="crm">
+      <h2>Leads &amp; companies</h2>
+      <p>QTools adds a CRM layer on top of your existing Shopify customers, so nothing is duplicated.</p>
+      <h3>Leads</h3>
+      <p>Capture prospects before they're customers. Move a lead through New → Contacted → Qualified, then convert it into a deal once they're ready for a quote.</p>
+      <h3>Companies</h3>
+      <p>Group multiple buyers under one company account to get a single view of every contact, deal and quote tied to that organisation.</p>
+      <h3>Universal search</h3>
+      <p>Use the search bar in the QTools sidebar to find any deal, lead, customer or company from one place.</p>
+    </article>
+
+    <article id="tax-shipping">
+      <h2>Tax &amp; shipping</h2>
+      <p>Configure tax handling once in <strong>Settings → Tax</strong> — choose GST-inclusive or exclusive pricing, and it applies to every quote from then on.</p>
+      <p>Shipping costs on a quote are calculated using your live Shopify shipping zones and rates at the moment the quote is built, so what you quote matches what the customer is actually charged at checkout.</p>
+    </article>
+
+    <article id="salesforce">
+      <h2>Salesforce sync</h2>
+      <p>If your wider sales org runs on Salesforce, connect it from <strong>Settings → Integrations → Salesforce</strong>. Once connected, leads and company accounts created in QTools sync to Salesforce, and updates flow both ways.</p>
+      <div class="note"><b>Note:</b> only CRM data (leads, companies, deal metadata) syncs to Salesforce — draft orders and Shopify order data are not pushed externally.</div>
+    </article>
+
+    <article id="uninstalling">
+      <h2>Uninstalling</h2>
+      <p>Uninstalling QTools from your Shopify admin removes the app and its CRM data (stages, owners, notes, history). Draft orders and orders that were created through QTools remain in Shopify exactly as they are — uninstalling does not touch your Shopify products, customers or order history.</p>
+      <p>Still have questions? Visit the <a href="index.html#support">support page</a> or check the <a href="index.html#faq">FAQ</a>.</p>
+    </article>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="fine">© 2026 QTools · <a href="index.html">Back to homepage</a></p>
+  </div>
+</footer>

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QTools — B2B quoting and CRM for Shopify</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styling/style.css">
+</head>
+<body>
+    <div class="corner-graphic corner-graphic--tr" aria-hidden="true">
+        <span class="cg-shape cg-purple cg-tr-1"></span>
+        <span class="cg-shape cg-cyan cg-tr-2"></span>
+        <span class="cg-shape cg-cyan cg-tr-3"></span>
+        <span class="cg-shape cg-purple cg-tr-4"></span>
+        <span class="cg-shape cg-ring cg-tr-ring"></span>
+        <span class="cg-shape cg-lines cg-tr-lines"></span>
+        <span class="cg-shape cg-dots cg-tr-dots"></span>
+    </div>
+    <div class="corner-graphic corner-graphic--tl" aria-hidden="true">
+        <span class="cg-shape cg-purple cg-tl-1"></span>
+        <span class="cg-shape cg-cyan cg-tl-2"></span>
+        <span class="cg-shape cg-purple cg-tl-3"></span>
+        <span class="cg-shape cg-ring cg-tl-ring"></span>
+    </div>
+    <img class="logo-mark logo-mark--fixed" src="images/QTools Logo.jpg" alt="QTools logo">
+    <nav class="header">
+        <div>
+            <span class="brand">
+                <span class="wordmark"><span class="q">Q</span>Tools</span>
+            </span>
+            <span class="links">
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-features">Features <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-how-it-works">How it works <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-docs">Docs <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-support">Support <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-faq">FAQ <span class="caret">▾</span></button></span>
+            </span>
+            <span class="actions">
+                <a class="btn frost" href="#support">Support</a>
+                <a class="btn dark" href="https://admin.shopify.com" target="_blank" rel="noopener"><span class="btn-face">Open in Shopify App Store <span class="arr">→</span></span></a>
+            </span>
+
+            <!-- One continuous dropdown: all four panels sit side by side in .mega-menu-track,
+                 which slides left/right so the right panel scrolls into the fixed-width dock.
+                 Lives inside the header's inner div so it lines up with the 1500px menu bar. -->
+            <div class="mega-menu-dock">
+                <div class="mega-menu-track">
+                <div class="mega-menu-panel" id="menu-features">
+                    <div>
+                    <h4>Quoting Engine</h4>
+                    <ul>
+                        <li><a href="#quotes" data-modal="cost-margin-quoting">Cost + margin quoting</a></li>
+                        <li><a href="#quotes" data-modal="product-pairing">Must-have product pairing</a></li>
+                        <li><a href="#quotes" data-modal="shipping-integration">Carrier-calculated shipping integration</a></li>
+                        <li><a href="#quotes" data-modal="companies-integration">Shopify Companies integration</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h4>Sales Reports</h4>
+                    <ul>
+                        <li><a href="#pipeline" data-modal="crm-pipeline">CRM pipeline</a></li>
+                        <li><a href="#pipeline" data-modal="sales-forecasting">Sales forecasting</a></li>
+                        <li><a href="#pipeline" data-modal="quarterly-kpis">Quarterly and yearly KPIs</a></li>
+                        <li><a href="#pipeline" data-modal="sales-team-filtering">Sales team filtering &amp; export to Excel</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h4>Quote &amp; Invoice Designer</h4>
+                    <ul>
+                        <li><a href="#quotes" data-modal="dragdrop-designer">Beginner-friendly drag &amp; drop designer</a></li>
+                        <li><a href="#quotes" data-modal="b2b-variables">Uses Shopify B2B variables</a></li>
+                        <li><a href="#quotes" data-modal="pay-online-links">Supports pay-online links</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h4>Leads, Customers &amp; Companies</h4>
+                    <ul>
+                        <li><a href="#crm" data-modal="tracks-inbound-leads">Tracks inbound leads</a></li>
+                        <li><a href="#crm" data-modal="sort-customers">Sort customers easily</a></li>
+                        <li><a href="#crm" data-modal="b2b-companies-setup">Set up B2B Shopify companies easily</a></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="mega-menu-panel" id="menu-how-it-works">
+                    <!-- Placeholder hrefs — swap in real video URLs -->
+                    <a class="video-link" href="#" data-video="getting-started" data-modal="video-getting-started">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">Getting started with QTools</span>
+                    <span class="video-time">3:12</span>
+                    </a>
+                    <a class="video-link" href="#" data-video="first-quote" data-modal="video-first-quote">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">Building your first quote</span>
+                    <span class="video-time">4:45</span>
+                    </a>
+                    <a class="video-link" href="#" data-video="pipeline-setup" data-modal="video-pipeline-setup">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">Setting up your pipeline</span>
+                    <span class="video-time">5:20</span>
+                    </a>
+                    <a class="video-link" href="#" data-video="crm-walkthrough" data-modal="video-crm-walkthrough">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">CRM &amp; leads walkthrough</span>
+                    <span class="video-time">6:03</span>
+                    </a>
+                </div>
+
+                <div class="mega-menu-panel cols-2" id="menu-docs">
+                    <a href="#docs" data-modal="salesforce-pushing">Salesforce pushing</a>
+                    <a href="#docs" data-modal="pipedrive-pushing">Pipedrive pushing</a>
+                    <a href="#docs" data-modal="xero-pushing">Xero pushing</a>
+                    <a href="#docs" data-modal="myob-pushing">MYOB pushing</a>
+                    <a href="#docs" data-modal="pdf-delivery-emails">PDF Delivery links for Shopify emails</a>
+                    <a href="#docs" data-modal="cci-api">Integrating CCI API</a>
+                    <a href="#docs" data-modal="quote-invoice-builder-how">How does the quote/invoice builder work?</a>
+                    <a class="docs-view-all" href="docs.html">View full documentation →</a>
+                </div>
+
+                <div class="mega-menu-panel cols-3" id="menu-support">
+                    <button class="btn ghost copy-email" type="button" data-email="oliivett2001@gmail.com"><span class="cl">Email support</span></button>
+                    <a class="btn ghost" href="#support">Book a call</a>
+                    <a class="btn ghost" href="#support">Live chat</a>
+                </div>
+
+                <div class="mega-menu-panel cols-2" id="menu-faq">
+                    <a href="#faq-1" data-modal="faq-install">How do I install QTools?</a>
+                    <a href="#faq-2" data-modal="faq-existing-orders">Does QTools change my existing orders or products?</a>
+                    <a href="#faq-3" data-modal="faq-quote-accepted">What happens when a customer accepts a quote?</a>
+                    <a href="#faq-4" data-modal="faq-customise-pipeline">Can I customise the pipeline stages?</a>
+                    <a href="#faq-5" data-modal="faq-salesforce">Does it work with Salesforce?</a>
+                    <a href="#faq-6" data-modal="faq-data-stored">Where is my data stored?</a>
+                    <a href="#faq-7" data-modal="faq-pricing">How much does QTools cost?</a>
+                    <a href="#faq-8" data-modal="faq-multiple-reps">Can multiple sales reps use QTools at once?</a>
+                    <a href="#faq-9" data-modal="faq-multi-currency">Does QTools support multi-currency quoting?</a>
+                    <a href="#faq-10" data-modal="faq-pay-directly">Can customers pay directly from a quote?</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content-area">
+        <div class="hero">
+    <!-- <div class="hero-bg" aria-hidden="true"><canvas id="gradient"></canvas></div> -->
+
+        <div class="container">
+
+    
+        </div>
+            <div class="hero-copy">
+                <h1 class="stage s2">The Quoting Engine with Features Businesses Actually Need</h1>
+                <p class="sub stage s3">QTools turns Shopify draft orders into a full B2B sales workflow. Build quotes, track deals through your pipeline, forecast revenue, and send branded PDFs, without ever leaving the admin.</p>
+                <div class="hero-ctas stage s4">
+                <a class="btn dark" href="#support"><span class="btn-face">Book an onboarding call <span class="arr">→</span></span></a>
+                </div>
+            </div>
+
+            <div class="board board--quote stage s5" role="img" aria-label="QTools Deal Edit Page inside the Shopify admin, showing a quote's line items, totals and shipping">
+                <span class="board-label"><span class="board-label__face">Quote Builder</span></span>
+                <div class="board__face">
+                <div class="admin-shell">
+                <aside class="admin-nav">
+                    <div class="nav-row"><span class="ic">⌂</span>Home</div>
+                    <div class="nav-row"><span class="ic">▭</span>Orders<span class="badge">2</span></div>
+                    <div class="nav-row"><span class="ic">◆</span>Products</div>
+                    <div class="nav-row"><span class="ic">◔</span>Customers</div>
+                    <div class="nav-row"><span class="ic">↗</span>Growth</div>
+                    <div class="nav-row"><span class="ic">%</span>Discounts</div>
+                    <div class="nav-row"><span class="ic">▤</span>Content</div>
+                    <div class="nav-group">Apps</div>
+                    <div class="nav-row"><span class="ic">⚑</span>Flow</div>
+                    <div class="nav-row nav-app"><span class="ic q">Q</span>QTools</div>
+                    <div class="nav-sub nav-sub-active">Deals</div>
+                    <div class="nav-sub">Leads</div>
+                    <div class="nav-sub">Customers</div>
+                    <div class="nav-sub">Companies</div>
+                </aside>
+                <div class="admin-main">
+                    <div class="admin-crumb admin-crumb--split">
+                    <span class="crumb-q">Q</span><span class="crumb-sep">›</span><span>Deal Edit Page – TS-1025</span>
+                    <span class="qe-crumb-actions"><span class="qe-save">Save quote</span><span class="qe-more">•••</span></span>
+                    </div>
+                    <div class="qe-toolbar">
+                    <span class="qe-icon-btn"><span class="ic">←</span>Back</span>
+                    <span class="qe-title"><span>Title:</span><span class="qe-title__input">TS-1025</span></span>
+                    <span class="qe-dropdown">Piri ⌄</span>
+                    <span class="qe-icon-btn"><span class="ic">⭱</span>Quote to PDF</span>
+                    <span class="qe-icon-btn"><span class="ic">＋</span>Add Product</span>
+                    <span class="qe-icon-btn"><span class="ic">✚</span>Create Product</span>
+                    <span class="qe-icon-btn"><span class="ic">◷</span>Timeline</span>
+                    <span class="qe-icon-btn"><span class="ic">⚙</span>Settings</span>
+                    <span class="qe-btn qe-btn--green"><span class="ic">▤</span>Process order</span>
+                    <span class="qe-btn qe-btn--red"><span class="ic">⊗</span>Lost</span>
+                    <span class="qe-pill qe-pill--blue">Open</span>
+                    <span class="qe-pill qe-pill--pink">Not saved</span>
+                    </div>
+                    <div class="qe-cards">
+                    <div class="qe-card">
+                        <div class="qe-card__head">Company<span>Edit</span></div>
+                        <div class="qe-card__body">Fingal Partners<br>Milton Office</div>
+                    </div>
+                    <div class="qe-card">
+                        <div class="qe-card__head">Customer<span>Edit</span></div>
+                        <div class="qe-card__body">Pidi Cavanagh<br>piri.cavanagh@gmail.com<br>+61 428 045 020</div>
+                    </div>
+                    <div class="qe-card">
+                        <div class="qe-card__head">Shipping address<span>Edit</span></div>
+                        <div class="qe-card__body">James Brennan, Fingal Partners<br>20 Paten St – Loading dock 1<br>Milton, QLD 4064</div>
+                    </div>
+                    <div class="qe-card">
+                        <div class="qe-card__head">Billing address<span>Edit</span></div>
+                        <div class="qe-card__body">Fingal Partners<br>20 Paten St<br>Milton, QLD 4064</div>
+                    </div>
+                    </div>
+                    <div class="qe-totals">
+                    <span class="qe-totals__label">Totals:</span>
+                    <span><b>Margin:</b> 15.0%</span>
+                    <span><b>Markup:</b> 17.6%</span>
+                    <span><b>Total Ex:</b> $5,481.18</span>
+                    <span><b>Shipping:</b> $0.00</span>
+                    <span class="qe-totals__final">Final Total Inc: $5,481.18</span>
+                    </div>
+                    <div class="qe-table">
+                        <table>
+                        <thead><tr><th></th><th>Qty</th><th>Supplier</th><th>Title</th><th>SKU</th><th>Unit cost</th><th>Unit price</th><th>Margin</th><th>Markup</th><th>Line total ex</th></tr></thead>
+                        <tbody>
+                            <tr><td class="qe-thumb qe-thumb--a"><span></span></td><td>1</td><td>Dicker Data <span class="qe-back-order">Back order</span></td><td>QBC Professional Display – 75"</td><td>LH75QBCEBGCXXY</td><td>$2,299.00</td><td>$2,704.70</td><td>15.0%</td><td>17.6%</td><td>$2,704.70</td></tr>
+                            <tr><td class="qe-thumb qe-thumb--b"><span></span></td><td>1</td><td>Dicker Data <span class="qe-back-order">Back order</span></td><td>Atdec AD-WF-5040 Fixed Angle Wall Mount</td><td>AD-WF-5040</td><td>$33.00</td><td>$38.82</td><td>15.0%</td><td>17.6%</td><td>$38.82</td></tr>
+                            <tr><td class="qe-thumb qe-thumb--c"><span></span></td><td>1</td><td>Dicker Data</td><td>Logitech Rally Bar</td><td>LOG-RB-BK</td><td>$1,499.00</td><td>$1,763.53</td><td>15.0%</td><td>17.6%</td><td>$1,763.53</td></tr>
+                            <tr><td class="qe-thumb qe-thumb--d"><span></span></td><td>2</td><td>Dicker Data</td><td>HDMI Active Optical Cable 15m</td><td>HDMI-AOC-15M</td><td>$89.00</td><td>$104.71</td><td>15.0%</td><td>17.6%</td><td>$209.42</td></tr>
+                            <tr><td class="qe-thumb qe-thumb--e"><span></span></td><td>1</td><td>Dicker Data</td><td>Crestron DM-NVX-350 Encoder</td><td>DMNVX350</td><td>$650.00</td><td>$764.71</td><td>15.0%</td><td>17.6%</td><td>$764.71</td></tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="qe-lower">
+                    <div class="qe-panel">
+                        <div class="qe-panel__head">Supplier Quotes</div>
+                        <div class="qe-panel__label">Dicker Data Quote Number</div>
+                        <div class="qe-panel__input">Quote number</div>
+                    </div>
+                    <div class="qe-panel">
+                        <div class="qe-panel__head">Shipping</div>
+                        <div class="qe-panel__label">Enter a custom amount</div>
+                        <div class="qe-panel__row">
+                        <span class="qe-panel__input">$ Enter amount</span>
+                        <span class="qe-panel__btn">🚚 Get live shipping rates</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="board stage s5" role="img" aria-label="QTools Deals screen inside the Shopify admin, showing a pipeline from Prospecting through Final Negotiations">
+                <span class="board-label"><span class="board-label__face">Quote Pipeline View</span></span>
+                <div class="board__face">
+                <div class="admin-shell">
+                <aside class="admin-nav">
+                    <div class="nav-row"><span class="ic">⌂</span>Home</div>
+                    <div class="nav-row"><span class="ic">▭</span>Orders<span class="badge">2</span></div>
+                    <div class="nav-row"><span class="ic">◆</span>Products</div>
+                    <div class="nav-row"><span class="ic">◔</span>Customers</div>
+                    <div class="nav-row"><span class="ic">↗</span>Growth</div>
+                    <div class="nav-row"><span class="ic">%</span>Discounts</div>
+                    <div class="nav-row"><span class="ic">▤</span>Content</div>
+                    <div class="nav-group">Apps</div>
+                    <div class="nav-row"><span class="ic">⚑</span>Flow</div>
+                    <div class="nav-row nav-app"><span class="ic q">Q</span>QTools</div>
+                    <div class="nav-sub nav-sub-active">Deals</div>
+                    <div class="nav-sub">Leads</div>
+                    <div class="nav-sub">Customers</div>
+                    <div class="nav-sub">Companies</div>
+                </aside>
+                <div class="admin-main">
+                    <div class="admin-crumb"><span class="crumb-q">Q</span><span class="crumb-sep">›</span><span>Deals</span></div>
+                    <div class="admin-toolbar">
+                    <div class="toolbar-col toolbar-col-left">
+                        <div class="view-tabs">
+                        <span class="view-tab active">⊞ Pipeline View</span>
+                        <span class="view-tab">☰ List View</span>
+                        <span class="view-tab">📊 Graph View</span>
+                        </div>
+                    </div>
+                    <div class="toolbar-col toolbar-col-mid">
+                        <div class="admin-search">🔍 search, then press Enter</div>
+                        <span class="admin-add">+</span>
+                    </div>
+                    <div class="toolbar-col toolbar-col-right">
+                        <span class="admin-owners">All owners ⌄</span>
+                        <span class="admin-filters">☰ Filters</span>
+                    </div>
+                    </div>
+                    <div class="admin-cols">
+                    <div class="admin-col">
+                        <div class="col-title">Prospecting/lead in <span class="chev">›</span></div>
+                        <div class="col-sub">$16,775 · 13 deals</div>
+                        <div class="col-weight">Weighted (10%): $1,677</div>
+                        <div class="admin-card">
+                        <div class="card-id">5x Jabra Evolve2 65 headsets</div>
+                        <div class="card-name">PPL Limited</div>
+                        <div class="card-tags"><span class="tag tag-pink">Unlisted item</span><span class="tag tag-blue">Self Serve</span></div>
+                        <div class="card-foot"><span>Age: 5 days</span><span class="card-val">$1,240</span></div>
+                        </div>
+                        <div class="admin-card">
+                        <div class="card-id">12x Logitech MX Master 3S mice</div>
+                        <div class="card-name">Northwind Digital</div>
+                        <div class="card-tags"><span class="tag tag-blue">Self Serve</span></div>
+                        <div class="card-foot"><span>Age: 5 days</span><span class="card-val">$948</span></div>
+                        </div>
+                        <div class="admin-card">
+                        <div class="card-id">3x Dell UltraSharp 27" monitors</div>
+                        <div class="card-name">Steele &amp; Vance</div>
+                        <div class="card-tags"></div>
+                        <div class="card-foot"><span>Age: 5 days</span><span class="card-val">$2,385</span></div>
+                        </div>
+
+                    </div>
+                    <div class="admin-col">
+                        <div class="col-title">Qualified – Defining BoM <span class="chev">›</span></div>
+                        <div class="col-sub">$1,860 · 1 deal</div>
+                        <div class="col-weight">Weighted (25%): $465</div>
+                        <div class="admin-card">
+                        <div class="card-id">15x HP EliteBook 840 laptops</div>
+                        <div class="card-name">Marrow &amp; Finch</div>
+                        <div class="card-tags"></div>
+                        <div class="card-foot"><span>Age: 5 days</span><span class="card-val">$1,860</span></div>
+                        </div>
+                    </div>
+                    <div class="admin-col">
+                        <div class="col-title">Quote Issued <span class="chev">›</span></div>
+                        <div class="col-sub">$6,420 · 1 deal</div>
+                        <div class="col-weight">Weighted (50%): $3,210</div>
+                        <div class="admin-card">
+                        <div class="card-id">40x Cisco Catalyst 1000 switches</div>
+                        <div class="card-name">Fingal Partners</div>
+                        <div class="card-tags"></div>
+                        <div class="card-foot"><span>Age: 5 days</span><span class="card-val">$6,420</span></div>
+                        </div>
+                    </div>
+                    <div class="admin-col">
+                        <div class="col-title">Updating/Revising <span class="chev">›</span></div>
+                        <div class="col-sub">$2,340 · 1 deal</div>
+                        <div class="col-weight">Weighted (60%): $1,404</div>
+                        <div class="admin-card">
+                        <div class="card-id">6x Ubiquiti UniFi U6+ access points</div>
+                        <div class="card-name">Castlereagh Co-op</div>
+                        <div class="card-tags"></div>
+                        <div class="card-foot"><span>Age: 5 days</span><span class="card-val">$2,340</span></div>
+                        </div>
+                    </div>
+                    <div class="admin-col">
+                        <div class="col-title">Final Negotiations <span class="chev">›</span></div>
+                        <div class="col-sub">$9,800 · 1 deal</div>
+                        <div class="col-weight">Weighted (80%): $7,840</div>
+                        <div class="admin-card">
+                        <div class="card-id">20x Yealink T54W desk phones</div>
+                        <div class="card-name">Grovemont Council</div>
+                        <div class="card-tags"></div>
+                        <div class="card-foot"><span>Age: 5 days</span><span class="card-val">$9,800</span></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        <section class="block bento-section" id="workspace">
+            <div class="container">
+                <div class="center-head reveal">
+                <h2>One workspace for the whole deal</h2>
+                </div>
+                <div class="bento-grid">
+                <div class="bento-card bento-card--lg reveal" style="--rd:0.05s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>Quote builder</h3>
+                        <p>Cost and margin calculated per line — built from your real supplier costs and Shopify catalog.</p>
+                    </div>
+                                            <div class="qb-summary">
+                            <div class="qb-summary__item"><span class="k">Total margin</span><span class="v">$421.39</span></div>
+                            <div class="qb-summary__item"><span class="k">Ex GST total</span><span class="v">$2,919.39</span></div>
+                            <div class="qb-summary__item"><span class="k">Inc GST total</span><span class="v">$3,211.33</span></div>
+                        </div>
+                    <div class="bento-card__visual bento-card__visual--fill">
+                        <div class="quote-builder-table" id="qb-preview">
+
+                        <table>
+                            <thead><tr><th>Product</th><th>Cost</th><th>Margin</th><th>Price</th></tr></thead>
+                            <tbody>
+                            <tr><td>Logitech MX Master&hellip;</td><td>$79.00</td><td>18.0%</td><td>$96.34</td></tr>
+                            <tr><td>Jabra Evolve2 65&hellip;</td><td>$189.00</td><td>20.0%</td><td>$236.25</td></tr>
+                            <tr><td>Dell UltraSharp 27"&hellip;</td><td>$349.00</td><td>15.0%</td><td>$410.59</td></tr>
+                            <tr><td>Cisco Catalyst 1000&hellip;</td><td>$1,480.00</td><td>12.0%</td><td>$1,681.82</td></tr>
+                            <tr><td>Ubiquiti UniFi U6+&hellip;</td><td>$158.00</td><td>22.0%</td><td>$202.56</td></tr>
+
+
+
+                            </tbody>
+                        </table>
+                        <div class="qb-shipping">
+                            <span class="qb-shipping__label">Shipping</span>
+                            <div class="qb-shipping__control">
+                            <span class="qb-shipping__step">−</span>
+                            <span class="qb-shipping__amount">$45.00</span>
+                            <span class="qb-shipping__step">+</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="bento-card reveal" style="--rd:0.1s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>One order number, start to finish</h3>
+                        <p>The draft order keeps the same number when it converts to a real order. No confusing renumbering for your customer to puzzle over.</p>
+                    </div>
+                                            <div class="community-quote">
+                        <div class="community-quote__head">
+                            <span class="community-quote__avatar">B</span>
+                            <span class="community-quote__name community-quote__name--blur">bryanro</span>
+                            <span class="community-quote__badge">Merchant</span>
+                            <span class="community-quote__date">Dec 2022</span>
+                        </div>
+                        <p class="community-quote__body">"Order numbers should not change when a Draft order is converted to a Completed/Pending order... we do not want the customer to see 2 different order numbers for the 'same order'."</p>
+                        <div class="community-quote__foot">
+                            <span class="community-quote__source">Shopify Community</span>
+                        </div>
+                        </div>
+                    <div class="bento-card__visual">
+                        <div class="order-consistency">
+                        <div class="order-chip">
+                            <span class="order-chip__label">Draft order</span>
+                            <span class="order-chip__num">#Q1042</span>
+                        </div>
+                        <span class="order-consistency__arrow">→</span>
+                        <div class="order-chip order-chip--final">
+                            <span class="order-chip__label">Order</span>
+                            <span class="order-chip__num">#Q1042</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="bento-card reveal" style="--rd:0.15s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>Every field required, every time</h3>
+                        <p>Adding a customer or company means filling in name, email, phone and company before it saves. So your records start clean and stay searchable.</p>
+                    </div>
+                    <div class="bento-card__visual">
+                        <div class="mini-modal" role="img" aria-label="Add a new customer dialog with required first name, last name, email, phone and company fields">
+                        <div class="mini-modal__head"><span>Add a new customer</span><span class="mini-modal__close">×</span></div>
+                        <div class="mini-modal__row">
+                            <div class="mini-modal__field"><span class="mini-modal__label">First name<i>*</i></span><div class="mini-modal__input"></div></div>
+                            <div class="mini-modal__field"><span class="mini-modal__label">Last name<i>*</i></span><div class="mini-modal__input"></div></div>
+                        </div>
+                        <div class="mini-modal__field"><span class="mini-modal__label">Email<i>*</i></span><div class="mini-modal__input"></div></div>
+                        <div class="mini-modal__field"><span class="mini-modal__label">Phone<i>*</i></span><div class="mini-modal__input">+1 555 555 5555</div></div>
+                        <div class="mini-modal__field"><span class="mini-modal__label">Company<i>*</i></span><div class="mini-modal__input mini-modal__input--search">Search by company name</div></div>
+                        <div class="mini-modal__hint">Can't find the company? <span class="mini-modal__link">Create new company</span></div>
+                        <div class="mini-modal__actions">
+                            <span class="mini-modal__btn">Close</span>
+                            <span class="mini-modal__btn mini-modal__btn--dark">Add customer</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="bento-card reveal" style="--rd:0.2s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>Set and track KPIs</h3>
+                        <p>Set and track quarterly KPIs against all Shopify orders. Not just the ones that came through QTools.</p>
+                    </div>
+                    <div class="bento-card__visual">
+                        <div class="kpi-mock">
+                        <div class="kpi-targets">
+                            <div class="kpi-target">
+                            <div class="kpi-target__head">
+                                <span class="kpi-target__label">This Quarter's Target</span>
+                                <div class="kpi-target__current"><span class="k">Current revenue</span><span class="v">$684,451.60</span></div>
+                            </div>
+                            <div class="kpi-target__bar">
+                                <span class="kpi-target__seg kpi-target__seg--behind"></span>
+                                <span class="kpi-target__seg kpi-target__seg--near"></span>
+                                <span class="kpi-target__seg kpi-target__seg--ahead"></span>
+                                <span class="kpi-target__marker" style="left:75%"></span>
+                            </div>
+                            <div class="kpi-target__ticks"><span style="left:58%">80%</span><span style="left:75%">100%</span></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="bento-card reveal" style="--rd:0.25s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>Set the fiscal year depending on your country</h3>
+                        <p>Auto-detected from your store's country. Determines how financial quarters are labelled and filtered on the Reporting page — override it here if your fiscal year works differently.</p>
+                    </div>
+                    <div class="bento-card__visual">
+                        <div class="fy-field">
+                        <div class="fy-field__label"><span class="fy-field__icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>Financial year</div>
+                        <div class="fy-field__select"><span>Jan</span><span class="fy-field__chevron">⌄</span></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <section class="integrations-carousel" aria-label="Integrations">
+                <div class="integrations-carousel__head">
+                    <h3>Works with the tools you already run</h3>
+                    <div class="integrations-carousel__nav">
+                    <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous integration">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M9.613 2.62 5.107 7.124h9.137v1.75H5.107l4.506 4.506-1.238 1.238-6-6L1.756 8l.619-.62 6-6 1.238 1.24Z"/></svg>
+                    </button>
+                    <button type="button" class="carousel-btn" data-carousel-next aria-label="Next integration">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="m6.387 2.62 4.506 4.505H1.756v1.75h9.137l-4.506 4.506 1.238 1.238 6-6L14.245 8l-.618-.62-6-6-1.239 1.24Z"/></svg>
+                    </button>
+                    </div>
+                </div>
+                <ul class="integrations-carousel__track" data-carousel-track>
+                    <li class="integration-card">
+                    <img class="integration-card__mark" src="images/salesforce logo.webp" alt="Salesforce">
+                    <p>Two-way sync for leads, contacts and accounts — QTools and Salesforce always agree.</p>
+                    </li>
+                    <li class="integration-card">
+                    <img class="integration-card__mark" src="images/pipedrive logo.png" alt="Pipedrive">
+                    <p>Push won deals straight into your Pipedrive pipeline with owner and value intact.</p>
+                    </li>
+                    <li class="integration-card">
+                    <img class="integration-card__mark integration-card__mark--xero" src="images/xero logo.svg" alt="Xero">
+                    <p>Send invoices and payments through automatically the moment a quote is won.</p>
+                    </li>
+                    <li class="integration-card">
+                    <img class="integration-card__mark" src="images/myob_logo.png" alt="MYOB">
+                    <p>Keep your Australian books in sync with every quote, order and payment.</p>
+                    </li>
+                </ul>
+                </section>
+
+                <div class="bento-grid2">
+                <div class="bento-card bento-card--lg reveal" style="--rd:0.05s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>Every update, in one spot</h3>
+                        <p>Sales team comments, freight and payment updates all land in a single order timeline — no digging through emails to piece together what happened.</p>
+                    </div>
+                    <div class="bento-card__visual bento-card__visual--fill">
+                        <div class="timeline-mock">
+                        <div class="timeline-mock__pills">
+                            <span class="timeline-pill">Payment: Pending</span>
+                            <span class="timeline-pill">Fulfillment: Unfulfilled</span>
+                        </div>
+                        <div class="timeline-entry timeline-entry--note">
+                            <div class="timeline-entry__head"><span class="timeline-entry__date">15/07/2026 — Sarah</span><span class="timeline-entry__tag timeline-entry__tag--note">Sales note</span></div>
+                            <div class="timeline-entry__body">Called customer — happy with the price, just waiting on their finance sign-off.</div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-entry__head"><span class="timeline-entry__date">15/07/2026 — Piri</span></div>
+                            <div class="timeline-entry__body">Action: Quote converted to order TS-1022</div>
+                        </div>
+
+                        <div class="timeline-entry">
+                            <div class="timeline-entry__head"><span class="timeline-entry__date">15/07/2026, 15:38:03</span><span class="timeline-entry__tag">Shopify</span></div>
+                            <div class="timeline-entry__body">Piri Cavanagh placed this order on QTools.</div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="timeline-entry__head"><span class="timeline-entry__date">15/07/2026 — Piri</span></div>
+                            <div class="timeline-entry__body">Action: This quote was created through the self-service method by Piri Cavanagh.</div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="bento-card reveal" style="--rd:0.1s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>Quarterly reports, filtered your way</h3>
+                        <p>Easily create quarterly reports with year, team and financial-quarter filtering, then export the results straight to Excel.</p>
+                    </div>
+                    <div class="bento-card__visual">
+                        <div class="reporting-mock">
+                        <div class="reporting-mock__head">
+                            <div class="reporting-mock__filters">
+                            <span class="reporting-mock__field">2025</span>
+                            <span class="reporting-mock__field">All managers</span>
+                            <span class="reporting-mock__field">Q3 (Jul–Sep)</span>
+                            </div>
+                            <span class="reporting-mock__export">↑ Export to CSV</span>
+                        </div>
+                        <div class="reporting-mock__tiles">
+                            <div class="tile"><div class="k">Total profit</div><div class="v">$18,240</div></div>
+                            <div class="tile"><div class="k">Avg margin</div><div class="v">16.8%</div></div>
+                        </div>
+                        <div class="quote-builder-table reporting-mock__table">
+                            <table>
+                            <thead><tr><th>Company</th><th>Cost</th><th>Margin</th><th>Profit</th><th>Price</th></tr></thead>
+                            <tbody>
+                                <tr><td>Ashgrove Retail Group</td><td>$3,120</td><td>18.0%</td><td>$685</td><td>$3,805</td></tr>
+                                <tr><td>Bellcastle Logistics</td><td>$2,450</td><td>20.0%</td><td>$613</td><td>$3,063</td></tr>
+                                <tr><td>Castlereagh Co-op</td><td>$1,860</td><td>15.0%</td><td>$328</td><td>$2,188</td></tr>
+                                <tr><td>Marrow &amp; Finch</td><td>$4,275</td><td>12.0%</td><td>$583</td><td>$4,858</td></tr>
+                                <tr><td>Grovemont Council</td><td>$6,420</td><td>22.0%</td><td>$1,812</td><td>$8,232</td></tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <section class="builder-section" aria-label="Quote and invoice builder">
+                <div class="bento-card bento-card--full reveal" style="--rd:0.05s">
+                    <div class="bento-card__face">
+                    <div class="bento-card__text">
+                        <h3>Comprehensive quote and invoice drag &amp; drop builder</h3>
+                        <p>Design your own quote and invoice templates — drag blocks like line items, totals and terms into place, no code required.</p>
+                    </div>
+                    <div class="bento-card__visual">
+                        <img class="qd-screenshot" src="images/quote builder image.png" alt="QTools quote and invoice drag and drop builder, showing the block list, a live quote preview, and template settings">
+                    </div>
+                </div>
+                </section>
+
+            </div>
+        </section>
+
+        <section class="accordion-section" id="modules">
+            <div class="container">
+                <div class="center-head reveal">
+                <h2>Everything organised, one click away</h2>
+                <p>Four modules, all built on your Shopify data — click any one to see what it covers.</p>
+                </div>
+                <div class="accordion-list reveal" style="--rd:0.1s">
+                <details class="accordion-item" open>
+                    <summary>
+                    <span class="accordion-icon">⬒</span>
+                    <span class="accordion-title">Deals</span>
+                    <span class="accordion-caret">+</span>
+                    </summary>
+                    <div class="accordion-body">
+                    <div class="accordion-body__inner">
+                    <p>Track every deal from first contact to closed-won, with custom stages, weighted forecasting and a full owner activity trail.</p>
+                    <div class="module-table">
+                        <table>
+                        <thead><tr><th>Title</th><th>Value</th><th>Margin</th><th>Company</th><th>Location</th><th>Customer</th><th>Stage</th><th>Age</th></tr></thead>
+                        <tbody>
+                            <tr><td>TS-1022</td><td>$47</td><td>15.0%</td><td>Fingal Partners</td><td>Fingal Partners</td><td>Piri Cavanagh</td><td>Closed – Won</td><td>2 days old</td></tr>
+                            <tr><td>TS-1020</td><td>$1,316</td><td>—</td><td>—</td><td>—</td><td>Piri Cavanagh</td><td>Closed – Won</td><td>2 days old</td></tr>
+                            <tr><td>TS-1008</td><td>$3,118</td><td>15.0%</td><td>Fingal Partners</td><td>Fingal Partners</td><td>Piri Cavanagh</td><td>Quote Issued</td><td>5 days old</td></tr>
+                            <tr><td>TS-1009</td><td>$750</td><td>—</td><td>—</td><td>—</td><td>Pidi Cavanagh</td><td>Prospecting/lead in</td><td>5 days old</td></tr>
+                            <tr><td>TS-1015</td><td>$2,340</td><td>18.0%</td><td>Castlereagh Co-op</td><td>Castlereagh Co-op</td><td>Karine Ruby</td><td>Updating/Revising</td><td>3 days old</td></tr>
+                            <tr><td>TS-1018</td><td>$9,800</td><td>22.0%</td><td>Grovemont Council</td><td>Grovemont Council</td><td>Russell Winfield</td><td>Final Negotiations</td><td>1 day old</td></tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>
+                    <span class="accordion-icon">◔</span>
+                    <span class="accordion-title">Leads</span>
+                    <span class="accordion-caret">+</span>
+                    </summary>
+                    <div class="accordion-body">
+                    <div class="accordion-body__inner">
+                    <p>Capture inbound leads before they're customers, qualify them, and convert them straight into your first quote.</p>
+                    <div class="module-table">
+                        <table>
+                        <thead><tr><th>Name</th><th>Email</th><th>Company</th><th>Status</th><th>Source</th><th>Age</th></tr></thead>
+                        <tbody>
+                            <tr><td>Ayumu Hirano</td><td>ayumu.hirano@example.com</td><td>Entreprise Solutions</td><td>New</td><td>Self-service</td><td>1 day old</td></tr>
+                            <tr><td>Karine Ruby</td><td>karine.ruby@example.com</td><td>Snowdevil</td><td>Contacted</td><td>Referral</td><td>3 days old</td></tr>
+                            <tr><td>Sarah Chen</td><td>s.chen@proav.com.au</td><td>Pro AV</td><td>Qualified</td><td>Website form</td><td>4 days old</td></tr>
+                            <tr><td>Tom Whitfield</td><td>tom@billysmeats.com.au</td><td>Billy's Meats</td><td>New</td><td>Trade show</td><td>2 days old</td></tr>
+                            <tr><td>Priya Nair</td><td>p.nair@d1store.com.au</td><td>D1Store</td><td>Contacted</td><td>Cold outreach</td><td>6 days old</td></tr>
+                            <tr><td>Jess Okafor</td><td>j.okafor@jbhifi.com.au</td><td>JB Hi-Fi</td><td>Qualified</td><td>Referral</td><td>5 days old</td></tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>
+                    <span class="accordion-icon">⊙</span>
+                    <span class="accordion-title">Customers</span>
+                    <span class="accordion-caret">+</span>
+                    </summary>
+                    <div class="accordion-body">
+                    <div class="accordion-body__inner">
+                    <p>Every customer's full order and quote history in one searchable view, synced straight from Shopify.</p>
+                    <div class="module-table">
+                        <table>
+                        <thead><tr><th>Customer name</th><th>Companies</th><th>User</th><th>Location</th><th>Open Quotes</th><th>Orders</th><th>Amount spent</th></tr></thead>
+                        <tbody>
+                            <tr><td>Pidi Cavanagh<br><span class="module-table__sub">piri.cavanagh@gmail.com</span></td><td>Fingal Partners</td><td>Piri</td><td>United States</td><td>2</td><td>0</td><td>$0.00</td></tr>
+                            <tr><td>Piri Cavanagh<br><span class="module-table__sub">pcava13.2@gmail.com</span></td><td>Fingal Partners</td><td>Piri</td><td>Parlier, California, United States</td><td>2</td><td>2</td><td>$1,363.29</td></tr>
+                            <tr><td>Tiaki Cavanagh<br><span class="module-table__sub">tiaki.cavanagh@fingalpartners.com</span></td><td>—</td><td>Unassigned</td><td>United States</td><td>0</td><td>0</td><td>$0.00</td></tr>
+                            <tr><td>Ayumu Hirano<br><span class="module-table__sub">ayumu.hirano@example.com</span></td><td>Entreprise Solutions</td><td>Unassigned</td><td>—</td><td>0</td><td>0</td><td>$0.00</td></tr>
+                            <tr><td>Karine Ruby<br><span class="module-table__sub">karine.ruby@example.com</span></td><td>Snowdevil</td><td>Unassigned</td><td>Ottawa, Canada</td><td>3</td><td>0</td><td>$0.00</td></tr>
+                            <tr><td>Russell Winfield<br><span class="module-table__sub">Russell.winfield@example.com</span></td><td>Fingal Partners</td><td>Piri</td><td>Toronto, Canada</td><td>4</td><td>0</td><td>$0.00</td></tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>
+                    <span class="accordion-icon">▤</span>
+                    <span class="accordion-title">Companies</span>
+                    <span class="accordion-caret">+</span>
+                    </summary>
+                    <div class="accordion-body">
+                    <div class="accordion-body__inner">
+                    <p>Group multiple buyers under one B2B company account, so your whole team sees the same view of every deal.</p>
+                    <div class="module-table">
+                        <table>
+                        <thead><tr><th>Name</th><th>Labels</th><th>Open Quotes</th><th>Won deals</th><th>Lost deals</th><th>Locations</th><th>Total spent</th><th>User</th></tr></thead>
+                        <tbody>
+                            <tr><td>Entreprise Solutions</td><td>—</td><td>0</td><td>0</td><td>0</td><td>1</td><td>$0.00</td><td>Unassigned</td></tr>
+                            <tr><td>Fingal Partners</td><td>—</td><td>4</td><td>2</td><td>0</td><td>1</td><td>$0.00</td><td>Piri</td></tr>
+                            <tr><td>Powderbound</td><td>—</td><td>0</td><td>0</td><td>0</td><td>1</td><td>$0.00</td><td>Unassigned</td></tr>
+                            <tr><td>Snowdevil</td><td>—</td><td>3</td><td>0</td><td>0</td><td>1</td><td>$0.00</td><td>Unassigned</td></tr>
+                            <tr><td>Pro AV</td><td>—</td><td>2</td><td>1</td><td>0</td><td>1</td><td>$0.00</td><td>Unassigned</td></tr>
+                            <tr><td>Billy's Meats</td><td>—</td><td>1</td><td>0</td><td>0</td><td>1</td><td>$0.00</td><td>Unassigned</td></tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    </div>
+                </details>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="wordmark wordmark--light"><span class="q">Q</span>Tools</span>
+                <p>The quoting engine with features businesses actually need.</p>
+            </div>
+            <nav class="site-footer__links" aria-label="Legal">
+                <a class="footer-btn" href="#">Terms &amp; Conditions</a>
+                <a class="footer-btn" href="#">Privacy Policy</a>
+                <a class="footer-btn" href="#">Data Policy</a>
+                <a class="footer-btn" href="#">ABN: 15 236 254 207</a>
+            </nav>
+        </div>
+    </footer>
+    <div class="info-modal-overlay" id="infoModalOverlay" aria-hidden="true">
+        <div class="info-modal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+            <button type="button" class="info-modal__close" aria-label="Close">×</button>
+            <div class="info-modal__eyebrow">QTools</div>
+            <h3 class="info-modal__title" id="infoModalTitle"></h3>
+            <p class="info-modal__body"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+  (function () {
+    /* ---- Animated gradient hero ---- */
+    var canvas = document.getElementById("gradient");
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (canvas) {
+      var ctx = canvas.getContext("2d");
+      // Blobs drawn on a tiny canvas, upscaled by CSS for a soft mesh blur.
+      var W = 64, H = 40;
+      canvas.width = W;
+      canvas.height = H;
+
+      var blobs = [
+        { c: "#8d86ff", x: 0.15, y: 0.30, r: 0.60, dx: 0.00016, dy: 0.00011, p: 0.0 },
+        { c: "#c07aff", x: 0.80, y: 0.15, r: 0.52, dx: 0.00013, dy: 0.00016, p: 2.1 },
+        { c: "#7ad0ff", x: 0.55, y: 0.75, r: 0.62, dx: 0.00011, dy: 0.00013, p: 4.2 },
+        { c: "#ffa3c2", x: 0.95, y: 0.70, r: 0.48, dx: 0.00017, dy: 0.00010, p: 1.3 },
+        { c: "#6f66ff", x: 0.35, y: 0.05, r: 0.42, dx: 0.00012, dy: 0.00014, p: 3.0 }
+      ];
+
+      var draw = function (t) {
+        ctx.fillStyle = "#f7f7fa";
+        ctx.fillRect(0, 0, W, H);
+        for (var i = 0; i < blobs.length; i++) {
+          var b = blobs[i];
+          var x = (b.x + 0.11 * Math.sin(t * b.dx + b.p)) * W;
+          var y = (b.y + 0.13 * Math.cos(t * b.dy + b.p)) * H;
+          var r = b.r * W;
+          var g = ctx.createRadialGradient(x, y, 0, x, y, r);
+          g.addColorStop(0, b.c);
+          g.addColorStop(1, b.c + "00");
+          ctx.fillStyle = g;
+          ctx.fillRect(0, 0, W, H);
+        }
+      };
+
+      var raf = null;
+      var loop = function (t) { draw(t); raf = requestAnimationFrame(loop); };
+      var start = function () {
+        if (reduce.matches) {
+          if (raf) cancelAnimationFrame(raf);
+          raf = null;
+          draw(12000); // one static, composed frame
+        } else if (!raf) {
+          raf = requestAnimationFrame(loop);
+        }
+      };
+      reduce.addEventListener ? reduce.addEventListener("change", start) : reduce.addListener(start);
+      start();
+    }
+
+    /* ---- Scroll reveals ---- */
+    var targets = document.querySelectorAll(".reveal");
+    if (reduce.matches || !("IntersectionObserver" in window)) {
+      targets.forEach(function (el) { el.classList.add("in"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.18, rootMargin: "0px 0px -40px 0px" });
+      targets.forEach(function (el) { io.observe(el); });
+    }
+
+    /* ---- Copy email (mailto: is blocked in embedded viewers) ---- */
+    document.querySelectorAll(".copy-email").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var email = btn.getAttribute("data-email");
+        var fallback = function () {
+          var ta = document.createElement("textarea");
+          ta.value = email;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "absolute";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(ta);
+        };
+        var done = function () {
+          var lbl = btn.querySelector(".cl");
+          if (!lbl || btn.classList.contains("copied")) return;
+          var orig = lbl.textContent;
+          lbl.textContent = "Copied ✓";
+          btn.classList.add("copied");
+          setTimeout(function () {
+            lbl.textContent = orig;
+            btn.classList.remove("copied");
+          }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(done, function () { fallback(); done(); });
+        } else {
+          fallback();
+          done();
+        }
+      });
+    });
+
+    /* ---- Nav dropdowns: one dock, one track, five panels side by side ----
+       Switching menus is a single CSS transform on .mega-menu-track (GPU-accelerated,
+       no per-menu show/hide), so rapid hovering across triggers can't cause the
+       overlapping-transition flicker the old View Transition version had. */
+    var dock = document.querySelector(".mega-menu-dock");
+    var track = document.querySelector(".mega-menu-track");
+    var triggers = Array.prototype.slice.call(document.querySelectorAll(".mega-trigger"));
+    var panelCount = track ? track.children.length : 0;
+    var closeTimer = null;
+    var activeIndex = -1;
+
+    var setActive = function (index) {
+      if (index === activeIndex) return;
+      activeIndex = index;
+
+      triggers.forEach(function (btn, i) {
+        var open = i === index;
+        btn.closest(".nav-item").classList.toggle("is-active", open);
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      if (index === -1) {
+        dock.classList.remove("is-open");
+      } else {
+        track.style.transform = "translateX(-" + (index * (100 / panelCount)) + "%)";
+        dock.classList.add("is-open");
+      }
+    };
+
+    var open = function (index) {
+      clearTimeout(closeTimer);
+      setActive(index);
+    };
+
+    var scheduleClose = function () {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { setActive(-1); }, 150);
+    };
+
+    triggers.forEach(function (btn, i) {
+      btn.addEventListener("mouseenter", function () { open(i); });
+      btn.addEventListener("focusin", function () { open(i); });
+      btn.addEventListener("mouseleave", scheduleClose);
+      btn.addEventListener("focusout", function (e) {
+        if (!dock.contains(e.relatedTarget) && e.relatedTarget !== btn) scheduleClose();
+      });
+    });
+
+    dock.addEventListener("mouseenter", function () { clearTimeout(closeTimer); });
+    dock.addEventListener("mouseleave", scheduleClose);
+    dock.addEventListener("focusout", function (e) {
+      if (!dock.contains(e.relatedTarget) && triggers.indexOf(e.relatedTarget) === -1) scheduleClose();
+    });
+
+    /* ---- Info modals: one popup per mega-menu content link, with a
+       0.1-opacity dark overlay + blur behind it. Content lives in one map
+       keyed by each link's data-modal attribute, rather than 35 separate
+       DOM modals. ---- */
+    var MODAL_CONTENT = {
+      "cost-margin-quoting": { title: "Cost + margin quoting", body: "Every line in a QTools quote starts from your real supplier cost, not the Shopify retail price. Set a target margin or markup once and QTools calculates the sell price automatically, recalculating instantly if the cost, quantity or margin changes. Because the math is driven by actual landed cost rather than list price, your sales team can quote confidently without needing to check with finance, and you always know exactly how profitable a deal is before you send it. Margins can be set per product, per customer, or per quote, so volume deals and one-off pricing exceptions are just as easy to build as your standard rate card." },
+      "product-pairing": { title: "Must-have product pairing", body: "Some products just belong together — a display needs a wall mount, a laptop needs a dock. Product pairing lets you flag “must-have” accessories against any item in your catalog, so the moment a sales rep adds that product to a quote, QTools automatically surfaces (or adds) the paired item as a suggestion. It's a simple way to protect attach-rate revenue that would otherwise get missed when someone's quoting quickly, and it stops customers receiving an incomplete order — like a monitor with no mount, or a switch with no matching cables — because a rep forgot to check what else was needed." },
+      "shipping-integration": { title: "Carrier-calculated shipping integration", body: "Instead of guessing a shipping figure or leaving it blank, QTools can pull live, carrier-calculated shipping rates directly from your store's connected shipping apps and carrier accounts straight into the quote builder. Weight, dimensions and delivery address are read from the line items and customer record automatically, so the number a customer sees on a quote is the same number Shopify would charge at checkout — no more absorbing shipping losses on quotes that were estimated too low. You can still override it manually with a flat or custom amount for freight-collect deals, trade pricing, or negotiated delivery terms." },
+      "companies-integration": { title: "Shopify Companies integration", body: "QTools is built directly on top of Shopify's native B2B Companies object, rather than maintaining a separate customer database that needs to be kept in sync. When a deal is linked to a Company, QTools automatically pulls in company-level payment terms, assigned price lists, and location details, and any quote you build respects that company's existing Shopify B2B settings. It means your CRM pipeline, quoting engine and Shopify admin are always looking at the exact same company record — no duplicate data entry, no mismatched terms between systems, and every new contact at a company inherits the pricing and account structure you've already set up." },
+      "crm-pipeline": { title: "CRM pipeline", body: "Every deal in QTools moves through a visual, kanban-style pipeline — from Prospecting through Qualified, Quote Issued, Negotiation and Closed Won or Lost — the same familiar board style used by dedicated CRMs, but built to run natively inside the Shopify admin. Each card shows the deal value, age, customer and tags at a glance, and dragging a card between columns updates its stage instantly. Because the pipeline lives on top of real draft orders, there's no second system to update after a call — moving the stage in QTools is the single source of truth for where a deal actually stands." },
+      "sales-forecasting": { title: "Sales forecasting", body: "QTools weights every open deal in your pipeline by its stage's historical close probability, so you get a realistic forecast of revenue landing this quarter — not just a raw sum of everything currently in play. As deals move stage, the weighting recalculates automatically, giving sales leaders an always-current view of likely revenue without needing a separate spreadsheet. You can filter the forecast by owner, team or date range to check whether a rep or region is tracking to target, and drill into any weighted figure to see exactly which deals are driving it." },
+      "quarterly-kpis": { title: "Quarterly and yearly KPIs", body: "Set a revenue target for the quarter or year and QTools tracks progress against it in real time, using every Shopify order — not just the ones that happened to be built through the quote builder. A visual progress bar shows how far along you are against pace, so you can spot early whether a team is tracking ahead or behind target long before the quarter closes. Targets can be set per sales rep or company-wide, fiscal years auto-adjust to your store's country, and the same KPI data feeds into the Reporting page for quarter-over-quarter comparisons." },
+      "sales-team-filtering": { title: "Sales team filtering & export to Excel", body: "Filter every report and pipeline view by individual sales rep, team, date range or financial quarter, so a manager can see exactly how one person or one region is performing without wading through the whole company's data. Once a report is filtered the way you want it, export it straight to Excel with one click — useful for board packs, commission calculations, or anywhere a spreadsheet is still the expected format. Filters are saved per view, so building the same weekly or monthly report doesn't mean re-selecting every option each time you open the page." },
+      "dragdrop-designer": { title: "Beginner-friendly drag & drop designer", body: "Design your own quote and invoice PDF templates by dragging ready-made blocks — headers, address blocks, line items, totals, terms and footers — into place, with no code or design skills required. Reorder sections, swap logos and colours, and preview the finished document exactly as your customer will see it, all from a visual editor built for non-designers. Because it's block-based rather than a blank canvas, every template stays properly aligned and print-ready by default, so a new hire can build a professional-looking quote template in minutes instead of relying on IT or an outside designer." },
+      "b2b-variables": { title: "Uses Shopify B2B variables", body: "Every quote and invoice template can pull live Shopify B2B data — company name, location, payment terms, catalog pricing, tax settings — directly into the document as dynamic variables, rather than static text someone has to update by hand. Change the customer's Company record in Shopify and the next quote generated for them automatically reflects it. This keeps every document consistent with what's actually configured in Shopify's B2B settings, and means your templates keep working correctly as you onboard new companies or price lists, without needing to rebuild them each time your account structure changes." },
+      "pay-online-links": { title: "Supports pay-online links", body: "Every quote and invoice can include a secure pay-online link, letting a customer accept and pay in a single step instead of a separate back-and-forth to arrange payment. The link is generated from the underlying Shopify draft order, so payment is processed through Shopify's own checkout and reconciled the moment it's confirmed — no manual invoice-matching required. This is especially useful for smaller B2B orders or one-off customers who don't have standing payment terms, letting them complete a purchase as easily as a normal Shopify checkout while still receiving a properly branded, itemised quote document." },
+      "tracks-inbound-leads": { title: "Tracks inbound leads", body: "Capture inbound interest — a contact form submission, a trade show scan, a cold-outreach reply — as a Lead before it's a full customer record, so early-stage interest doesn't get lost or force you to create incomplete customer profiles. Each lead records source, status and age, and can be qualified and converted straight into a customer and a first quote once it's ready to move forward, with no re-typing of details. This keeps your Customers list clean — containing only real, qualified relationships — while still giving your sales team visibility over everything currently in the top of the funnel." },
+      "sort-customers": { title: "Sort customers easily", body: "The Customers list surfaces every buyer synced from Shopify alongside their full quote and order history, and can be sorted or filtered by status, location, assigned sales rep, or recent activity in a couple of clicks. Because every field — name, email, phone, company — is mandatory when a customer is created, the underlying data stays clean and genuinely searchable instead of degrading into duplicate or half-filled records over time. Finding “every customer in Queensland with an open quote” or “everyone assigned to a specific rep” is a filter away, rather than a manual scroll through a spreadsheet." },
+      "b2b-companies-setup": { title: "Set up B2B Shopify companies easily", body: "Turn any customer into a full Shopify B2B Company — with its own locations, contacts, payment terms and catalog pricing — directly from within QTools, without switching over to the standard Shopify admin flow. Required fields keep the company record complete from the moment it's created, and every quote or deal linked to that company automatically respects the pricing and terms you've configured. It removes the friction that normally stops smaller teams from using Shopify's native B2B features properly, since the whole setup — customer, company, pricing — can be done from one connected workflow." },
+      "video-getting-started": { title: "Getting started with QTools", body: "A walkthrough of installing QTools from the Shopify App Store and getting your store ready to quote — connecting your product catalog, setting default margins, and inviting your sales team with the right permissions. Covers the handful of settings worth configuring on day one (fiscal year, currency, default shipping behaviour) so your first real quote goes out correctly rather than needing to be fixed after the fact. By the end, you'll have a working pipeline stage set, at least one company or customer created, and a clear idea of where each part of the app lives inside the Shopify admin." },
+      "video-first-quote": { title: "Building your first quote", body: "A step-by-step run-through of the quote builder — adding products from your catalog, applying a margin or markup, pairing accessories, adjusting shipping, and generating a branded PDF ready to send. Shows how cost and price recalculate live as you edit quantities or swap products, and how to attach the quote to a customer or company so it shows up correctly in their history and the pipeline. Also covers converting an issued quote into a real order once it's accepted, and where to check that the order number stays consistent for the customer from draft through to completion." },
+      "video-pipeline-setup": { title: "Setting up your pipeline", body: "Covers customising your deal pipeline to match how your business actually sells — renaming stages, setting the weighted close probability for each one, and deciding which stages count toward forecasted revenue. Explains how deals move automatically as quotes are issued or orders convert, versus when a rep needs to drag a card manually, and how to set quarterly KPI targets against the pipeline once it's structured. Useful for teams migrating off a spreadsheet or another CRM, since it shows how to map an existing sales process onto QTools's stages without losing any historical context." },
+      "video-crm-walkthrough": { title: "CRM & leads walkthrough", body: "A tour of the Leads, Customers and Companies sections — how a lead gets captured, qualified and converted, how customer records stay clean thanks to mandatory required fields, and how Companies tie multiple contacts under one shared account with its own pricing and terms. Shows the filtering and sorting tools available on each list, and how a sales rep can move from “just got a new contact” to “quote sent” without leaving the Shopify admin or re-entering the same details twice. A good starting point for anyone coming from a standalone CRM and wanting to see how QTools compares." },
+      "salesforce-pushing": { title: "Salesforce pushing", body: "QTools keeps a two-way sync running between its CRM and Salesforce, so leads, contacts and accounts created or updated in either system stay in agreement without manual exporting. When a deal reaches Closed Won inside QTools, the relevant account and opportunity data pushes through to Salesforce automatically, keeping revenue reporting consistent for teams that still rely on Salesforce as their system of record alongside Shopify. Field mapping between the two systems — customer, company, deal value, owner — is configurable, so you control exactly what gets pushed and how it lines up with your existing Salesforce object structure, rather than accepting a rigid default mapping." },
+      "pipedrive-pushing": { title: "Pipedrive pushing", body: "Won deals in QTools push straight into your Pipedrive pipeline, carrying over the deal owner, value and linked contact so nothing needs to be re-entered by hand once a quote converts to a sale. This is aimed at teams who run day-to-day deal tracking in Pipedrive but want their Shopify order and quoting data — cost, margin, shipping — feeding in automatically rather than living only inside Shopify. The push happens the moment a deal's stage changes to won, so Pipedrive stays current without anyone needing to remember to update it separately after closing a sale in QTools." },
+      "xero-pushing": { title: "Xero pushing", body: "Every quote, order and payment processed through QTools can push through to Xero automatically, keeping your accounting records in sync with what's actually being sold without double-entry between Shopify and your books. Invoices generated from won quotes carry the same line items, tax treatment and customer details into Xero, so your bookkeeper or accountant is working from the same numbers your sales team quoted — reducing reconciliation errors at end of month or end of quarter. This is particularly useful for Australian and New Zealand businesses where Xero is the standard accounting platform alongside Shopify." },
+      "myob-pushing": { title: "MYOB pushing", body: "For businesses running MYOB rather than Xero, QTools offers the same automatic push of quotes, orders and payments into your accounting file, so financial records stay aligned with sales activity without manual re-entry. As a deal closes and converts to a real order, the invoice detail — customer, line items, tax, totals — flows through to MYOB in the background, keeping your books current without your finance team needing to touch QTools directly. It's built for the same reason as the Xero integration: so the numbers your sales team quotes are exactly the numbers that land in your accounting system." },
+      "pdf-delivery-emails": { title: "PDF Delivery links for Shopify emails", body: "Quote and invoice PDFs generated in QTools can be delivered as links embedded directly inside your store's existing Shopify notification emails, rather than as a separate attachment sent from a different system. That means a customer receiving their draft order confirmation or invoice email from Shopify sees a branded, professional PDF one click away, with no extra app or portal to log into. Because delivery rides on Shopify's own email infrastructure, deliverability and formatting stay consistent with the rest of your store's transactional emails, and links stay valid and up to date even if the underlying quote changes after sending." },
+      "cci-api": { title: "Integrating CCI API", body: "QTools can connect to the CCI API to pull in supplier catalog data, real-time cost pricing and stock availability directly into the quote builder, so line items reflect accurate, current supplier information instead of a manually maintained price list. As supplier costs change, margin and sell price recalculate automatically wherever that product appears in an open quote, keeping profitability figures accurate right up until a quote is sent. This is particularly useful for reseller and distribution businesses working with a small number of core suppliers, where keeping cost data current by hand would otherwise be a constant manual task." },
+      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." },
+      "faq-install": { title: "How do I install QTools?", body: "Install QTools directly from the Shopify App Store like any other app — search for QTools, click install, and approve the requested permissions. QTools reads your existing product catalog, customers and companies to set itself up, but doesn't modify or duplicate any of that data; it simply builds its quoting and CRM layer on top of what's already in your store. Once installed, a short setup flow helps you configure your default margin, fiscal year and pipeline stages, and you can invite additional sales team members with their own permissions straight away. No developer or theme changes are required." },
+      "faq-existing-orders": { title: "Does QTools change my existing orders or products?", body: "No. QTools reads your existing products, customers, companies and orders to power its quoting and CRM features, but it doesn't modify, duplicate or move any of that underlying data. Quotes are built as standard Shopify draft orders, so when one is accepted it converts using Shopify's own normal order flow — nothing about how your existing orders or product catalog behaves changes as a result of installing the app. If you were to uninstall QTools, your products, customers and past orders remain exactly as they were; only QTools's own quoting and pipeline data would stop being accessible." },
+      "faq-quote-accepted": { title: "What happens when a customer accepts a quote?", body: "When a customer accepts a quote — either by approving a pay-online link or confirming via your sales rep — the underlying Shopify draft order converts into a real order, keeping the exact same order number throughout so there's no confusing renumbering for the customer to puzzle over. The linked deal automatically advances to Closed Won in the pipeline, the order flows into your normal Shopify fulfilment and payment process, and — if configured — the sale pushes through to any connected CRM or accounting integration like Salesforce, Pipedrive, Xero or MYOB. From the customer's side, it feels exactly like any other Shopify checkout confirmation." },
+      "faq-customise-pipeline": { title: "Can I customise the pipeline stages?", body: "Yes — pipeline stages aren't fixed. You can rename existing stages, add new ones, remove ones you don't use, and set the weighted close probability each stage contributes to your sales forecast, so the pipeline matches how your business actually sells rather than a generic default. Changes apply immediately to the kanban board, and existing deals keep their history even if a stage gets renamed or reordered later. This is particularly useful for teams migrating from another CRM or a spreadsheet, since you can recreate your existing process rather than forcing your sales workflow to fit QTools's defaults." },
+      "faq-salesforce": { title: "Does it work with Salesforce?", body: "Yes. QTools maintains a two-way sync with Salesforce for leads, contacts and accounts, and pushes won-deal data through automatically so your Salesforce records stay aligned with what's actually happening in your Shopify-based pipeline. Field mapping is configurable, so you control which QTools fields correspond to which Salesforce objects rather than being locked into a fixed default mapping. This is aimed at businesses that already rely on Salesforce for broader account management or reporting, but want their Shopify quoting and order data feeding into it automatically instead of needing someone to manually re-key deal information between the two systems." },
+      "faq-data-stored": { title: "Where is my data stored?", body: "QTools reads and writes the majority of its data directly into Shopify itself — quotes as draft orders, deals linked to Shopify Companies and Customers — so your core commercial data stays inside Shopify's own infrastructure rather than being duplicated into a separate external database. Configuration specific to QTools, such as pipeline stage setup, margin defaults and integration credentials for services like Salesforce or Xero, is stored securely within QTools's own hosted environment, encrypted at rest and in transit. If you uninstall the app, your Shopify data — orders, customers, products — is entirely unaffected, since it was never duplicated outside of Shopify in the first place." },
+      "faq-pricing": { title: "How much does QTools cost?", body: "QTools is priced per store on a monthly subscription, with plans scaled to the size of your sales team and which integrations — Salesforce, Pipedrive, Xero, MYOB — you need connected. Every plan includes the full quote builder, CRM pipeline, KPI tracking and reporting — pricing tiers are about team size and integration depth, not withholding core features behind a paywall. Full current pricing is listed on the Shopify App Store listing, and a free trial is available so you can build real quotes and run a pipeline for a few weeks before committing, rather than deciding based on a features list alone." },
+      "faq-multiple-reps": { title: "Can multiple sales reps use QTools at once?", body: "Yes — QTools is built for teams, not just a single user. Each sales rep gets their own login with deals, quotes and customers attributed to them individually, while managers get filtered views to see performance by rep, team or region without needing separate spreadsheets. Permissions control who can edit pricing defaults or margin rules versus who can simply build and send quotes, so junior reps can be onboarded without giving them access to sensitive account-wide settings. Pipeline and forecasting views aggregate across every rep automatically, so leadership always has a company-wide picture alongside each individual's activity." },
+      "faq-multi-currency": { title: "Does QTools support multi-currency quoting?", body: "Yes — QTools quotes in whichever currencies your Shopify store is already configured to sell in, using Shopify's own currency and market settings rather than maintaining a separate conversion layer. A customer in a different market sees pricing, shipping and totals in their local currency on the quote and invoice PDF, calculated using the same rates and rounding your storefront already applies at checkout. This keeps quoted figures consistent with what a customer would actually be charged, and means expanding into a new market or currency in Shopify doesn't require any extra configuration inside QTools itself." },
+      "faq-pay-directly": { title: "Can customers pay directly from a quote?", body: "Yes — every quote can include a secure pay-online link that lets a customer accept and pay in one step, processed through Shopify's own checkout rather than a separate payment system. This is useful for smaller B2B orders or one-off customers without standing account terms, letting them complete a purchase as easily as a normal online order while still receiving a properly branded, itemised quote or invoice. Once paid, the linked draft order converts automatically and the deal's pipeline stage updates to reflect it, so there's no manual step required from your sales team to mark the quote as won and processed." }
+    };
+
+    var infoOverlay = document.getElementById("infoModalOverlay");
+    var infoTitle = infoOverlay ? infoOverlay.querySelector(".info-modal__title") : null;
+    var infoBody = infoOverlay ? infoOverlay.querySelector(".info-modal__body") : null;
+
+    var openInfoModal = function (slug) {
+      var data = MODAL_CONTENT[slug];
+      if (!data || !infoOverlay) return;
+      setActive(-1);
+      infoTitle.textContent = data.title;
+      infoBody.textContent = data.body;
+      infoOverlay.classList.add("is-open");
+      infoOverlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    var closeInfoModal = function () {
+      if (!infoOverlay) return;
+      infoOverlay.classList.remove("is-open");
+      infoOverlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    document.querySelectorAll("[data-modal]").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        openInfoModal(link.getAttribute("data-modal"));
+      });
+    });
+
+    if (infoOverlay) {
+      infoOverlay.addEventListener("click", function (e) {
+        if (e.target === infoOverlay) closeInfoModal();
+      });
+      var infoClose = infoOverlay.querySelector(".info-modal__close");
+      if (infoClose) infoClose.addEventListener("click", closeInfoModal);
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        setActive(-1);
+        closeInfoModal();
+      }
+    });
+
+    /* ---- Integrations carousel: prev/next scroll by one card width ---- */
+    document.querySelectorAll(".integrations-carousel").forEach(function (carousel) {
+      var track = carousel.querySelector("[data-carousel-track]");
+      var prev = carousel.querySelector("[data-carousel-prev]");
+      var next = carousel.querySelector("[data-carousel-next]");
+      if (!track || !prev || !next) return;
+
+      var step = function () {
+        var card = track.querySelector(".integration-card");
+        return card ? card.getBoundingClientRect().width + 20 : track.clientWidth;
+      };
+      var updateButtons = function () {
+        var max = track.scrollWidth - track.clientWidth - 1;
+        prev.disabled = track.scrollLeft <= 0;
+        next.disabled = track.scrollLeft >= max;
+      };
+
+      prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
+      next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
+      track.addEventListener("scroll", updateButtons);
+      updateButtons();
+    });
+  })();
+</script>
