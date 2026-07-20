@@ -52,7 +52,12 @@
       "Bash(node qe_test.js)",
       "Bash(node menu_test.js)",
       "Bash(grep -n 'final-cta\\\\|</section>\\\\|</div>\\\\s*$' index.html)",
-      "Bash(node footer_test.js)"
+      "Bash(node footer_test.js)",
+      "Bash(python3 -m http.server 8934)",
+      "Bash(curl -s -o /dev/null -w \"index: %{http_code}\\\\n\" http://localhost:8934/index.html)",
+      "Bash(curl -s -o /dev/null -w \"contact: %{http_code}\\\\n\" http://localhost:8934/contact.html)",
+      "Bash(curl -s -o /dev/null -w \"css: %{http_code}\\\\n\" http://localhost:8934/styling/style.css)",
+      "Bash(git -C /Users/piricavanagh/Desktop/Shopify/Qtools.net status)"
     ]
   }
 }

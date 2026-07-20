@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact support — QTools</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styling/style.css">
+</head>
+<body>
+    <div class="corner-graphic corner-graphic--tr" aria-hidden="true">
+        <span class="cg-shape cg-purple cg-tr-1"></span>
+        <span class="cg-shape cg-cyan cg-tr-2"></span>
+        <span class="cg-shape cg-cyan cg-tr-3"></span>
+        <span class="cg-shape cg-purple cg-tr-4"></span>
+        <span class="cg-shape cg-ring cg-tr-ring"></span>
+        <span class="cg-shape cg-lines cg-tr-lines"></span>
+        <span class="cg-shape cg-dots cg-tr-dots"></span>
+    </div>
+    <div class="corner-graphic corner-graphic--tl" aria-hidden="true">
+        <span class="cg-shape cg-purple cg-tl-1"></span>
+        <span class="cg-shape cg-cyan cg-tl-2"></span>
+        <span class="cg-shape cg-purple cg-tl-3"></span>
+        <span class="cg-shape cg-ring cg-tl-ring"></span>
+    </div>
+    <img class="logo-mark logo-mark--fixed" src="images/QTools Logo.jpg" alt="QTools logo">
+    <nav class="header">
+        <div>
+            <span class="brand">
+                <a href="index.html" style="text-decoration:none;"><span class="wordmark"><span class="q">Q</span>Tools</span></a>
+            </span>
+            <span class="links">
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-features">Features <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-how-it-works">How it works <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-docs">Docs <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-support">Support <span class="caret">▾</span></button></span>
+                <span class="nav-item"><button type="button" class="mega-trigger" aria-expanded="false" aria-controls="menu-faq">FAQ <span class="caret">▾</span></button></span>
+            </span>
+            <span class="actions">
+                <a class="btn dark" href="https://admin.shopify.com" target="_blank" rel="noopener"><span class="btn-face">Open in Shopify App Store <span class="arr">→</span></span></a>
+            </span>
+
+            <!-- One continuous dropdown: all four panels sit side by side in .mega-menu-track,
+                 which slides left/right so the right panel scrolls into the fixed-width dock.
+                 Lives inside the header's inner div so it lines up with the 1500px menu bar. -->
+            <div class="mega-menu-dock">
+                <div class="mega-menu-track">
+                <div class="mega-menu-panel" id="menu-features">
+                    <div>
+                    <h4>Quoting Engine</h4>
+                    <ul>
+                        <li><a href="index.html#quotes" data-modal="cost-margin-quoting">Cost + margin quoting</a></li>
+                        <li><a href="index.html#quotes" data-modal="product-pairing">Must-have product pairing</a></li>
+                        <li><a href="index.html#quotes" data-modal="shipping-integration">Carrier-calculated shipping integration</a></li>
+                        <li><a href="index.html#quotes" data-modal="companies-integration">Shopify Companies integration</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h4>Sales Reports</h4>
+                    <ul>
+                        <li><a href="index.html#pipeline" data-modal="crm-pipeline">CRM pipeline</a></li>
+                        <li><a href="index.html#pipeline" data-modal="sales-forecasting">Sales forecasting</a></li>
+                        <li><a href="index.html#pipeline" data-modal="quarterly-kpis">Quarterly and yearly KPIs</a></li>
+                        <li><a href="index.html#pipeline" data-modal="sales-team-filtering">Sales team filtering &amp; export to Excel</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h4>Quote &amp; Invoice Designer</h4>
+                    <ul>
+                        <li><a href="index.html#quotes" data-modal="dragdrop-designer">Beginner-friendly drag &amp; drop designer</a></li>
+                        <li><a href="index.html#quotes" data-modal="b2b-variables">Uses Shopify B2B variables</a></li>
+                        <li><a href="index.html#quotes" data-modal="pay-online-links">Supports pay-online links</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h4>Leads, Customers &amp; Companies</h4>
+                    <ul>
+                        <li><a href="index.html#crm" data-modal="tracks-inbound-leads">Tracks inbound leads</a></li>
+                        <li><a href="index.html#crm" data-modal="sort-customers">Sort customers easily</a></li>
+                        <li><a href="index.html#crm" data-modal="b2b-companies-setup">Set up B2B Shopify companies easily</a></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="mega-menu-panel" id="menu-how-it-works">
+                    <!-- Placeholder hrefs — swap in real video URLs -->
+                    <a class="video-link" href="index.html#" data-video="getting-started" data-modal="video-getting-started">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">Getting started with QTools</span>
+                    <span class="video-time">3:12</span>
+                    </a>
+                    <a class="video-link" href="index.html#" data-video="first-quote" data-modal="video-first-quote">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">Building your first quote</span>
+                    <span class="video-time">4:45</span>
+                    </a>
+                    <a class="video-link" href="index.html#" data-video="pipeline-setup" data-modal="video-pipeline-setup">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">Setting up your pipeline</span>
+                    <span class="video-time">5:20</span>
+                    </a>
+                    <a class="video-link" href="index.html#" data-video="crm-walkthrough" data-modal="video-crm-walkthrough">
+                    <span class="video-thumb">▶</span>
+                    <span class="video-title">CRM &amp; leads walkthrough</span>
+                    <span class="video-time">6:03</span>
+                    </a>
+                </div>
+
+                <div class="mega-menu-panel cols-2" id="menu-docs">
+                    <a href="index.html#docs" data-modal="salesforce-pushing">Salesforce pushing</a>
+                    <a href="index.html#docs" data-modal="pipedrive-pushing">Pipedrive pushing</a>
+                    <a href="index.html#docs" data-modal="xero-pushing">Xero pushing</a>
+                    <a href="index.html#docs" data-modal="myob-pushing">MYOB pushing</a>
+                    <a href="index.html#docs" data-modal="pdf-delivery-emails">PDF Delivery links for Shopify emails</a>
+                    <a href="index.html#docs" data-modal="cci-api">Integrating CCI API</a>
+                    <a class="docs-view-all" href="docs.html">View full documentation →</a>
+                </div>
+
+                <div class="mega-menu-panel cols-3" id="menu-support">
+                    <button class="btn ghost copy-email" type="button" data-email="support@q-tools.net"><span class="cl">Email support</span></button>
+                    <a class="btn ghost" href="https://qtools.zohobookings.com.au/qtools/#/qtools" target="_blank" rel="noopener">Book a call</a>
+                    <a class="btn ghost" href="contact.html">Contact support</a>
+                </div>
+
+                <div class="mega-menu-panel cols-2" id="menu-faq">
+                    <a href="index.html#faq-1" data-modal="faq-install">How do I install QTools?</a>
+                    <a href="index.html#faq-2" data-modal="faq-existing-orders">Does QTools change my existing orders or products?</a>
+                    <a href="index.html#faq-3" data-modal="faq-quote-accepted">What happens when a customer accepts a quote?</a>
+                    <a href="index.html#faq-4" data-modal="faq-customise-pipeline">Can I customise the pipeline stages?</a>
+                    <a href="index.html#faq-5" data-modal="faq-salesforce">Does it work with Salesforce?</a>
+                    <a href="index.html#faq-6" data-modal="faq-data-stored">Where is my data stored?</a>
+                    <a href="index.html#faq-7" data-modal="faq-pricing">How much does QTools cost?</a>
+                    <a href="index.html#faq-8" data-modal="faq-multiple-reps">Can multiple sales reps use QTools at once?</a>
+                    <a href="index.html#faq-9" data-modal="faq-multi-currency">Does QTools support multi-currency quoting?</a>
+                    <a href="index.html#faq-10" data-modal="faq-pay-directly">Can customers pay directly from a quote?</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content-area">
+        <section class="contact-page">
+            <div class="contact-intro">
+                <p class="eyebrow">Contact support</p>
+                <h1>We're here to help</h1>
+                <p class="sub">Questions about setup, pricing, or something not behaving as expected? Send us a message and our support team will get back to you within one business day.</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="field">
+                        <label for="cf-name">Name</label>
+                        <input type="text" id="cf-name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="cf-store">Shop URL <span class="opt">(optional)</span></label>
+                        <input type="text" id="cf-store" name="store" placeholder="your-store.myshopify.com" autocomplete="off">
+                    </div>
+                    <div class="field">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button class="btn" type="submit">Send message</button>
+                    <p class="contact-form__status" id="contactFormStatus" role="status" aria-live="polite"></p>
+                </form>
+                <aside class="contact-side">
+                    <h4>Prefer another way?</h4>
+                    <button class="btn ghost copy-email" type="button" data-email="support@q-tools.net"><span class="cl">Email support</span></button>
+                    <a class="btn ghost" href="https://qtools.zohobookings.com.au/qtools/#/qtools" target="_blank" rel="noopener">Book a call</a>
+                </aside>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="wordmark wordmark--light"><span class="q">Q</span>Tools</span>
+                <p>The quoting engine with features businesses actually need.</p>
+            </div>
+            <nav class="site-footer__links" aria-label="Legal">
+                <a class="footer-btn" href="index.html#">Terms &amp; Conditions</a>
+                <a class="footer-btn" href="index.html#">Privacy Policy</a>
+                <a class="footer-btn" href="index.html#">Data Policy</a>
+                <a class="footer-btn" href="index.html#">ABN: 15 236 254 207</a>
+            </nav>
+        </div>
+    </footer>
+    <div class="info-modal-overlay" id="infoModalOverlay" aria-hidden="true">
+        <div class="info-modal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+            <button type="button" class="info-modal__close" aria-label="Close">×</button>
+            <div class="info-modal__eyebrow">QTools</div>
+            <h3 class="info-modal__title" id="infoModalTitle"></h3>
+            <p class="info-modal__body"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+  (function () {
+    /* ---- Copy email (mailto: is blocked in embedded viewers) ---- */
+    document.querySelectorAll(".copy-email").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var email = btn.getAttribute("data-email");
+        var fallback = function () {
+          var ta = document.createElement("textarea");
+          ta.value = email;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "absolute";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(ta);
+        };
+        var done = function () {
+          var lbl = btn.querySelector(".cl");
+          if (!lbl || btn.classList.contains("copied")) return;
+          var orig = lbl.textContent;
+          lbl.textContent = "Copied ✓";
+          btn.classList.add("copied");
+          setTimeout(function () {
+            lbl.textContent = orig;
+            btn.classList.remove("copied");
+          }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(done, function () { fallback(); done(); });
+        } else {
+          fallback();
+          done();
+        }
+      });
+    });
+
+    /* ---- Nav dropdowns: one dock, one track, five panels side by side ----
+       Switching menus is a single CSS transform on .mega-menu-track (GPU-accelerated,
+       no per-menu show/hide), so rapid hovering across triggers can't cause the
+       overlapping-transition flicker the old View Transition version had. */
+    var dock = document.querySelector(".mega-menu-dock");
+    var track = document.querySelector(".mega-menu-track");
+    var triggers = Array.prototype.slice.call(document.querySelectorAll(".mega-trigger"));
+    var panelCount = track ? track.children.length : 0;
+    var closeTimer = null;
+    var activeIndex = -1;
+
+    var setActive = function (index) {
+      if (index === activeIndex) return;
+      activeIndex = index;
+
+      triggers.forEach(function (btn, i) {
+        var open = i === index;
+        btn.closest(".nav-item").classList.toggle("is-active", open);
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      if (index === -1) {
+        dock.classList.remove("is-open");
+      } else {
+        track.style.transform = "translateX(-" + (index * (100 / panelCount)) + "%)";
+        dock.classList.add("is-open");
+      }
+    };
+
+    var open = function (index) {
+      clearTimeout(closeTimer);
+      setActive(index);
+    };
+
+    var scheduleClose = function () {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { setActive(-1); }, 150);
+    };
+
+    triggers.forEach(function (btn, i) {
+      btn.addEventListener("mouseenter", function () { open(i); });
+      btn.addEventListener("focusin", function () { open(i); });
+      btn.addEventListener("mouseleave", scheduleClose);
+      btn.addEventListener("focusout", function (e) {
+        if (!dock.contains(e.relatedTarget) && e.relatedTarget !== btn) scheduleClose();
+      });
+    });
+
+    if (dock) {
+      dock.addEventListener("mouseenter", function () { clearTimeout(closeTimer); });
+      dock.addEventListener("mouseleave", scheduleClose);
+      dock.addEventListener("focusout", function (e) {
+        if (!dock.contains(e.relatedTarget) && triggers.indexOf(e.relatedTarget) === -1) scheduleClose();
+      });
+    }
+
+    /* ---- Info modals: one popup per mega-menu content link, with a
+       0.1-opacity dark overlay + blur behind it. Content lives in one map
+       keyed by each link's data-modal attribute, rather than 35 separate
+       DOM modals. ---- */
+    var MODAL_CONTENT = {
+      "cost-margin-quoting": { title: "Cost + margin quoting", body: "Every line in a QTools quote starts from your real supplier cost, not the Shopify retail price. Set a target margin or markup once and QTools calculates the sell price automatically, recalculating instantly if the cost, quantity or margin changes. Because the math is driven by actual landed cost rather than list price, your sales team can quote confidently without needing to check with finance, and you always know exactly how profitable a deal is before you send it. Margins can be set per product, per customer, or per quote, so volume deals and one-off pricing exceptions are just as easy to build as your standard rate card." },
+      "product-pairing": { title: "Must-have product pairing", body: "Some products just belong together — a display needs a wall mount, a laptop needs a dock. Product pairing lets you flag “must-have” accessories against any item in your catalog, so the moment a sales rep adds that product to a quote, QTools automatically surfaces (or adds) the paired item as a suggestion. It's a simple way to protect attach-rate revenue that would otherwise get missed when someone's quoting quickly, and it stops customers receiving an incomplete order — like a monitor with no mount, or a switch with no matching cables — because a rep forgot to check what else was needed." },
+      "shipping-integration": { title: "Carrier-calculated shipping integration", body: "Instead of guessing a shipping figure or leaving it blank, QTools can pull live, carrier-calculated shipping rates directly from your store's connected shipping apps and carrier accounts straight into the quote builder. Weight, dimensions and delivery address are read from the line items and customer record automatically, so the number a customer sees on a quote is the same number Shopify would charge at checkout — no more absorbing shipping losses on quotes that were estimated too low. You can still override it manually with a flat or custom amount for freight-collect deals, trade pricing, or negotiated delivery terms." },
+      "companies-integration": { title: "Shopify Companies integration", body: "QTools is built directly on top of Shopify's native B2B Companies object, rather than maintaining a separate customer database that needs to be kept in sync. When a deal is linked to a Company, QTools automatically pulls in company-level payment terms, assigned price lists, and location details, and any quote you build respects that company's existing Shopify B2B settings. It means your CRM pipeline, quoting engine and Shopify admin are always looking at the exact same company record — no duplicate data entry, no mismatched terms between systems, and every new contact at a company inherits the pricing and account structure you've already set up." },
+      "crm-pipeline": { title: "CRM pipeline", body: "Every deal in QTools moves through a visual, kanban-style pipeline — from Prospecting through Qualified, Quote Issued, Negotiation and Closed Won or Lost — the same familiar board style used by dedicated CRMs, but built to run natively inside the Shopify admin. Each card shows the deal value, age, customer and tags at a glance, and dragging a card between columns updates its stage instantly. Because the pipeline lives on top of real draft orders, there's no second system to update after a call — moving the stage in QTools is the single source of truth for where a deal actually stands." },
+      "sales-forecasting": { title: "Sales forecasting", body: "QTools weights every open deal in your pipeline by its stage's historical close probability, so you get a realistic forecast of revenue landing this quarter — not just a raw sum of everything currently in play. As deals move stage, the weighting recalculates automatically, giving sales leaders an always-current view of likely revenue without needing a separate spreadsheet. You can filter the forecast by owner, team or date range to check whether a rep or region is tracking to target, and drill into any weighted figure to see exactly which deals are driving it." },
+      "quarterly-kpis": { title: "Quarterly and yearly KPIs", body: "Set a revenue target for the quarter or year and QTools tracks progress against it in real time, using every Shopify order — not just the ones that happened to be built through the quote builder. A visual progress bar shows how far along you are against pace, so you can spot early whether a team is tracking ahead or behind target long before the quarter closes. Targets can be set per sales rep or company-wide, fiscal years auto-adjust to your store's country, and the same KPI data feeds into the Reporting page for quarter-over-quarter comparisons." },
+      "sales-team-filtering": { title: "Sales team filtering & export to Excel", body: "Filter every report and pipeline view by individual sales rep, team, date range or financial quarter, so a manager can see exactly how one person or one region is performing without wading through the whole company's data. Once a report is filtered the way you want it, export it straight to Excel with one click — useful for board packs, commission calculations, or anywhere a spreadsheet is still the expected format. Filters are saved per view, so building the same weekly or monthly report doesn't mean re-selecting every option each time you open the page." },
+      "dragdrop-designer": { title: "Beginner-friendly drag & drop designer", body: "Design your own quote and invoice PDF templates by dragging ready-made blocks — headers, address blocks, line items, totals, terms and footers — into place, with no code or design skills required. Reorder sections, swap logos and colours, and preview the finished document exactly as your customer will see it, all from a visual editor built for non-designers. Because it's block-based rather than a blank canvas, every template stays properly aligned and print-ready by default, so a new hire can build a professional-looking quote template in minutes instead of relying on IT or an outside designer." },
+      "b2b-variables": { title: "Uses Shopify B2B variables", body: "Every quote and invoice template can pull live Shopify B2B data — company name, location, payment terms, catalog pricing, tax settings — directly into the document as dynamic variables, rather than static text someone has to update by hand. Change the customer's Company record in Shopify and the next quote generated for them automatically reflects it. This keeps every document consistent with what's actually configured in Shopify's B2B settings, and means your templates keep working correctly as you onboard new companies or price lists, without needing to rebuild them each time your account structure changes." },
+      "pay-online-links": { title: "Supports pay-online links", body: "Every quote and invoice can include a secure pay-online link, letting a customer accept and pay in a single step instead of a separate back-and-forth to arrange payment. The link is generated from the underlying Shopify draft order, so payment is processed through Shopify's own checkout and reconciled the moment it's confirmed — no manual invoice-matching required. This is especially useful for smaller B2B orders or one-off customers who don't have standing payment terms, letting them complete a purchase as easily as a normal Shopify checkout while still receiving a properly branded, itemised quote document." },
+      "tracks-inbound-leads": { title: "Tracks inbound leads", body: "Capture inbound interest — a contact form submission, a trade show scan, a cold-outreach reply — as a Lead before it's a full customer record, so early-stage interest doesn't get lost or force you to create incomplete customer profiles. Each lead records source, status and age, and can be qualified and converted straight into a customer and a first quote once it's ready to move forward, with no re-typing of details. This keeps your Customers list clean — containing only real, qualified relationships — while still giving your sales team visibility over everything currently in the top of the funnel." },
+      "sort-customers": { title: "Sort customers easily", body: "The Customers list surfaces every buyer synced from Shopify alongside their full quote and order history, and can be sorted or filtered by status, location, assigned sales rep, or recent activity in a couple of clicks. Because every field — name, email, phone, company — is mandatory when a customer is created, the underlying data stays clean and genuinely searchable instead of degrading into duplicate or half-filled records over time. Finding “every customer in Queensland with an open quote” or “everyone assigned to a specific rep” is a filter away, rather than a manual scroll through a spreadsheet." },
+      "b2b-companies-setup": { title: "Set up B2B Shopify companies easily", body: "Turn any customer into a full Shopify B2B Company — with its own locations, contacts, payment terms and catalog pricing — directly from within QTools, without switching over to the standard Shopify admin flow. Required fields keep the company record complete from the moment it's created, and every quote or deal linked to that company automatically respects the pricing and terms you've configured. It removes the friction that normally stops smaller teams from using Shopify's native B2B features properly, since the whole setup — customer, company, pricing — can be done from one connected workflow." },
+      "video-getting-started": { title: "Getting started with QTools", body: "A walkthrough of installing QTools from the Shopify App Store and getting your store ready to quote — connecting your product catalog, setting default margins, and inviting your sales team with the right permissions. Covers the handful of settings worth configuring on day one (fiscal year, currency, default shipping behaviour) so your first real quote goes out correctly rather than needing to be fixed after the fact. By the end, you'll have a working pipeline stage set, at least one company or customer created, and a clear idea of where each part of the app lives inside the Shopify admin." },
+      "video-first-quote": { title: "Building your first quote", body: "A step-by-step run-through of the quote builder — adding products from your catalog, applying a margin or markup, pairing accessories, adjusting shipping, and generating a branded PDF ready to send. Shows how cost and price recalculate live as you edit quantities or swap products, and how to attach the quote to a customer or company so it shows up correctly in their history and the pipeline. Also covers converting an issued quote into a real order once it's accepted, and where to check that the order number stays consistent for the customer from draft through to completion." },
+      "video-pipeline-setup": { title: "Setting up your pipeline", body: "Covers customising your deal pipeline to match how your business actually sells — renaming stages, setting the weighted close probability for each one, and deciding which stages count toward forecasted revenue. Explains how deals move automatically as quotes are issued or orders convert, versus when a rep needs to drag a card manually, and how to set quarterly KPI targets against the pipeline once it's structured. Useful for teams migrating off a spreadsheet or another CRM, since it shows how to map an existing sales process onto QTools's stages without losing any historical context." },
+      "video-crm-walkthrough": { title: "CRM & leads walkthrough", body: "A tour of the Leads, Customers and Companies sections — how a lead gets captured, qualified and converted, how customer records stay clean thanks to mandatory required fields, and how Companies tie multiple contacts under one shared account with its own pricing and terms. Shows the filtering and sorting tools available on each list, and how a sales rep can move from “just got a new contact” to “quote sent” without leaving the Shopify admin or re-entering the same details twice. A good starting point for anyone coming from a standalone CRM and wanting to see how QTools compares." },
+      "salesforce-pushing": { title: "Salesforce pushing", body: "QTools keeps a two-way sync running between its CRM and Salesforce, so leads, contacts and accounts created or updated in either system stay in agreement without manual exporting. When a deal reaches Closed Won inside QTools, the relevant account and opportunity data pushes through to Salesforce automatically, keeping revenue reporting consistent for teams that still rely on Salesforce as their system of record alongside Shopify. Field mapping between the two systems — customer, company, deal value, owner — is configurable, so you control exactly what gets pushed and how it lines up with your existing Salesforce object structure, rather than accepting a rigid default mapping." },
+      "pipedrive-pushing": { title: "Pipedrive pushing", body: "Won deals in QTools push straight into your Pipedrive pipeline, carrying over the deal owner, value and linked contact so nothing needs to be re-entered by hand once a quote converts to a sale. This is aimed at teams who run day-to-day deal tracking in Pipedrive but want their Shopify order and quoting data — cost, margin, shipping — feeding in automatically rather than living only inside Shopify. The push happens the moment a deal's stage changes to won, so Pipedrive stays current without anyone needing to remember to update it separately after closing a sale in QTools." },
+      "xero-pushing": { title: "Xero pushing", body: "Every quote, order and payment processed through QTools can push through to Xero automatically, keeping your accounting records in sync with what's actually being sold without double-entry between Shopify and your books. Invoices generated from won quotes carry the same line items, tax treatment and customer details into Xero, so your bookkeeper or accountant is working from the same numbers your sales team quoted — reducing reconciliation errors at end of month or end of quarter. This is particularly useful for Australian and New Zealand businesses where Xero is the standard accounting platform alongside Shopify." },
+      "myob-pushing": { title: "MYOB pushing", body: "For businesses running MYOB rather than Xero, QTools offers the same automatic push of quotes, orders and payments into your accounting file, so financial records stay aligned with sales activity without manual re-entry. As a deal closes and converts to a real order, the invoice detail — customer, line items, tax, totals — flows through to MYOB in the background, keeping your books current without your finance team needing to touch QTools directly. It's built for the same reason as the Xero integration: so the numbers your sales team quotes are exactly the numbers that land in your accounting system." },
+      "pdf-delivery-emails": { title: "PDF Delivery links for Shopify emails", body: "Quote and invoice PDFs generated in QTools can be delivered as links embedded directly inside your store's existing Shopify notification emails, rather than as a separate attachment sent from a different system. That means a customer receiving their draft order confirmation or invoice email from Shopify sees a branded, professional PDF one click away, with no extra app or portal to log into. Because delivery rides on Shopify's own email infrastructure, deliverability and formatting stay consistent with the rest of your store's transactional emails, and links stay valid and up to date even if the underlying quote changes after sending." },
+      "cci-api": { title: "Integrating CCI API", body: "QTools can connect to the CCI API to pull in supplier catalog data, real-time cost pricing and stock availability directly into the quote builder, so line items reflect accurate, current supplier information instead of a manually maintained price list. As supplier costs change, margin and sell price recalculate automatically wherever that product appears in an open quote, keeping profitability figures accurate right up until a quote is sent. This is particularly useful for reseller and distribution businesses working with a small number of core suppliers, where keeping cost data current by hand would otherwise be a constant manual task." },
+      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." },
+      "faq-install": { title: "How do I install QTools?", body: "Install QTools directly from the Shopify App Store like any other app — search for QTools, click install, and approve the requested permissions. QTools reads your existing product catalog, customers and companies to set itself up, but doesn't modify or duplicate any of that data; it simply builds its quoting and CRM layer on top of what's already in your store. Once installed, a short setup flow helps you configure your default margin, fiscal year and pipeline stages, and you can invite additional sales team members with their own permissions straight away. No developer or theme changes are required." },
+      "faq-existing-orders": { title: "Does QTools change my existing orders or products?", body: "No. QTools reads your existing products, customers, companies and orders to power its quoting and CRM features, but it doesn't modify, duplicate or move any of that underlying data. Quotes are built as standard Shopify draft orders, so when one is accepted it converts using Shopify's own normal order flow — nothing about how your existing orders or product catalog behaves changes as a result of installing the app. If you were to uninstall QTools, your products, customers and past orders remain exactly as they were; only QTools's own quoting and pipeline data would stop being accessible." },
+      "faq-quote-accepted": { title: "What happens when a customer accepts a quote?", body: "When a customer accepts a quote — either by approving a pay-online link or confirming via your sales rep — the underlying Shopify draft order converts into a real order, keeping the exact same order number throughout so there's no confusing renumbering for the customer to puzzle over. The linked deal automatically advances to Closed Won in the pipeline, the order flows into your normal Shopify fulfilment and payment process, and — if configured — the sale pushes through to any connected CRM or accounting integration like Salesforce, Pipedrive, Xero or MYOB. From the customer's side, it feels exactly like any other Shopify checkout confirmation." },
+      "faq-customise-pipeline": { title: "Can I customise the pipeline stages?", body: "Yes — pipeline stages aren't fixed. You can rename existing stages, add new ones, remove ones you don't use, and set the weighted close probability each stage contributes to your sales forecast, so the pipeline matches how your business actually sells rather than a generic default. Changes apply immediately to the kanban board, and existing deals keep their history even if a stage gets renamed or reordered later. This is particularly useful for teams migrating from another CRM or a spreadsheet, since you can recreate your existing process rather than forcing your sales workflow to fit QTools's defaults." },
+      "faq-salesforce": { title: "Does it work with Salesforce?", body: "Yes. QTools maintains a two-way sync with Salesforce for leads, contacts and accounts, and pushes won-deal data through automatically so your Salesforce records stay aligned with what's actually happening in your Shopify-based pipeline. Field mapping is configurable, so you control which QTools fields correspond to which Salesforce objects rather than being locked into a fixed default mapping. This is aimed at businesses that already rely on Salesforce for broader account management or reporting, but want their Shopify quoting and order data feeding into it automatically instead of needing someone to manually re-key deal information between the two systems." },
+      "faq-data-stored": { title: "Where is my data stored?", body: "QTools reads and writes the majority of its data directly into Shopify itself — quotes as draft orders, deals linked to Shopify Companies and Customers — so your core commercial data stays inside Shopify's own infrastructure rather than being duplicated into a separate external database. Configuration specific to QTools, such as pipeline stage setup, margin defaults and integration credentials for services like Salesforce or Xero, is stored securely within QTools's own hosted environment, encrypted at rest and in transit. If you uninstall the app, your Shopify data — orders, customers, products — is entirely unaffected, since it was never duplicated outside of Shopify in the first place." },
+      "faq-pricing": { title: "How much does QTools cost?", body: "QTools is priced per store on a monthly subscription, with plans scaled to the size of your sales team and which integrations — Salesforce, Pipedrive, Xero, MYOB — you need connected. Every plan includes the full quote builder, CRM pipeline, KPI tracking and reporting — pricing tiers are about team size and integration depth, not withholding core features behind a paywall. Full current pricing is listed on the Shopify App Store listing, and a free trial is available so you can build real quotes and run a pipeline for a few weeks before committing, rather than deciding based on a features list alone." },
+      "faq-multiple-reps": { title: "Can multiple sales reps use QTools at once?", body: "Yes — QTools is built for teams, not just a single user. Each sales rep gets their own login with deals, quotes and customers attributed to them individually, while managers get filtered views to see performance by rep, team or region without needing separate spreadsheets. Permissions control who can edit pricing defaults or margin rules versus who can simply build and send quotes, so junior reps can be onboarded without giving them access to sensitive account-wide settings. Pipeline and forecasting views aggregate across every rep automatically, so leadership always has a company-wide picture alongside each individual's activity." },
+      "faq-multi-currency": { title: "Does QTools support multi-currency quoting?", body: "Yes — QTools quotes in whichever currencies your Shopify store is already configured to sell in, using Shopify's own currency and market settings rather than maintaining a separate conversion layer. A customer in a different market sees pricing, shipping and totals in their local currency on the quote and invoice PDF, calculated using the same rates and rounding your storefront already applies at checkout. This keeps quoted figures consistent with what a customer would actually be charged, and means expanding into a new market or currency in Shopify doesn't require any extra configuration inside QTools itself." },
+      "faq-pay-directly": { title: "Can customers pay directly from a quote?", body: "Yes — every quote can include a secure pay-online link that lets a customer accept and pay in one step, processed through Shopify's own checkout rather than a separate payment system. This is useful for smaller B2B orders or one-off customers without standing account terms, letting them complete a purchase as easily as a normal online order while still receiving a properly branded, itemised quote or invoice. Once paid, the linked draft order converts automatically and the deal's pipeline stage updates to reflect it, so there's no manual step required from your sales team to mark the quote as won and processed." }
+    };
+
+    var infoOverlay = document.getElementById("infoModalOverlay");
+    var infoTitle = infoOverlay ? infoOverlay.querySelector(".info-modal__title") : null;
+    var infoBody = infoOverlay ? infoOverlay.querySelector(".info-modal__body") : null;
+
+    var openInfoModal = function (slug) {
+      var data = MODAL_CONTENT[slug];
+      if (!data || !infoOverlay) return;
+      setActive(-1);
+      infoTitle.textContent = data.title;
+      infoBody.textContent = data.body;
+      infoOverlay.classList.add("is-open");
+      infoOverlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    var closeInfoModal = function () {
+      if (!infoOverlay) return;
+      infoOverlay.classList.remove("is-open");
+      infoOverlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    document.querySelectorAll("[data-modal]").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        openInfoModal(link.getAttribute("data-modal"));
+      });
+    });
+
+    if (infoOverlay) {
+      infoOverlay.addEventListener("click", function (e) {
+        if (e.target === infoOverlay) closeInfoModal();
+      });
+      var infoClose = infoOverlay.querySelector(".info-modal__close");
+      if (infoClose) infoClose.addEventListener("click", closeInfoModal);
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        setActive(-1);
+        closeInfoModal();
+      }
+    });
+
+    /* ---- Contact form: static site, no backend — acknowledge and reset ---- */
+    var contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var status = document.getElementById("contactFormStatus");
+        status.textContent = "Thanks — we've got your message and will reply within one business day.";
+        status.classList.add("is-success");
+        contactForm.reset();
+      });
+    }
+  })();
+</script>
