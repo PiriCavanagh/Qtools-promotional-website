@@ -197,7 +197,7 @@
     font: inherit;
     color: inherit;
   }
-  .mega-trigger .caret { font-size: 10px; display: inline-block; transition: transform 0.2s ease; opacity: 0.8; }
+  .mega-trigger .caret { font-size: 16px; display: inline-block; transition: transform 0.2s ease; opacity: 0.8; }
   .nav-item.is-active .mega-trigger .caret { transform: rotate(180deg); }
 
   /* One dock for all four menus, positioned against .header's inner div — that div is
@@ -232,7 +232,7 @@
   .mega-menu-track {
     display: flex;
     width: 500%;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.5s ease-in-out;
   }
   .mega-menu-panel {
     flex-shrink: 0;
@@ -1764,3 +1764,12 @@
   @media (max-width: 720px) {
     .contact-grid { grid-template-columns: 1fr; }
   }
+
+  /* ---------- Privacy / legal pages ---------- */
+  .policy-page { padding: 64px 0 100px; max-width: 760px; margin: 0 auto; }
+  .policy-page h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.03em; margin: 6px 0 10px; }
+  .policy-page .updated { color: var(--muted); font-size: 15px; margin-bottom: 36px; }
+  .policy-page h2 { font-size: 21px; letter-spacing: -0.02em; margin: 36px 0 12px; }
+  .policy-page p { margin-bottom: 14px; max-width: 68ch; }
+  .policy-page ul { margin: 0 0 14px; padding-left: 22px; display: grid; gap: 8px; max-width: 68ch; }
+  .policy-page li { padding-left: 2px; }
