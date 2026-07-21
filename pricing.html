@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact support — QTools</title>
+    <title>Pricing — QTools</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styling/style.css">
 </head>
@@ -139,39 +139,33 @@
         </div>
     </nav>
     <div class="content-area">
-        <section class="contact-page">
-            <div class="contact-intro">
-                <p class="eyebrow">Contact support</p>
-                <h1>We're here to help</h1>
-                <p class="sub">Questions about setup, pricing, or something not behaving as expected? Send us a message and our support team will get back to you within one business day.</p>
+        <section class="pricing-page">
+            <div class="pricing-intro">
+                <p class="eyebrow">Pricing</p>
+                <h1>One plan. Everything included.</h1>
+                <p class="sub">No tiers to compare and no features locked behind a higher plan — every QTools store gets the full quoting engine, CRM pipeline and all integrations from day one.</p>
             </div>
-            <div class="contact-grid">
-                <form class="contact-form" id="contactForm" novalidate>
-                    <div class="field">
-                        <label for="cf-name">Name</label>
-                        <input type="text" id="cf-name" name="name" autocomplete="name" required>
-                    </div>
-                    <div class="field">
-                        <label for="cf-email">Email</label>
-                        <input type="email" id="cf-email" name="email" autocomplete="email" required>
-                    </div>
-                    <div class="field">
-                        <label for="cf-store">Shop URL <span class="opt">(optional)</span></label>
-                        <input type="text" id="cf-store" name="store" placeholder="your-store.myshopify.com" autocomplete="off">
-                    </div>
-                    <div class="field">
-                        <label for="cf-message">Message</label>
-                        <textarea id="cf-message" name="message" rows="6" required></textarea>
-                    </div>
-                    <button class="btn" type="submit">Send message</button>
-                    <p class="contact-form__status" id="contactFormStatus" role="status" aria-live="polite"></p>
-                </form>
-                <aside class="contact-side">
-                    <h4>Prefer another way?</h4>
-                    <button class="btn ghost copy-email" type="button" data-email="support@q-tools.net"><span class="cl">Email support</span></button>
-                    <a class="btn ghost" href="https://qtools.zohobookings.com.au/qtools/#/qtools" target="_blank" rel="noopener">Book a call</a>
-                </aside>
+
+            <div class="price-card">
+                <div class="price-card__head">
+                    <span class="price-card__amount"><span class="price-card__currency">$55</span> USD</span>
+                    <span class="price-card__period">per store, per month</span>
+                </div>
+                <ul class="price-card__features">
+                    <li>Cost + margin quoting on every line item</li>
+                    <li>Carrier-calculated shipping, pulled live from Shopify</li>
+                    <li>Full Shopify B2B Companies integration</li>
+                    <li>Kanban CRM pipeline with weighted sales forecasting &amp; KPIs</li>
+                    <li>Drag-and-drop quote &amp; invoice designer with pay-online links</li>
+                    <li>Salesforce, Pipedrive, Xero &amp; MYOB sync</li>
+                    <li>Multi-currency quoting</li>
+                    <li>Unlimited sales reps — no per-seat fees</li>
+                </ul>
+                <a class="btn dark price-card__cta" href="https://admin.shopify.com" target="_blank" rel="noopener"><span class="btn-face">Open in Shopify App Store <span class="arr">→</span></span></a>
+                <p class="price-card__note">Free trial included. Cancel any time from your Shopify admin.</p>
             </div>
+
+            <p class="pricing-footnote">Questions about pricing? <a href="/contact">Contact support</a> and we'll help you work out if QTools is the right fit.</p>
         </section>
     </div>
     <footer class="site-footer">
@@ -323,7 +317,7 @@
       "myob-pushing": { title: "MYOB pushing", body: "For businesses running MYOB rather than Xero, QTools offers the same automatic push of quotes, orders and payments into your accounting file, so financial records stay aligned with sales activity without manual re-entry. As a deal closes and converts to a real order, the invoice detail — customer, line items, tax, totals — flows through to MYOB in the background, keeping your books current without your finance team needing to touch QTools directly. It's built for the same reason as the Xero integration: so the numbers your sales team quotes are exactly the numbers that land in your accounting system." },
       "pdf-delivery-emails": { title: "PDF Delivery links for Shopify emails", body: "Quote and invoice PDFs generated in QTools can be delivered as links embedded directly inside your store's existing Shopify notification emails, rather than as a separate attachment sent from a different system. That means a customer receiving their draft order confirmation or invoice email from Shopify sees a branded, professional PDF one click away, with no extra app or portal to log into. Because delivery rides on Shopify's own email infrastructure, deliverability and formatting stay consistent with the rest of your store's transactional emails, and links stay valid and up to date even if the underlying quote changes after sending." },
       "cci-api": { title: "Integrating CCI API", body: "QTools can connect to the CCI API to pull in supplier catalog data, real-time cost pricing and stock availability directly into the quote builder, so line items reflect accurate, current supplier information instead of a manually maintained price list. As supplier costs change, margin and sell price recalculate automatically wherever that product appears in an open quote, keeping profitability figures accurate right up until a quote is sent. This is particularly useful for reseller and distribution businesses working with a small number of core suppliers, where keeping cost data current by hand would otherwise be a constant manual task." },
-      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." },
+      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." }
     };
 
     var infoOverlay = document.getElementById("infoModalOverlay");
@@ -369,17 +363,5 @@
         closeInfoModal();
       }
     });
-
-    /* ---- Contact form: static site, no backend — acknowledge and reset ---- */
-    var contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-      contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var status = document.getElementById("contactFormStatus");
-        status.textContent = "Thanks — we've got your message and will reply within one business day.";
-        status.classList.add("is-success");
-        contactForm.reset();
-      });
-    }
   })();
 </script>

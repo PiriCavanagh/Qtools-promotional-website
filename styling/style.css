@@ -1785,3 +1785,42 @@
   .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
   .faq-item h2 { font-size: 19px; letter-spacing: -0.01em; margin-bottom: 10px; }
   .faq-item p { max-width: 68ch; }
+
+  /* ---------- Pricing page ---------- */
+  .pricing-page { padding: 64px 0 100px; }
+  .pricing-intro { max-width: 42em; margin: 0 auto 40px; text-align: center; }
+  .pricing-intro h1 { font-size: clamp(32px, 4.4vw, 48px); letter-spacing: -0.035em; margin: 6px 0 14px; }
+  .pricing-intro .sub { color: var(--body); font-size: 18px; }
+  .price-card {
+    max-width: 440px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+    display: grid;
+    gap: 24px;
+  }
+  .price-card__head { text-align: center; display: grid; gap: 4px; }
+  .price-card__amount { font-size: 44px; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); }
+  .price-card__currency { font-size: 44px; }
+  .price-card__period { color: var(--muted); font-size: 15px; font-weight: 600; }
+  .price-card__features { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+  .price-card__features li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 15.5px;
+    color: var(--body);
+  }
+  .price-card__features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-ink);
+    font-weight: 700;
+  }
+  .price-card__cta { justify-content: center; width: 100%; }
+  .price-card__note { text-align: center; color: var(--muted); font-size: 13.5px; margin: 0; }
+  .pricing-footnote { text-align: center; color: var(--body); margin-top: 32px; }
