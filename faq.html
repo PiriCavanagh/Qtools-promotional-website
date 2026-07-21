@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy — QTools</title>
+    <title>FAQ — QTools</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styling/style.css">
 </head>
@@ -138,44 +138,54 @@
         </div>
     </nav>
     <div class="content-area">
-        <section class="policy-page">
-            <p class="eyebrow">Privacy Policy</p>
-            <h1>Your data, and what it's for</h1>
-            <p class="updated">Last updated 20 July 2026</p>
-
-            <p>This policy covers the information collected through this website — the contact form, and any email you send to our support address. It does not cover data processed inside the QTools app itself, which is governed by Shopify's platform terms and our app permissions.</p>
-
-            <p>The short version: anything you share with us here is used to reply to you, and beyond that, only to help us promote QTools and the value it offers to the wider world — never sold, rented, or handed to third parties for their own purposes.</p>
-
-            <h2>What we collect</h2>
-            <ul>
-                <li>Contact form submissions — your name, email address, shop URL (if you give it), and your message.</li>
-                <li>Anything you send directly to <span class="email-plain">support@q-tools.net</span>.</li>
-                <li>Nothing else. This site doesn't run analytics, tracking cookies or advertising pixels, so we don't collect anything about you just for visiting.</li>
-            </ul>
-
-            <h2>How we use it</h2>
-            <ul>
-                <li>To reply to your question, support request or booking.</li>
-                <li>Outside of replying to you directly, the only other use is promotional: understanding who reaches out to us and why helps us describe QTools and the value it offers more accurately in our marketing, website copy and case studies.</li>
-                <li>If we ever wanted to use specifics from your message publicly — a quote, a story, a named example — we'd ask first and confirm exactly what you're comfortable with us sharing.</li>
-            </ul>
-
-            <h2>What we don't do</h2>
-            <ul>
-                <li>We don't sell or rent your information to anyone.</li>
-                <li>We don't share it with third parties for their own marketing.</li>
-                <li>We don't run ad trackers or build advertising profiles from it.</li>
-            </ul>
-
-            <h2>How long we keep it</h2>
-            <p>We keep contact form and support email records for as long as they're reasonably useful to us for the purposes above. You can ask us to delete your information at any time — see below.</p>
-
-            <h2>Your choices</h2>
-            <p>Email <span class="email-plain">support@q-tools.net</span> if you'd like to see, correct, or delete the information we hold about you. We'll action requests promptly.</p>
-
-            <h2>Changes to this policy</h2>
-            <p>If this policy changes, we'll update it here and refresh the date at the top of the page.</p>
+        <section class="faq-page">
+            <div class="faq-intro">
+                <p class="eyebrow">FAQ</p>
+                <h1>Frequently asked questions</h1>
+                <p>Everything we get asked most often about installing, running and paying for QTools. Can't find what you need? <a href="/contact">Contact support</a> and we'll help directly.</p>
+            </div>
+            <div class="faq-list">
+                <article class="faq-item" id="faq-1">
+                    <h2>How do I install QTools?</h2>
+                    <p>Install QTools directly from the Shopify App Store like any other app — search for QTools, click install, and approve the requested permissions. QTools reads your existing product catalog, customers and companies to set itself up, but doesn't modify or duplicate any of that data; it simply builds its quoting and CRM layer on top of what's already in your store. Once installed, a short setup flow helps you configure your default margin, fiscal year and pipeline stages, and you can invite additional sales team members with their own permissions straight away. No developer or theme changes are required.</p>
+                </article>
+                <article class="faq-item" id="faq-2">
+                    <h2>Does QTools change my existing orders or products?</h2>
+                    <p>No. QTools reads your existing products, customers, companies and orders to power its quoting and CRM features, but it doesn't modify, duplicate or move any of that underlying data. Quotes are built as standard Shopify draft orders, so when one is accepted it converts using Shopify's own normal order flow — nothing about how your existing orders or product catalog behaves changes as a result of installing the app. If you were to uninstall QTools, your products, customers and past orders remain exactly as they were; only QTools's own quoting and pipeline data would stop being accessible.</p>
+                </article>
+                <article class="faq-item" id="faq-3">
+                    <h2>What happens when a customer accepts a quote?</h2>
+                    <p>When a customer accepts a quote — either by approving a pay-online link or confirming via your sales rep — the underlying Shopify draft order converts into a real order, keeping the exact same order number throughout so there's no confusing renumbering for the customer to puzzle over. The linked deal automatically advances to Closed Won in the pipeline, the order flows into your normal Shopify fulfilment and payment process, and — if configured — the sale pushes through to any connected CRM or accounting integration like Salesforce, Pipedrive, Xero or MYOB. From the customer's side, it feels exactly like any other Shopify checkout confirmation.</p>
+                </article>
+                <article class="faq-item" id="faq-4">
+                    <h2>Can I customise the pipeline stages?</h2>
+                    <p>Yes — pipeline stages aren't fixed. You can rename existing stages, add new ones, remove ones you don't use, and set the weighted close probability each stage contributes to your sales forecast, so the pipeline matches how your business actually sells rather than a generic default. Changes apply immediately to the kanban board, and existing deals keep their history even if a stage gets renamed or reordered later. This is particularly useful for teams migrating from another CRM or a spreadsheet, since you can recreate your existing process rather than forcing your sales workflow to fit QTools's defaults.</p>
+                </article>
+                <article class="faq-item" id="faq-5">
+                    <h2>Does it work with Salesforce?</h2>
+                    <p>Yes. QTools maintains a two-way sync with Salesforce for leads, contacts and accounts, and pushes won-deal data through automatically so your Salesforce records stay aligned with what's actually happening in your Shopify-based pipeline. Field mapping is configurable, so you control which QTools fields correspond to which Salesforce objects rather than being locked into a fixed default mapping. This is aimed at businesses that already rely on Salesforce for broader account management or reporting, but want their Shopify quoting and order data feeding into it automatically instead of needing someone to manually re-key deal information between the two systems.</p>
+                </article>
+                <article class="faq-item" id="faq-6">
+                    <h2>Where is my data stored?</h2>
+                    <p>QTools reads and writes the majority of its data directly into Shopify itself — quotes as draft orders, deals linked to Shopify Companies and Customers — so your core commercial data stays inside Shopify's own infrastructure rather than being duplicated into a separate external database. Configuration specific to QTools, such as pipeline stage setup, margin defaults and integration credentials for services like Salesforce or Xero, is stored securely within QTools's own hosted environment, encrypted at rest and in transit. If you uninstall the app, your Shopify data — orders, customers, products — is entirely unaffected, since it was never duplicated outside of Shopify in the first place.</p>
+                </article>
+                <article class="faq-item" id="faq-7">
+                    <h2>How much does QTools cost?</h2>
+                    <p>QTools is priced per store on a monthly subscription, with plans scaled to the size of your sales team and which integrations — Salesforce, Pipedrive, Xero, MYOB — you need connected. Every plan includes the full quote builder, CRM pipeline, KPI tracking and reporting — pricing tiers are about team size and integration depth, not withholding core features behind a paywall. Full current pricing is listed on the Shopify App Store listing, and a free trial is available so you can build real quotes and run a pipeline for a few weeks before committing, rather than deciding based on a features list alone.</p>
+                </article>
+                <article class="faq-item" id="faq-8">
+                    <h2>Can multiple sales reps use QTools at once?</h2>
+                    <p>Yes — QTools is built for teams, not just a single user. Each sales rep gets their own login with deals, quotes and customers attributed to them individually, while managers get filtered views to see performance by rep, team or region without needing separate spreadsheets. Permissions control who can edit pricing defaults or margin rules versus who can simply build and send quotes, so junior reps can be onboarded without giving them access to sensitive account-wide settings. Pipeline and forecasting views aggregate across every rep automatically, so leadership always has a company-wide picture alongside each individual's activity.</p>
+                </article>
+                <article class="faq-item" id="faq-9">
+                    <h2>Does QTools support multi-currency quoting?</h2>
+                    <p>Yes — QTools quotes in whichever currencies your Shopify store is already configured to sell in, using Shopify's own currency and market settings rather than maintaining a separate conversion layer. A customer in a different market sees pricing, shipping and totals in their local currency on the quote and invoice PDF, calculated using the same rates and rounding your storefront already applies at checkout. This keeps quoted figures consistent with what a customer would actually be charged, and means expanding into a new market or currency in Shopify doesn't require any extra configuration inside QTools itself.</p>
+                </article>
+                <article class="faq-item" id="faq-10">
+                    <h2>Can customers pay directly from a quote?</h2>
+                    <p>Yes — every quote can include a secure pay-online link that lets a customer accept and pay in one step, processed through Shopify's own checkout rather than a separate payment system. This is useful for smaller B2B orders or one-off customers without standing account terms, letting them complete a purchase as easily as a normal online order while still receiving a properly branded, itemised quote or invoice. Once paid, the linked draft order converts automatically and the deal's pipeline stage updates to reflect it, so there's no manual step required from your sales team to mark the quote as won and processed.</p>
+                </article>
+            </div>
         </section>
     </div>
     <footer class="site-footer">
@@ -327,7 +337,7 @@
       "myob-pushing": { title: "MYOB pushing", body: "For businesses running MYOB rather than Xero, QTools offers the same automatic push of quotes, orders and payments into your accounting file, so financial records stay aligned with sales activity without manual re-entry. As a deal closes and converts to a real order, the invoice detail — customer, line items, tax, totals — flows through to MYOB in the background, keeping your books current without your finance team needing to touch QTools directly. It's built for the same reason as the Xero integration: so the numbers your sales team quotes are exactly the numbers that land in your accounting system." },
       "pdf-delivery-emails": { title: "PDF Delivery links for Shopify emails", body: "Quote and invoice PDFs generated in QTools can be delivered as links embedded directly inside your store's existing Shopify notification emails, rather than as a separate attachment sent from a different system. That means a customer receiving their draft order confirmation or invoice email from Shopify sees a branded, professional PDF one click away, with no extra app or portal to log into. Because delivery rides on Shopify's own email infrastructure, deliverability and formatting stay consistent with the rest of your store's transactional emails, and links stay valid and up to date even if the underlying quote changes after sending." },
       "cci-api": { title: "Integrating CCI API", body: "QTools can connect to the CCI API to pull in supplier catalog data, real-time cost pricing and stock availability directly into the quote builder, so line items reflect accurate, current supplier information instead of a manually maintained price list. As supplier costs change, margin and sell price recalculate automatically wherever that product appears in an open quote, keeping profitability figures accurate right up until a quote is sent. This is particularly useful for reseller and distribution businesses working with a small number of core suppliers, where keeping cost data current by hand would otherwise be a constant manual task." },
-      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." },
+      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." }
     };
 
     var infoOverlay = document.getElementById("infoModalOverlay");
