@@ -66,7 +66,8 @@
       "Bash(git -C /Users/piricavanagh/Desktop/Shopify/Qtools.net log --oneline -5)",
       "Bash(git -C /Users/piricavanagh/Desktop/Shopify/Qtools.net fetch origin)",
       "Bash(git -C /Users/piricavanagh/Desktop/Shopify/Qtools.net log origin/main --oneline -5)",
-      "WebFetch(domain:q-tools.net)"
+      "WebFetch(domain:q-tools.net)",
+      "Bash(git -C /Users/piricavanagh/Desktop/Shopify/Qtools.net log --reverse --format=\"%ad %an <%ae> %s\" --date=short)"
     ]
   }
 }

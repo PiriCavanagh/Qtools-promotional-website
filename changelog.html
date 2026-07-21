@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy — QTools</title>
+    <title>Changelog — QTools</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styling/style.css">
 </head>
@@ -140,45 +140,40 @@
         </div>
     </nav>
     <div class="content-area">
-        <section class="policy-page">
-            <p class="eyebrow">Privacy Policy</p>
-            <h1>Your data, and what it's for</h1>
-            <p class="updated">Last updated 20 July 2026</p>
+        <div class="changelog-banner">
+            <span class="cg-shape changelog-banner__shape cg-shape--1" aria-hidden="true"></span>
+            <span class="cg-shape changelog-banner__shape cg-shape--2" aria-hidden="true"></span>
+            <span class="cg-shape changelog-banner__shape cg-shape--3" aria-hidden="true"></span>
+            <p class="eyebrow">Changelog</p>
+            <h1>What's new in QTools</h1>
+        </div>
 
-            <p>This policy covers the information collected through this website — the contact form, and any email you send to our support address. It does not cover data processed inside the QTools app itself, which is governed by Shopify's platform terms and our app permissions.</p>
-
-            <p>The short version: anything you share with us here is used to reply to you, and beyond that, only to help us promote QTools and the value it offers to the wider world — never sold, rented, or handed to third parties for their own purposes.</p>
-
-            <h2>What we collect</h2>
-            <ul>
-                <li>Contact form submissions — your name, email address, shop URL (if you give it), and your message.</li>
-                <li>Anything you send directly to <span class="email-plain">support@q-tools.net</span>.</li>
-                <li>Nothing else. This site doesn't run analytics, tracking cookies or advertising pixels, so we don't collect anything about you just for visiting.</li>
-            </ul>
-
-            <h2>How we use it</h2>
-            <ul>
-                <li>To reply to your question, support request or booking.</li>
-                <li>Outside of replying to you directly, the only other use is promotional: understanding who reaches out to us and why helps us describe QTools and the value it offers more accurately in our marketing, website copy and case studies.</li>
-                <li>If we ever wanted to use specifics from your message publicly — a quote, a story, a named example — we'd ask first and confirm exactly what you're comfortable with us sharing.</li>
-            </ul>
-
-            <h2>What we don't do</h2>
-            <ul>
-                <li>We don't sell or rent your information to anyone.</li>
-                <li>We don't share it with third parties for their own marketing.</li>
-                <li>We don't run ad trackers or build advertising profiles from it.</li>
-            </ul>
-
-            <h2>How long we keep it</h2>
-            <p>We keep contact form and support email records for as long as they're reasonably useful to us for the purposes above. You can ask us to delete your information at any time — see below.</p>
-
-            <h2>Your choices</h2>
-            <p>Email <span class="email-plain">support@q-tools.net</span> if you'd like to see, correct, or delete the information we hold about you. We'll action requests promptly.</p>
-
-            <h2>Changes to this policy</h2>
-            <p>If this policy changes, we'll update it here and refresh the date at the top of the page.</p>
-        </section>
+        <div class="changelog-timeline">
+            <article class="changelog-item">
+                <div class="changelog-item__date">18 Jul</div>
+                <div class="changelog-item__rail"><span class="changelog-item__dot"></span></div>
+                <div class="changelog-item__content">
+                    <h3>Idea drafted</h3>
+                    <p>QTools started as an idea from Piri Cavanagh and Oli Ivett — a faster way to build B2B quotes without ever leaving the Shopify admin.</p>
+                    <div class="changelog-item__meta">
+                        <span class="changelog-tag changelog-tag--new">New</span>
+                        <span class="changelog-item__category">Concept</span>
+                    </div>
+                </div>
+            </article>
+            <article class="changelog-item">
+                <div class="changelog-item__date">21 Jul</div>
+                <div class="changelog-item__rail"><span class="changelog-item__dot"></span></div>
+                <div class="changelog-item__content">
+                    <h3>App ready to launch</h3>
+                    <p>The quoting engine, CRM pipeline and every core page are built and ready — QTools is prepared to launch on the Shopify App Store.</p>
+                    <div class="changelog-item__meta">
+                        <span class="changelog-tag">Feature</span>
+                        <span class="changelog-item__category">Release</span>
+                    </div>
+                </div>
+            </article>
+        </div>
     </div>
     <footer class="site-footer">
         <div class="site-footer__inner">
@@ -329,7 +324,7 @@
       "myob-pushing": { title: "MYOB pushing", body: "For businesses running MYOB rather than Xero, QTools offers the same automatic push of quotes, orders and payments into your accounting file, so financial records stay aligned with sales activity without manual re-entry. As a deal closes and converts to a real order, the invoice detail — customer, line items, tax, totals — flows through to MYOB in the background, keeping your books current without your finance team needing to touch QTools directly. It's built for the same reason as the Xero integration: so the numbers your sales team quotes are exactly the numbers that land in your accounting system." },
       "pdf-delivery-emails": { title: "PDF Delivery links for Shopify emails", body: "Quote and invoice PDFs generated in QTools can be delivered as links embedded directly inside your store's existing Shopify notification emails, rather than as a separate attachment sent from a different system. That means a customer receiving their draft order confirmation or invoice email from Shopify sees a branded, professional PDF one click away, with no extra app or portal to log into. Because delivery rides on Shopify's own email infrastructure, deliverability and formatting stay consistent with the rest of your store's transactional emails, and links stay valid and up to date even if the underlying quote changes after sending." },
       "cci-api": { title: "Integrating CCI API", body: "QTools can connect to the CCI API to pull in supplier catalog data, real-time cost pricing and stock availability directly into the quote builder, so line items reflect accurate, current supplier information instead of a manually maintained price list. As supplier costs change, margin and sell price recalculate automatically wherever that product appears in an open quote, keeping profitability figures accurate right up until a quote is sent. This is particularly useful for reseller and distribution businesses working with a small number of core suppliers, where keeping cost data current by hand would otherwise be a constant manual task." },
-      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." },
+      "quote-invoice-builder-how": { title: "How does the quote/invoice builder work?", body: "The quote and invoice builder works by combining your real Shopify catalog and supplier cost data with a drag-and-drop template designer — you build the visual layout once using blocks like line items, totals and terms, and every quote generated afterwards is automatically populated into that layout from the underlying draft order. Margins, shipping and taxes recalculate live as products are added or changed, and the finished document can be exported to PDF, emailed via Shopify's notification system, or sent with a pay-online link attached. Because it's all built on draft orders, converting an accepted quote into a real order keeps the same order number and full history intact." }
     };
 
     var infoOverlay = document.getElementById("infoModalOverlay");

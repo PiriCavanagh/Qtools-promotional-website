@@ -1824,3 +1824,84 @@
   .price-card__cta { justify-content: center; width: 100%; }
   .price-card__note { text-align: center; color: var(--muted); font-size: 13.5px; margin: 0; }
   .pricing-footnote { text-align: center; color: var(--body); margin-top: 32px; }
+
+  /* ---------- Changelog page ---------- */
+  .changelog-banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #eef0ff 0%, #e6fbfd 100%);
+    border-radius: 20px;
+    margin-top: 32px;
+    padding: 48px 40px;
+  }
+  .changelog-banner .cg-shape { position: absolute; border-radius: 50%; opacity: 0.55; filter: blur(2px); }
+  .changelog-banner .cg-shape--1 { width: 130px; height: 130px; right: 60px; top: -30px; background: var(--accent); }
+  .changelog-banner .cg-shape--2 { width: 90px; height: 90px; right: 190px; bottom: -30px; background: var(--accent-cyan); }
+  .changelog-banner .cg-shape--3 { width: 46px; height: 46px; right: 30px; bottom: 20px; background: var(--accent-cyan); opacity: 0.4; }
+  .changelog-banner .eyebrow { position: relative; z-index: 1; margin-bottom: 8px; }
+  .changelog-banner h1 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(32px, 4.6vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    max-width: 14em;
+  }
+  .changelog-timeline { padding: 56px 0 100px; max-width: 720px; margin: 0 auto; }
+  .changelog-item { display: grid; grid-template-columns: 90px 28px 1fr; }
+  .changelog-item .changelog-item__date {
+    padding-top: 2px;
+    font-weight: 800;
+    font-size: 12.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .changelog-item .changelog-item__rail { position: relative; display: flex; justify-content: center; }
+  .changelog-item .changelog-item__rail::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: -44px;
+    width: 2px;
+    background: var(--line);
+  }
+  .changelog-item:last-child .changelog-item__rail::before { display: none; }
+  .changelog-item .changelog-item__dot {
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-ink);
+    background: var(--ground);
+    z-index: 1;
+  }
+  .changelog-item .changelog-item__content { padding-bottom: 48px; }
+  .changelog-item h3 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--line);
+    margin-bottom: 10px;
+  }
+  .changelog-item p { color: var(--body); max-width: 58ch; margin-bottom: 14px; }
+  .changelog-item .changelog-item__meta { display: flex; align-items: center; gap: 10px; }
+  .changelog-tag {
+    display: inline-block;
+    background: #ddf6f4;
+    color: #0d7a72;
+    font-weight: 700;
+    font-size: 12.5px;
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+  .changelog-tag--new { background: #ffe9d1; color: #9a5a12; }
+  .changelog-item__category { font-size: 13px; color: var(--muted); font-weight: 600; }
+  @media (max-width: 640px) {
+    .changelog-item { grid-template-columns: 70px 24px 1fr; }
+    .changelog-banner { padding: 36px 24px; }
+  }
