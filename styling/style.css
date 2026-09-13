@@ -1825,6 +1825,50 @@
   .price-card__note { text-align: center; color: var(--muted); font-size: 13.5px; margin: 0; }
   .pricing-footnote { text-align: center; color: var(--body); margin-top: 32px; }
 
+  /* ---------- Hire Me page ---------- */
+  .hire-page { padding: 64px 0 100px; }
+  .hire-intro { max-width: 42em; margin: 0 auto 48px; text-align: center; }
+  .hire-intro h1 { font-size: clamp(32px, 4.4vw, 48px); letter-spacing: -0.035em; margin: 6px 0 14px; }
+  .hire-intro .sub { color: var(--body); font-size: 18px; }
+  .hire-rate { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; color: var(--accent-ink); margin: 0 0 14px; }
+  .hire-rate span { font-size: 16px; font-weight: 600; color: var(--muted); }
+  .hire-grid { display: grid; grid-template-columns: 320px 1fr; gap: 40px; max-width: 900px; margin: 0 auto; align-items: start; }
+  @media (max-width: 720px) {
+    .hire-grid { grid-template-columns: 1fr; }
+  }
+  .hire-details, .hire-stores {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--card-shadow);
+  }
+  .hire-details h4, .hire-stores h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 18px; }
+  .hire-photo { display: block; width: 96px; height: 96px; margin: 0 auto 20px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); box-shadow: var(--card-shadow); }
+  .hire-details__list { display: grid; gap: 14px; margin: 0 0 24px; }
+  .hire-details__list > div { display: grid; gap: 2px; }
+  .hire-details__list dt { font-size: 13px; font-weight: 700; color: var(--muted); }
+  .hire-details__list dd { margin: 0; font-size: 15.5px; color: var(--ink); }
+  .hire-details__list dd a { color: var(--ink); }
+  .hire-details .btn { width: 100%; justify-content: center; margin-bottom: 12px; }
+  .hire-details .btn:last-child { margin-bottom: 0; }
+  .hire-stores__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .store-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--ground);
+  }
+  .store-card__name { font-weight: 700; color: var(--ink); }
+  .store-card__link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent-ink); font-weight: 600; text-decoration: none; }
+  .store-card__link .arr { transition: transform 0.18s ease; }
+  .store-card__link:hover .arr { transform: translateX(3px); }
+
   /* ---------- Changelog page ---------- */
   .changelog-banner {
     position: relative;
