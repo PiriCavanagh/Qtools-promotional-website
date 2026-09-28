@@ -1979,3 +1979,134 @@
   .email-menu__button:hover, .email-menu[open] .email-menu__button { background: rgba(255, 255, 255, 0.2); }
   .email-menu__button:focus-visible { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 0 3px rgba(255, 255, 255, 0.45); }
   .country-bar__flags img { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25); }
+
+  /* ---------- Responsive: tablet & mobile ----------
+     Kept last so it overrides the desktop rules above. The header collapses its
+     page links behind a hamburger (scripts/nav-menu.js) below 1200px, where the
+     nine links no longer fit on one row. */
+  .nav-toggle { display: none; }
+
+  @media (max-width: 1200px) {
+    .content-area { padding: 0 32px; }
+    .header > div { padding-left: 32px; padding-right: 32px; }
+    body:has(.feature-page) .header > div { padding-left: 48px; padding-right: 48px; }
+    .site-footer__inner { padding-left: 32px; padding-right: 32px; }
+
+    nav.header:not(.country-bar) > div { height: 80px; }
+    nav .actions { order: 4; }
+    .nav-toggle {
+      order: 5;
+      flex: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+      cursor: pointer;
+    }
+    .nav-toggle:hover { background: rgba(255, 255, 255, 0.2); }
+    .nav-toggle:focus-visible { outline: none; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 0 3px rgba(255, 255, 255, 0.45); }
+    .nav-toggle span { display: block; width: 20px; height: 2px; border-radius: 2px; background: #fff; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .is-menu-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .is-menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
+    .is-menu-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Links drop down as a full-width panel under the header row. */
+    nav .links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      flex-direction: column;
+      gap: 0;
+      padding: 8px 32px 16px;
+      background: var(--secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.35);
+    }
+    nav.is-menu-open .links { display: flex; }
+    nav .links .nav-item { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    nav .links .nav-item:first-child { border-top: none; }
+    nav .links a { display: block; width: 100%; padding: 13px 0; font-size: 17px; }
+  }
+
+  @media (max-width: 900px) {
+    html, body { overflow-x: clip; }
+
+    /* Home hero */
+    .hero-copy { height: auto; padding: 48px 0 56px; }
+    .hero h1 { font-size: clamp(1.4rem, 3.6vw, 1.75rem); line-height: 1.15; }
+    .hero .sub { margin: 18px 0 24px; }
+    .board__face { margin-bottom: 56px; }
+
+    .country-bar__flags { gap: 8px 14px; }
+    .country-bar__flags img { width: 80px; height: 40px; }
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    .content-area { padding: 0 16px; }
+    .header > div, body:has(.feature-page) .header > div { padding-left: 16px; padding-right: 16px; }
+    nav.header:not(.country-bar) > div { flex-wrap: nowrap; height: 68px; padding-top: 0; padding-bottom: 0; gap: 10px; }
+    nav .links { padding: 4px 16px 12px; flex-basis: auto; }
+    .wordmark { font-size: 20px; }
+
+    /* Header contact buttons shrink to icons; labels stay for screen readers. */
+    .email-menu__button, .whatsapp-button { padding: 10px 11px; }
+    .email-menu__button > span,
+    .whatsapp-button > span:first-child {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .whatsapp-button__detail { font-size: 0; gap: 0; }
+    .email-menu { position: static; }
+    .email-menu__panel { left: 16px; right: 16px; top: calc(100% + 6px); z-index: 10; text-align: center; white-space: normal; overflow-wrap: anywhere; }
+
+    .country-bar > div { gap: 8px 14px; }
+    .country-bar__flags { gap: 8px 10px; }
+    .country-bar__flags img { width: 52px; height: 26px; }
+
+    /* Home page */
+    .hero-copy { padding: 36px 0 48px; }
+    .hero .sub { font-size: 17px; }
+    .hero-ctas:has(.btn--text) { gap: 14px 24px; }
+    .board__face { margin-bottom: 40px; }
+    .board-label__face { font-size: 15px; padding: 8px 18px; }
+
+    .bento-grid, .bento-grid2, .accordion-list { margin-top: 32px; }
+    .bento-card__face { padding: 20px; }
+    .qb-summary { gap: 6px; }
+    .qb-summary__item { padding: 8px; }
+    .qb-summary__item .v { font-size: 13px; }
+    .quote-builder-table { overflow-x: auto; }
+    .quote-builder-table table { font-size: 12px; }
+    .reporting-mock__filters { flex-wrap: wrap; }
+    .community-quote__head, .kpi-target__head { flex-wrap: wrap; }
+    .integrations-carousel { margin-top: 40px; }
+
+    .accordion-item summary { padding: 14px 16px; gap: 12px; }
+    .accordion-title { font-size: 20px; }
+    .accordion-body__inner { padding: 0 14px 14px; }
+
+    /* Feature & policy pages */
+    .feature-page, .policy-page { padding: 40px 0 64px; }
+    .feature-page__shot { margin-top: 32px; margin-bottom: 40px; }
+    .feature-page h2 { font-size: 22px; }
+    .feature-facts { padding: 16px 18px !important; }
+    .feature-cta p { gap: 12px 24px; }
+
+    .site-footer__inner { padding: 36px 16px; }
+  }

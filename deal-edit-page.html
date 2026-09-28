@@ -47,6 +47,7 @@
     }
     </script>
     <script src="scripts/email-menu.js" defer></script>
+    <script src="scripts/nav-menu.js" defer></script>
 </head>
 <body>
     <nav class="header">
@@ -54,7 +55,8 @@
             <span class="brand">
                 <a href="index.html" style="text-decoration:none;"><span class="wordmark"><span class="q">Q</span>Tools</span></a>
             </span>
-            <span class="links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+            <span class="links" id="site-links">
                 <span class="nav-item"><a href="deals-page.html">Deals</a></span>
                 <span class="nav-item"><a href="deal-edit-page.html" aria-current="page">Deal Edit</a></span>
                 <span class="nav-item"><a href="customers-page.html">Customers</a></span>

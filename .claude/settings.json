@@ -111,7 +111,11 @@
       "Bash(openssl x509 *)",
       "Bash(openssl s_client -connect www.qtoolsapp.com:443 -servername www.qtoolsapp.com)",
       "Bash(curl -sI --max-time 10 https://qtoolsapp.com/automatic-email-design-page.html)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code} ssl_verify=%{ssl_verify_result}\\\\n\" https://www.qtoolsapp.com/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code} ssl_verify=%{ssl_verify_result}\\\\n\" https://www.qtoolsapp.com/)",
+      "Bash(grep -v -E '\\\\.\\(png|jpg|jpeg|svg|webp|gif|ico|mp4|woff2?\\)$')",
+      "Bash(awk '$1<40')",
+      "Bash(ls \"/Applications/Google Chrome.app/Contents/MacOS/\" 2>/dev/null; which npx node 2>/dev/null)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)"
     ]
   }
 }
