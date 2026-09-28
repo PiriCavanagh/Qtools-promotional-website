@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Automatic Email Design Page: Order and Quote Emails with PDF Attachments for Shopify | QTools</title>
+    <meta name="description" content="The QTools Automatic Email Design page sets up automatic emails for Shopify B2B stores: a thank you for your order email with the business invoice PDF attached, and a self serve quote email with the quote PDF attached, instead of a download link.">
+    <link rel="icon" href="images/New logo.png" type="image/png">
+    <link rel="stylesheet" href="styling/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "#qtools",
+          "name": "QTools",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "B2B quoting and CRM app for Shopify",
+          "operatingSystem": "Web, Shopify admin",
+          "description": "QTools is a Shopify app that turns draft orders into a full B2B sales workflow: enterprise quotes, must have product pairings, a deal pipeline, lead tracking, B2B customer and company dashboards, sales forecasting and reporting, Google Shopping sync, branded PDF quotes and invoices, and automatic emails with the PDF attached, all inside the Shopify admin.",
+          "author": { "@type": "Person", "name": "Piri Cavanagh", "email": "piri.cavanagh@qtoolsapp.com" }
+        },
+        {
+          "@type": "WebPage",
+          "name": "Automatic Email Design Page",
+          "description": "How the QTools Automatic Email Design page sends Shopify B2B customers their invoice or quote as a PDF attachment, automatically, when they place an order or request a quote.",
+          "about": { "@id": "#qtools" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "contentUrl": "images/Automatic%20Email%20Design%20page.png",
+            "caption": "The QTools Automatic Email Design page inside the Shopify admin"
+          }
+        }
+      ]
+    }
+    </script>
+    <script src="scripts/email-menu.js" defer></script>
+</head>
+<body>
+    <nav class="header">
+        <div>
+            <span class="brand">
+                <a href="index.html" style="text-decoration:none;"><span class="wordmark"><span class="q">Q</span>Tools</span></a>
+            </span>
+            <span class="links">
+                <span class="nav-item"><a href="deals-page.html">Deals</a></span>
+                <span class="nav-item"><a href="deal-edit-page.html">Deal Edit</a></span>
+                <span class="nav-item"><a href="leads-page.html">Leads</a></span>
+                <span class="nav-item"><a href="customers-page.html">Customers</a></span>
+                <span class="nav-item"><a href="companies-page.html">Companies</a></span>
+                <span class="nav-item"><a href="product-catalog-page.html">Product Catalog</a></span>
+                <span class="nav-item"><a href="google-shopping-sync-page.html">Google Shopping</a></span>
+                <span class="nav-item"><a href="reporting-page.html">Reporting</a></span>
+                <span class="nav-item"><a href="quote-invoice-design-page.html">Quote/Invoice Design</a></span>
+                <span class="nav-item"><a href="automatic-email-design-page.html" aria-current="page">Automatic Email Design</a></span>
+            </span>
+            <span class="actions">
+                <details class="email-menu">
+                    <summary class="email-menu__button">
+                        <span>Email me</span>
+                        <svg class="email-menu__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    </summary>
+                    <div class="email-menu__panel">
+                        <a href="mailto:piri.cavanagh@qtoolsapp.com">piri.cavanagh@qtoolsapp.com</a>
+                    </div>
+                </details>
+            </span>
+        </div>
+    </nav>
+    <nav class="header country-bar" aria-label="Country setup">
+        <div>
+            <a class="country-bar__title" href="country-setup-page.html">Country setup</a>
+            <span class="country-bar__flags">
+                <a href="country-setup-page.html#australia" title="Australia"><img src="images/AUS.jpg" width="1200" height="600" alt="Australia"></a>
+                <a href="country-setup-page.html#canada" title="Canada"><img src="images/Canada.jpg" width="1200" height="600" alt="Canada"></a>
+                <a href="country-setup-page.html#united-kingdom" title="United Kingdom"><img src="images/UK.jpg" width="1200" height="600" alt="United Kingdom"></a>
+                <a href="country-setup-page.html#germany" title="Germany"><img src="images/Germany.jpg" width="1200" height="600" alt="Germany"></a>
+                <a href="country-setup-page.html#united-states" title="United States"><img src="images/USA edited.jpg" width="1200" height="600" alt="United States"></a>
+            </span>
+        </div>
+    </nav>
+    <div class="content-area">
+        <article class="feature-page">
+            <header class="feature-page__head">
+                <div class="feature-page__title-row">
+                    <h1>Automatic Email Design Page</h1>
+                    <img class="feature-page__logo" src="images/New logo.png" alt="QTools logo">
+                </div>
+                <p class="feature-page__lede">The Automatic Email Design page sets up the emails QTools sends your customers automatically. When a customer places an order, their accounts team receives a thank you for your order email with the business invoice attached as a PDF, followed by an automatic payment reminder if it is not paid by the due date. When a customer requests a quote through your store's self serve quote process, they receive an email with the quote PDF attached. This is the workflow business customers expect: the document itself in their inbox, not a link they have to click to download it.</p>
+            </header>
+
+            <figure class="feature-page__shot">
+                <div class="board">
+                    <div class="board__face">
+                        <img class="board__shot" src="images/Automatic Email Design page.png" width="1910" height="934" alt="QTools Automatic Email Design page inside the Shopify admin, showing inbox content settings for subject line, preview text, from name and reply to address with placeholders such as companyName, quoteName and dueDate, email body sections for banner and logo, hero image and text, line items table, body text and footer, and a live preview of a thank you invoice email with a line items table and total">
+                    </div>
+                </div>
+                <figcaption>The Automatic Email Design page, open inside the Shopify admin.</figcaption>
+            </figure>
+
+            <div class="feature-page__body">
+                <section>
+                    <h2>At a glance</h2>
+                    <ul class="feature-facts">
+                        <li><strong>What it is:</strong> the automatic email screen of QTools, a B2B quoting and CRM app for Shopify.</li>
+                        <li><strong>Invoice email:</strong> a thank you for your order email with the business invoice PDF attached, sent to the company's accounts email when an order is placed or a deal is marked Won.</li>
+                        <li><strong>Payment reminder:</strong> the invoice email is sent again if the order is not marked paid by its due date.</li>
+                        <li><strong>Quote email:</strong> sent when a customer requests a quote through your Shopify store's self serve quote process, with the quote PDF attached.</li>
+                        <li><strong>Designer:</strong> set the subject line, preview text, from name and reply to address, and build the email body from a banner or logo, hero image and text, line items table, body text and footer, with a live preview.</li>
+                        <li><strong>Key difference:</strong> the PDF is attached to the email, instead of the download link most other apps send.</li>
+                        <li><strong>Why it matters:</strong> business customers can open, forward and file the document straight away, without clicking an external link that their company may block or hold for scanning.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>The invoice email: thank you, with the invoice attached</h2>
+                    <p>As soon as a customer places an order, or your sales representative marks a deal as Won, QTools sends a thank you for your order email with the business invoice attached as a PDF. It goes straight to the company's accounts email, so the people who pay the bills have everything they need the moment it arrives, with no need to log in to your store or request a copy of the invoice.</p>
+                    <p>This matters most for B2B orders placed on a credit account or paid by bank transfer, where the invoice is what triggers payment. The faster it reaches the right person, the faster you are paid.</p>
+                </section>
+
+                <section>
+                    <h2>Automatic payment reminders</h2>
+                    <p>If an order has not been marked paid by its due date, QTools sends the invoice email again as a payment reminder, with the invoice still attached. Your team no longer has to track overdue invoices and chase them by hand, and the customer's accounts team receives the document they need to pay, not just a request for payment.</p>
+                </section>
+
+                <section>
+                    <h2>The quote email: self serve quotes, with the PDF attached</h2>
+                    <p>Many business buyers need a formal quote before they can raise a purchase order. With a self serve quote process on your Shopify store, customers can request a quote themselves, at any time, without waiting for a sales representative. QTools then emails them the quote with the quote PDF attached, ready to forward to their manager or procurement team for approval.</p>
+                    <p>Your store keeps quoting while your team is busy or out of the office, and every self serve quote reaches the customer as a proper document rather than a link.</p>
+                </section>
+
+                <section>
+                    <h2>Design the email around the PDF</h2>
+                    <p>The PDF attached to each email comes from your templates on the Quote/Invoice Design page. The Automatic Email Design page controls the email wrapped around it, in two groups of settings:</p>
+                    <h3>Inbox content</h3>
+                    <dl class="feature-defs">
+                        <dt>Subject line</dt>
+                        <dd>The email's subject, for example "Invoice {{quoteName}} — payment due {{dueDate}}".</dd>
+                        <dt>Preview text</dt>
+                        <dd>The short line shown after the subject in most inboxes, for example "Your invoice from {{companyName}} is attached."</dd>
+                        <dt>From name</dt>
+                        <dd>The sender name your customer sees, such as Acme Billing.</dd>
+                        <dt>Reply to address</dt>
+                        <dd>Where replies go, such as your accounts email address.</dd>
+                    </dl>
+                    <p>Placeholders such as {{companyName}}, {{quoteName}} and {{dueDate}} work in the subject line and in any body text, and are filled in with each customer's details when the email is sent.</p>
+                    <h3>Email body</h3>
+                    <dl class="feature-defs">
+                        <dt>Banner / logo</dt>
+                        <dd>Your logo from the Quote/Invoice Design settings, or your company name as text if the logo is turned off or not set.</dd>
+                        <dt>Hero image + text</dt>
+                        <dd>An image across the top of the email with text over it, such as "Thanks for your order".</dd>
+                        <dt>Line items table</dt>
+                        <dd>The items on the order, with quantity, line totals and the order total.</dd>
+                        <dt>Body text</dt>
+                        <dd>Your message to the customer, for example asking them to keep the invoice for warranty purposes.</dd>
+                        <dt>Footer</dt>
+                        <dd>Your contact details and locations.</dd>
+                    </dl>
+                    <p>A live preview, filled with sample data, shows exactly how the email will look as you edit it. Press Save when you are happy with it.</p>
+                </section>
+
+                <section>
+                    <h2>Why attachments, not download links</h2>
+                    <p>Many quoting and invoicing apps email a link to download the document instead of the document itself. That works for consumers, but it creates real problems for business customers:</p>
+                    <dl class="feature-defs">
+                        <dt>Links are often blocked</dt>
+                        <dd>Many companies do not allow employees to open certain links from outside sources, so the person who needs the quote or invoice may not be able to reach it at all.</dd>
+                        <dt>Links are held for scanning</dt>
+                        <dd>Company antivirus and email security systems investigate external links closely, rewriting, sandboxing or holding them before they can be opened. This can stall a quote or invoice for hours, or stop it completely.</dd>
+                        <dt>Links train people to click</dt>
+                        <dd>Phishing attacks commonly imitate "click here to view your invoice" emails. A business customer who receives the PDF from a supplier they are expecting to hear from does not need to click an unfamiliar link to see it.</dd>
+                        <dt>Links do not travel well</dt>
+                        <dd>A quote usually has to be forwarded to a manager or procurement team, and an invoice filed with accounts. An attached PDF can be forwarded, saved and filed as it is. A link may expire, require a login or stop working once it leaves the original inbox.</dd>
+                    </dl>
+                    <p>With the PDF attached, your quote or invoice arrives as a complete document that your customer can open, forward and act on straight away.</p>
+                </section>
+
+                <section>
+                    <h2>Part of the QTools sales workflow</h2>
+                    <p>The PDFs attached to these emails are the quote and invoice templates you design on the <a href="quote-invoice-design-page.html">Quote/Invoice Design page</a>, so every automatic email carries the same branded, professional documents as the quotes your team builds on the <a href="deal-edit-page.html">Deal Edit page</a>. Invoice emails are triggered when a deal is marked Won on the <a href="deals-page.html">Deals page</a>.</p>
+                </section>
+
+                <section class="feature-cta">
+                    <h2>See the Automatic Email Design page in action</h2>
+                    <p>
+                        <a class="text-link" href="https://qtools.zohobookings.com.au/qtools/#/qtools" target="_blank" rel="noopener">Book an onboarding or support call</a>
+                        <a class="text-link" href="https://admin.shopify.com" target="_blank" rel="noopener">Open Shopify App Store listing</a>
+                    </p>
+                </section>
+            </div>
+        </article>
+    </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="wordmark wordmark--light"><span class="q">Q</span>Tools</span>
+                <p>The quoting engine with features businesses actually need.</p>
+            </div>
+            <nav class="site-footer__links" aria-label="Legal">
+                <a class="footer-btn" href="index.html#">Terms &amp; Conditions</a>
+                <a class="footer-btn" href="privacy.html">Privacy Policy</a>
+                <a class="footer-btn" href="index.html#">Data Policy</a>
+                <a class="footer-btn" href="index.html#">ABN: 15 236 254 207</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

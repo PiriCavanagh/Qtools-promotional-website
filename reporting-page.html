@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reporting Page: Quarterly Ex GST Sales, Margin and Profit Reports for Shopify | QTools</title>
+    <meta name="description" content="The QTools Reporting page creates sales reports for B2B Shopify stores, exported to CSV for Excel and filtered by year, financial quarter, month, account manager and company label, with totals and a list of deals showing ex GST cost including shipping, margin, profit and total value.">
+    <link rel="icon" href="images/New logo.png" type="image/png">
+    <link rel="stylesheet" href="styling/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "#qtools",
+          "name": "QTools",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "B2B quoting and CRM app for Shopify",
+          "operatingSystem": "Web, Shopify admin",
+          "description": "QTools is a Shopify app that turns draft orders into a full B2B sales workflow: enterprise quotes, must have product pairings, a deal pipeline, lead tracking, B2B customer and company dashboards, sales forecasting and reporting, Google Shopping sync and branded PDF quotes, all inside the Shopify admin.",
+          "author": { "@type": "Person", "name": "Piri Cavanagh", "email": "piri.cavanagh@qtoolsapp.com" }
+        },
+        {
+          "@type": "WebPage",
+          "name": "Reporting Page",
+          "description": "How the QTools Reporting page creates quarterly sales reports, exported for Excel, with ex GST cost, margin, profit and deal value for Shopify B2B stores.",
+          "about": { "@id": "#qtools" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "contentUrl": "images/Reporting%20Page.png",
+            "caption": "The QTools Reporting page inside the Shopify admin"
+          }
+        }
+      ]
+    }
+    </script>
+    <script src="scripts/email-menu.js" defer></script>
+</head>
+<body>
+    <nav class="header">
+        <div>
+            <span class="brand">
+                <a href="index.html" style="text-decoration:none;"><span class="wordmark"><span class="q">Q</span>Tools</span></a>
+            </span>
+            <span class="links">
+                <span class="nav-item"><a href="deals-page.html">Deals</a></span>
+                <span class="nav-item"><a href="deal-edit-page.html">Deal Edit</a></span>
+                <span class="nav-item"><a href="leads-page.html">Leads</a></span>
+                <span class="nav-item"><a href="customers-page.html">Customers</a></span>
+                <span class="nav-item"><a href="companies-page.html">Companies</a></span>
+                <span class="nav-item"><a href="product-catalog-page.html">Product Catalog</a></span>
+                <span class="nav-item"><a href="google-shopping-sync-page.html">Google Shopping</a></span>
+                <span class="nav-item"><a href="reporting-page.html" aria-current="page">Reporting</a></span>
+                <span class="nav-item"><a href="quote-invoice-design-page.html">Quote/Invoice Design</a></span>
+                <span class="nav-item"><a href="automatic-email-design-page.html">Automatic Email Design</a></span>
+            </span>
+            <span class="actions">
+                <details class="email-menu">
+                    <summary class="email-menu__button">
+                        <span>Email me</span>
+                        <svg class="email-menu__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    </summary>
+                    <div class="email-menu__panel">
+                        <a href="mailto:piri.cavanagh@qtoolsapp.com">piri.cavanagh@qtoolsapp.com</a>
+                    </div>
+                </details>
+            </span>
+        </div>
+    </nav>
+    <nav class="header country-bar" aria-label="Country setup">
+        <div>
+            <a class="country-bar__title" href="country-setup-page.html">Country setup</a>
+            <span class="country-bar__flags">
+                <a href="country-setup-page.html#australia" title="Australia"><img src="images/AUS.jpg" width="1200" height="600" alt="Australia"></a>
+                <a href="country-setup-page.html#canada" title="Canada"><img src="images/Canada.jpg" width="1200" height="600" alt="Canada"></a>
+                <a href="country-setup-page.html#united-kingdom" title="United Kingdom"><img src="images/UK.jpg" width="1200" height="600" alt="United Kingdom"></a>
+                <a href="country-setup-page.html#germany" title="Germany"><img src="images/Germany.jpg" width="1200" height="600" alt="Germany"></a>
+                <a href="country-setup-page.html#united-states" title="United States"><img src="images/USA edited.jpg" width="1200" height="600" alt="United States"></a>
+            </span>
+        </div>
+    </nav>
+    <div class="content-area">
+        <article class="feature-page">
+            <header class="feature-page__head">
+                <div class="feature-page__title-row">
+                    <h1>Reporting Page</h1>
+                    <img class="feature-page__logo" src="images/New logo.png" alt="QTools logo">
+                </div>
+                <p class="feature-page__lede">Every business that sells goods has to report its sales results each quarter: the ex GST total cost including shipping, the average margin, the profit and the total value of every deal. The Reporting page gives you these figures in one place. Filter by year, account manager, financial quarter, month or company label, see the totals at a glance, then export the list of deals as a spreadsheet ready to turn into an Excel pivot table or import into your existing CRM.</p>
+            </header>
+
+            <figure class="feature-page__shot">
+                <div class="board">
+                    <div class="board__face">
+                        <img class="board__shot" src="images/Reporting Page.png" width="1910" height="934" alt="QTools Reporting page inside the Shopify admin, showing Year, User, Financial quarter, Month and Company label filters, summary cards for total unit price inc ship ex GST, total cost inc ship ex GST, total profit and average margin, a table of deals with order, date, company, customer, user, label, total cost inc ship ex GST, margin, profit and total unit price inc ship ex GST, and an Export to CSV button">
+                    </div>
+                </div>
+                <figcaption>The Reporting page, open inside the Shopify admin.</figcaption>
+            </figure>
+
+            <div class="feature-page__body">
+                <section>
+                    <h2>At a glance</h2>
+                    <ul class="feature-facts">
+                        <li><strong>What it is:</strong> the sales reporting screen of QTools, a B2B quoting and CRM app for Shopify.</li>
+                        <li><strong>Problem solved:</strong> quarterly sales reporting that would otherwise mean exporting orders and calculating costs, margins and profit by hand.</li>
+                        <li><strong>Filters:</strong> year, user (account manager), financial quarter, month and company label, such as Education.</li>
+                        <li><strong>Totals:</strong> total value, total cost, total profit and average margin for everything that matches your filters, all ex GST and including shipping.</li>
+                        <li><strong>Shows per deal:</strong> order number, date, company, customer, account manager, label, total cost, margin, profit and total value.</li>
+                        <li><strong>Output:</strong> Export to CSV, which opens straight in Excel for pivot tables or imports into your current CRM.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Why quarterly reporting matters</h2>
+                    <p>Owners, finance teams and sales managers all need the same answers at the end of each quarter: how much was sold, what it cost, and how much profit it made. For a B2B business those figures must be ex GST, because GST is collected on behalf of the tax office and is not revenue, and they must include shipping, because freight is a real cost of every order that can quietly wipe out the margin on a deal.</p>
+                    <p>Shopify's standard reports are built around retail orders and do not give you an ex GST cost, margin and profit for each B2B deal. Building that report by hand every quarter is slow and easy to get wrong. The Reporting page produces it for you.</p>
+                </section>
+
+                <section>
+                    <h2>Filter to exactly the report you need</h2>
+                    <p>The filter bar at the top of the page narrows the report down. Combine any of these:</p>
+                    <dl class="feature-defs">
+                        <dt>Year</dt>
+                        <dd>The year of the deals to include.</dd>
+                        <dt>User</dt>
+                        <dd>Only the deals handled by one account manager, for performance reviews and commission calculations, or all managers.</dd>
+                        <dt>Financial quarter</dt>
+                        <dd>A single financial quarter, for your quarterly results, or all quarters.</dd>
+                        <dt>Month</dt>
+                        <dd>A single month, for monthly sales meetings, or all months.</dd>
+                        <dt>Company label</dt>
+                        <dd>Only the deals for companies with a given label, for example Education, so you can see how each market segment is performing.</dd>
+                    </dl>
+                    <p>For example, you can report on the Education deals closed by one account manager in the third quarter, or every deal across the whole business for the year.</p>
+                </section>
+
+                <section>
+                    <h2>Your totals at a glance</h2>
+                    <p>Above the list of deals, four summary cards update as you change the filters:</p>
+                    <dl class="feature-defs">
+                        <dt>Total unit price inc ship ex GST</dt>
+                        <dd>The total value of the deals, including shipping, ex GST.</dd>
+                        <dt>Total cost inc ship ex GST</dt>
+                        <dd>What those deals cost your business, including shipping, ex GST.</dd>
+                        <dt>Total profit</dt>
+                        <dd>Total value minus total cost.</dd>
+                        <dt>Avg margin</dt>
+                        <dd>The average margin across the deals.</dd>
+                    </dl>
+                    <p>These are the four numbers most quarterly sales reports ask for, ready to copy into a board report or a management meeting.</p>
+                </section>
+
+                <section>
+                    <h2>Every deal, line by line</h2>
+                    <p>Below the totals, each deal that matches your filters appears as a single row:</p>
+                    <dl class="feature-defs">
+                        <dt>Order</dt>
+                        <dd>The order number of the deal.</dd>
+                        <dt>Date</dt>
+                        <dd>The date of the order.</dd>
+                        <dt>Company</dt>
+                        <dd>The company that placed the order.</dd>
+                        <dt>Customer</dt>
+                        <dd>The contact who placed the order.</dd>
+                        <dt>User</dt>
+                        <dd>The account manager responsible for the deal.</dd>
+                        <dt>Label</dt>
+                        <dd>The company's label, such as Education or Government.</dd>
+                        <dt>Total cost inc ship ex GST</dt>
+                        <dd>What the deal cost your business, including shipping, ex GST.</dd>
+                        <dt>Margin</dt>
+                        <dd>The deal's profit as a percentage of its total value.</dd>
+                        <dt>Profit</dt>
+                        <dd>The deal's total value minus its total cost.</dd>
+                        <dt>Total unit price inc ship ex GST</dt>
+                        <dd>The value of the deal, including shipping, ex GST.</dd>
+                    </dl>
+                </section>
+
+                <section>
+                    <h2>Export to Excel for pivot tables and your CRM</h2>
+                    <p>The Export to CSV button downloads the filtered report as a spreadsheet that opens straight in Excel, with one row per deal and one column per field. That is exactly the layout a pivot table needs, so in a few clicks you can total profit by account manager, compare margins across company labels or chart revenue by month.</p>
+                    <p>The same file imports cleanly into the CRM or accounting system your business already uses, so QTools can sit alongside your existing tools rather than replace them.</p>
+                </section>
+
+                <section>
+                    <h2>Part of the QTools sales workflow</h2>
+                    <p>The report is built from the deals you quote on the <a href="deal-edit-page.html">Deal Edit page</a> and move through the pipeline on the <a href="deals-page.html">Deals page</a>, using the unit costs from the <a href="product-catalog-page.html">Product Catalog page</a> and the labels you give companies on the <a href="companies-page.html">Companies page</a>.</p>
+                </section>
+
+                <section class="feature-cta">
+                    <h2>See the Reporting page in action</h2>
+                    <p>
+                        <a class="text-link" href="https://qtools.zohobookings.com.au/qtools/#/qtools" target="_blank" rel="noopener">Book an onboarding or support call</a>
+                        <a class="text-link" href="https://admin.shopify.com" target="_blank" rel="noopener">Open Shopify App Store listing</a>
+                    </p>
+                </section>
+            </div>
+        </article>
+    </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="wordmark wordmark--light"><span class="q">Q</span>Tools</span>
+                <p>The quoting engine with features businesses actually need.</p>
+            </div>
+            <nav class="site-footer__links" aria-label="Legal">
+                <a class="footer-btn" href="index.html#">Terms &amp; Conditions</a>
+                <a class="footer-btn" href="privacy.html">Privacy Policy</a>
+                <a class="footer-btn" href="index.html#">Data Policy</a>
+                <a class="footer-btn" href="index.html#">ABN: 15 236 254 207</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

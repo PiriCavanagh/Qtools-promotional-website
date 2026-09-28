@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Country Setup Page: GST, VAT and Financial Year Quarters by Country | QTools</title>
+    <meta name="description" content="How QTools handles GST, VAT and sales tax rates and financial year quarters for Australia, Canada, the United Kingdom, Germany and the United States, including when you need the QTools Google Shopping Sync page and how to set your financial year for the Reporting page.">
+    <link rel="icon" href="images/New logo.png" type="image/png">
+    <link rel="stylesheet" href="styling/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "#qtools",
+          "name": "QTools",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "B2B quoting and CRM app for Shopify",
+          "operatingSystem": "Web, Shopify admin",
+          "description": "QTools is a Shopify app that turns draft orders into a full B2B sales workflow: enterprise quotes, must have product pairings, a deal pipeline, lead tracking, B2B customer and company dashboards, sales forecasting and reporting, Google Shopping sync, branded PDF quotes and invoices, and automatic emails with the PDF attached, all inside the Shopify admin.",
+          "author": { "@type": "Person", "name": "Piri Cavanagh", "email": "piri.cavanagh@qtoolsapp.com" }
+        },
+        {
+          "@type": "WebPage",
+          "name": "Country Setup Page",
+          "description": "GST, VAT and sales tax rates, Google Shopping requirements and financial year quarters for QTools stores in Australia, Canada, the United Kingdom, Germany and the United States.",
+          "about": { "@id": "#qtools" }
+        }
+      ]
+    }
+    </script>
+    <script src="scripts/email-menu.js" defer></script>
+</head>
+<body>
+    <nav class="header">
+        <div>
+            <span class="brand">
+                <a href="index.html" style="text-decoration:none;"><span class="wordmark"><span class="q">Q</span>Tools</span></a>
+            </span>
+            <span class="links">
+                <span class="nav-item"><a href="deals-page.html">Deals</a></span>
+                <span class="nav-item"><a href="deal-edit-page.html">Deal Edit</a></span>
+                <span class="nav-item"><a href="leads-page.html">Leads</a></span>
+                <span class="nav-item"><a href="customers-page.html">Customers</a></span>
+                <span class="nav-item"><a href="companies-page.html">Companies</a></span>
+                <span class="nav-item"><a href="product-catalog-page.html">Product Catalog</a></span>
+                <span class="nav-item"><a href="google-shopping-sync-page.html">Google Shopping</a></span>
+                <span class="nav-item"><a href="reporting-page.html">Reporting</a></span>
+                <span class="nav-item"><a href="quote-invoice-design-page.html">Quote/Invoice Design</a></span>
+                <span class="nav-item"><a href="automatic-email-design-page.html">Automatic Email Design</a></span>
+            </span>
+            <span class="actions">
+                <details class="email-menu">
+                    <summary class="email-menu__button">
+                        <span>Email me</span>
+                        <svg class="email-menu__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    </summary>
+                    <div class="email-menu__panel">
+                        <a href="mailto:piri.cavanagh@qtoolsapp.com">piri.cavanagh@qtoolsapp.com</a>
+                    </div>
+                </details>
+            </span>
+        </div>
+    </nav>
+    <nav class="header country-bar" aria-label="Country setup">
+        <div>
+            <a class="country-bar__title" href="country-setup-page.html" aria-current="page">Country setup</a>
+            <span class="country-bar__flags">
+                <a href="country-setup-page.html#australia" title="Australia"><img src="images/AUS.jpg" width="1200" height="600" alt="Australia"></a>
+                <a href="country-setup-page.html#canada" title="Canada"><img src="images/Canada.jpg" width="1200" height="600" alt="Canada"></a>
+                <a href="country-setup-page.html#united-kingdom" title="United Kingdom"><img src="images/UK.jpg" width="1200" height="600" alt="United Kingdom"></a>
+                <a href="country-setup-page.html#germany" title="Germany"><img src="images/Germany.jpg" width="1200" height="600" alt="Germany"></a>
+                <a href="country-setup-page.html#united-states" title="United States"><img src="images/USA edited.jpg" width="1200" height="600" alt="United States"></a>
+            </span>
+        </div>
+    </nav>
+    <div class="content-area">
+        <article class="feature-page">
+            <header class="feature-page__head">
+                <div class="feature-page__title-row">
+                    <h1>Country Setup Page</h1>
+                    <img class="feature-page__logo" src="images/New logo.png" alt="QTools logo">
+                </div>
+                <p class="feature-page__lede">QTools supports B2B stores in Australia, Canada, the United Kingdom, Germany and the United States. Each country has its own goods and services tax or VAT rate, its own rules for how prices must appear on Google Shopping, and its own financial year. This page explains what changes in each country, when you need the QTools Google Shopping Sync page, and how to set your financial year so the Reporting page groups your deals into the right quarters.</p>
+            </header>
+
+            <div class="feature-page__body">
+                <section>
+                    <h2>At a glance</h2>
+                    <div class="module-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Tax</th>
+                                    <th>Standard rate</th>
+                                    <th>Google Shopping feed</th>
+                                    <th>Common financial year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#australia">Australia</a></td>
+                                    <td>GST</td>
+                                    <td>10%</td>
+                                    <td>QTools Google Shopping Sync</td>
+                                    <td>1 July to 30 June</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#canada">Canada</a></td>
+                                    <td>GST, HST, PST, QST</td>
+                                    <td>5% GST, up to 15% HST</td>
+                                    <td>QTools Google Shopping Sync</td>
+                                    <td>1 April to 31 March, or the calendar year</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#united-kingdom">United Kingdom</a></td>
+                                    <td>VAT</td>
+                                    <td>20%</td>
+                                    <td>QTools Google Shopping Sync</td>
+                                    <td>1 April to 31 March</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#germany">Germany</a></td>
+                                    <td>VAT (Umsatzsteuer)</td>
+                                    <td>19%</td>
+                                    <td>QTools Google Shopping Sync</td>
+                                    <td>1 January to 31 December</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#united-states">United States</a></td>
+                                    <td>State and local sales tax</td>
+                                    <td>No national rate</td>
+                                    <td>Default Google feed</td>
+                                    <td>1 January to 31 December, or 1 October to 30 September</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Every business can choose its own financial year, so the common financial years above are a starting point. You set the financial year your business actually uses in QTools, and the Reporting page uses it for its financial quarter filter.</p>
+                </section>
+
+                <section id="australia" class="country-section">
+                    <h2><img class="country-section__flag" src="images/AUS.jpg" width="1200" height="600" alt="">Australia</h2>
+                    <h3>GST</h3>
+                    <p>Australia charges a goods and services tax (GST) of 10% on most goods and services. Registered businesses claim back the GST they pay, which is why business buyers compare prices ex GST.</p>
+                    <h3>Google Shopping</h3>
+                    <p>Google requires prices in Australian Shopping listings to include GST. Use the <a href="google-shopping-sync-page.html">Google Shopping Sync page</a> to keep your store priced ex GST while QTools adds the 10% GST to the prices it sends to Google.</p>
+                    <h3>Financial year quarters</h3>
+                    <p>The Australian financial year runs from 1 July to 30 June:</p>
+                    <dl class="feature-defs">
+                        <dt>Q1</dt><dd>July, August, September</dd>
+                        <dt>Q2</dt><dd>October, November, December</dd>
+                        <dt>Q3</dt><dd>January, February, March</dd>
+                        <dt>Q4</dt><dd>April, May, June</dd>
+                    </dl>
+                </section>
+
+                <section id="canada" class="country-section">
+                    <h2><img class="country-section__flag" src="images/Canada.jpg" width="1200" height="600" alt="">Canada</h2>
+                    <h3>GST, HST, PST and QST</h3>
+                    <p>Canada's tax rate depends on the province or territory the goods are delivered to:</p>
+                    <dl class="feature-defs">
+                        <dt>GST 5%</dt><dd>The federal goods and services tax, charged everywhere in Canada. In Alberta and the territories it is the only sales tax.</dd>
+                        <dt>HST 13% to 15%</dt><dd>The harmonized sales tax, which combines GST and provincial tax: 13% in Ontario, 14% in Nova Scotia, and 15% in New Brunswick, Newfoundland and Labrador, and Prince Edward Island.</dd>
+                        <dt>GST + PST</dt><dd>5% GST plus a separate provincial sales tax in British Columbia (7%), Manitoba (7%) and Saskatchewan (6%).</dd>
+                        <dt>GST + QST</dt><dd>5% GST plus the 9.975% Quebec sales tax.</dd>
+                    </dl>
+                    <h3>Google Shopping</h3>
+                    <p>Use the <a href="google-shopping-sync-page.html">Google Shopping Sync page</a> to keep your store priced before tax while QTools sends your prices to Google.</p>
+                    <h3>Financial year quarters</h3>
+                    <p>The Government of Canada's fiscal year runs from 1 April to 31 March, and many Canadian businesses use the calendar year instead. For an April to March financial year:</p>
+                    <dl class="feature-defs">
+                        <dt>Q1</dt><dd>April, May, June</dd>
+                        <dt>Q2</dt><dd>July, August, September</dd>
+                        <dt>Q3</dt><dd>October, November, December</dd>
+                        <dt>Q4</dt><dd>January, February, March</dd>
+                    </dl>
+                </section>
+
+                <section id="united-kingdom" class="country-section">
+                    <h2><img class="country-section__flag" src="images/UK.jpg" width="1200" height="600" alt="">United Kingdom</h2>
+                    <h3>VAT</h3>
+                    <p>The United Kingdom charges value added tax (VAT) at a standard rate of 20%. Some goods have a reduced rate of 5%, such as children's car seats and home energy, or a zero rate of 0%, such as most food and children's clothing. VAT registered businesses reclaim the VAT they pay, so B2B buyers compare prices ex VAT.</p>
+                    <h3>Google Shopping</h3>
+                    <p>Google requires prices in UK Shopping listings to include VAT. Use the <a href="google-shopping-sync-page.html">Google Shopping Sync page</a> to keep your store priced ex VAT while QTools adds the 20% VAT to the prices it sends to Google.</p>
+                    <h3>Financial year quarters</h3>
+                    <p>The UK government's financial year runs from 1 April to 31 March, and many UK businesses align with it:</p>
+                    <dl class="feature-defs">
+                        <dt>Q1</dt><dd>April, May, June</dd>
+                        <dt>Q2</dt><dd>July, August, September</dd>
+                        <dt>Q3</dt><dd>October, November, December</dd>
+                        <dt>Q4</dt><dd>January, February, March</dd>
+                    </dl>
+                </section>
+
+                <section id="germany" class="country-section">
+                    <h2><img class="country-section__flag" src="images/Germany.jpg" width="1200" height="600" alt="">Germany</h2>
+                    <h3>VAT (Umsatzsteuer)</h3>
+                    <p>Germany charges VAT, known as Umsatzsteuer or Mehrwertsteuer (MwSt), at a standard rate of 19%. A reduced rate of 7% applies to some goods, such as most food and books. Businesses reclaim the VAT they pay as input tax (Vorsteuer), so B2B prices are quoted net of VAT.</p>
+                    <h3>Google Shopping</h3>
+                    <p>Google requires prices in German Shopping listings to include VAT. Use the <a href="google-shopping-sync-page.html">Google Shopping Sync page</a> to keep your store priced net of VAT while QTools adds the 19% VAT to the prices it sends to Google.</p>
+                    <h3>Financial year quarters</h3>
+                    <p>Most German businesses use the calendar year as their financial year (Geschäftsjahr):</p>
+                    <dl class="feature-defs">
+                        <dt>Q1</dt><dd>January, February, March</dd>
+                        <dt>Q2</dt><dd>April, May, June</dd>
+                        <dt>Q3</dt><dd>July, August, September</dd>
+                        <dt>Q4</dt><dd>October, November, December</dd>
+                    </dl>
+                </section>
+
+                <section id="united-states" class="country-section">
+                    <h2><img class="country-section__flag" src="images/USA edited.jpg" width="1200" height="600" alt="">United States</h2>
+                    <h3>Sales tax</h3>
+                    <p>The United States has no national GST or VAT. Instead, most states and many cities and counties charge their own sales tax, calculated at checkout based on where the order is delivered. Alaska, Delaware, Montana, New Hampshire and Oregon have no statewide sales tax.</p>
+                    <h3>Google Shopping</h3>
+                    <p>Google expects prices in US Shopping listings to exclude sales tax, which matches the prices already in a B2B store. You do not need the QTools Google Shopping Sync page in the United States. Use the default Google product feed instead, such as Shopify's Google &amp; YouTube sales channel.</p>
+                    <h3>Financial year quarters</h3>
+                    <p>Most US businesses use the calendar year as their financial year, while the US federal government's fiscal year runs from 1 October to 30 September. For a calendar financial year:</p>
+                    <dl class="feature-defs">
+                        <dt>Q1</dt><dd>January, February, March</dd>
+                        <dt>Q2</dt><dd>April, May, June</dd>
+                        <dt>Q3</dt><dd>July, August, September</dd>
+                        <dt>Q4</dt><dd>October, November, December</dd>
+                    </dl>
+                </section>
+
+                <section>
+                    <h2>Set your financial year in QTools</h2>
+                    <p>Quarterly sales results only make sense if your quarters match your financial year. You set your financial year in QTools, and the financial quarter filter on the <a href="reporting-page.html">Reporting page</a> follows it. Choose Q1, for example, and the report shows the deals from the first three months of your financial year, whether that is July to September in Australia, April to June in the United Kingdom or January to March in Germany.</p>
+                </section>
+
+                <section class="feature-cta">
+                    <h2>Need help setting up your country?</h2>
+                    <p>
+                        <a class="text-link" href="https://qtools.zohobookings.com.au/qtools/#/qtools" target="_blank" rel="noopener">Book an onboarding or support call</a>
+                        <a class="text-link" href="https://admin.shopify.com" target="_blank" rel="noopener">Open Shopify App Store listing</a>
+                    </p>
+                </section>
+            </div>
+        </article>
+    </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="wordmark wordmark--light"><span class="q">Q</span>Tools</span>
+                <p>The quoting engine with features businesses actually need.</p>
+            </div>
+            <nav class="site-footer__links" aria-label="Legal">
+                <a class="footer-btn" href="index.html#">Terms &amp; Conditions</a>
+                <a class="footer-btn" href="privacy.html">Privacy Policy</a>
+                <a class="footer-btn" href="index.html#">Data Policy</a>
+                <a class="footer-btn" href="index.html#">ABN: 15 236 254 207</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

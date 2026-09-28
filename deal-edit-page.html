@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deal Edit Page: B2B Quote Builder for Shopify | QTools</title>
+    <meta name="description" content="The QTools Deal Edit page turns Shopify draft orders into enterprise B2B sales quotes, with a guided four step setup, cost and margin pricing, live carrier shipping rates, PDF export, purchase order processing and Pipedrive and Salesforce sync.">
+    <link rel="icon" href="images/New logo.png" type="image/png">
+    <link rel="stylesheet" href="styling/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "#qtools",
+          "name": "QTools",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "B2B quoting and CRM app for Shopify",
+          "operatingSystem": "Web, Shopify admin",
+          "description": "QTools is a Shopify app that turns draft orders into a full B2B sales workflow: enterprise quotes, a deal pipeline, sales forecasting and branded PDF quotes, all inside the Shopify admin.",
+          "author": { "@type": "Person", "name": "Piri Cavanagh", "email": "piri.cavanagh@qtoolsapp.com" }
+        },
+        {
+          "@type": "WebPage",
+          "name": "Deal Edit Page",
+          "description": "How the QTools Deal Edit page builds enterprise B2B sales quotes on top of Shopify draft orders.",
+          "about": { "@id": "#qtools" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "contentUrl": "images/Deal%20Edit%20page.png",
+            "caption": "The QTools Deal Edit page inside the Shopify admin"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "Set up a new B2B quote in QTools",
+          "description": "The four step guided setup shown when a new deal is created on the QTools Deal Edit page.",
+          "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Select the company and location", "text": "Choose the Shopify Company the quote is for from your existing Shopify Companies, then choose the correct location within that company." },
+            { "@type": "HowToStep", "position": 2, "name": "Select the customer", "text": "Choose the customer contact from the customers assigned to that company location." },
+            { "@type": "HowToStep", "position": 3, "name": "Confirm the shipping address", "text": "The default shipping address for the location is filled in automatically. Add site contact name, email, phone, end user company, street address, building name and loading dock or level." },
+            { "@type": "HowToStep", "position": 4, "name": "Confirm the billing address", "text": "Enter the billing address, which can differ completely from the shipping address, with the same level of detail." }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script src="scripts/email-menu.js" defer></script>
+</head>
+<body>
+    <nav class="header">
+        <div>
+            <span class="brand">
+                <a href="index.html" style="text-decoration:none;"><span class="wordmark"><span class="q">Q</span>Tools</span></a>
+            </span>
+            <span class="links">
+                <span class="nav-item"><a href="deals-page.html">Deals</a></span>
+                <span class="nav-item"><a href="deal-edit-page.html" aria-current="page">Deal Edit</a></span>
+                <span class="nav-item"><a href="leads-page.html">Leads</a></span>
+                <span class="nav-item"><a href="customers-page.html">Customers</a></span>
+                <span class="nav-item"><a href="companies-page.html">Companies</a></span>
+                <span class="nav-item"><a href="product-catalog-page.html">Product Catalog</a></span>
+                <span class="nav-item"><a href="google-shopping-sync-page.html">Google Shopping</a></span>
+                <span class="nav-item"><a href="reporting-page.html">Reporting</a></span>
+                <span class="nav-item"><a href="quote-invoice-design-page.html">Quote/Invoice Design</a></span>
+                <span class="nav-item"><a href="automatic-email-design-page.html">Automatic Email Design</a></span>
+            </span>
+            <span class="actions">
+                <details class="email-menu">
+                    <summary class="email-menu__button">
+                        <span>Email me</span>
+                        <svg class="email-menu__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    </summary>
+                    <div class="email-menu__panel">
+                        <a href="mailto:piri.cavanagh@qtoolsapp.com">piri.cavanagh@qtoolsapp.com</a>
+                    </div>
+                </details>
+            </span>
+        </div>
+    </nav>
+    <nav class="header country-bar" aria-label="Country setup">
+        <div>
+            <a class="country-bar__title" href="country-setup-page.html">Country setup</a>
+            <span class="country-bar__flags">
+                <a href="country-setup-page.html#australia" title="Australia"><img src="images/AUS.jpg" width="1200" height="600" alt="Australia"></a>
+                <a href="country-setup-page.html#canada" title="Canada"><img src="images/Canada.jpg" width="1200" height="600" alt="Canada"></a>
+                <a href="country-setup-page.html#united-kingdom" title="United Kingdom"><img src="images/UK.jpg" width="1200" height="600" alt="United Kingdom"></a>
+                <a href="country-setup-page.html#germany" title="Germany"><img src="images/Germany.jpg" width="1200" height="600" alt="Germany"></a>
+                <a href="country-setup-page.html#united-states" title="United States"><img src="images/USA edited.jpg" width="1200" height="600" alt="United States"></a>
+            </span>
+        </div>
+    </nav>
+    <div class="content-area">
+        <article class="feature-page">
+            <header class="feature-page__head">
+                <div class="feature-page__title-row">
+                    <h1>Deal Edit Page</h1>
+                    <img class="feature-page__logo" src="images/New logo.png" alt="QTools logo">
+                </div>
+                <p class="feature-page__lede">The Deal Edit page is where QTools users build enterprise level B2B sales quotations inside the Shopify admin. It is built on Shopify's existing draft order infrastructure, so every quote uses your real products, companies, customers and pricing, and can be converted into a genuine Shopify order the moment the customer commits.</p>
+            </header>
+
+            <figure class="feature-page__shot">
+                <div class="board">
+                    <div class="board__face">
+                        <img class="board__shot" src="images/Deal Edit page.png" width="1920" height="935" alt="QTools Deal Edit page inside the Shopify admin, showing the header toolbar, company, customer, shipping and billing address cards, a totals row, a quote table of products with unit cost, unit price, margin and markup, a shipping row with live rates and supplier quote number fields">
+                    </div>
+                </div>
+                <figcaption>The Deal Edit page for quote TS-1077, open inside the Shopify admin.</figcaption>
+            </figure>
+
+            <div class="feature-page__body">
+                <section>
+                    <h2>At a glance</h2>
+                    <ul class="feature-facts">
+                        <li><strong>What it is:</strong> the quote builder screen of QTools, a B2B quoting and CRM app for Shopify.</li>
+                        <li><strong>Built on:</strong> Shopify draft orders, Shopify B2B Companies and your existing product catalogue.</li>
+                        <li><strong>Setup:</strong> a guided four step process covering company and location, customer, shipping address and billing address.</li>
+                        <li><strong>Pricing:</strong> quotes are built from unit cost with margin and markup calculated on every line.</li>
+                        <li><strong>Outputs:</strong> instant PDF quotes, CSV export for Excel, and direct pushes to Pipedrive and Salesforce.</li>
+                        <li><strong>Order handling:</strong> purchase order capture, credit account terms and win or loss tracking.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Guided four step deal setup</h2>
+                    <p>When a new deal is created, QTools walks the user through a guided, step by step setup. Each step highlights the next field to complete, so every quote starts with accurate, complete customer information before any products are added.</p>
+                    <ol class="feature-steps">
+                        <li>
+                            <h3>Company and location</h3>
+                            <p>The user selects the Shopify Company the quote is for, chosen from the companies already set up in your Shopify store. QTools then asks for the correct location within that company, also drawn from the Shopify Company record, so quotes for businesses with several offices or sites are always attributed to the right one.</p>
+                        </li>
+                        <li>
+                            <h3>Customer</h3>
+                            <p>The user selects the customer contact for the quote from every customer assigned to that company location.</p>
+                        </li>
+                        <li>
+                            <h3>Shipping address</h3>
+                            <p>The default shipping address for the selected location is filled in automatically. The user can then complete every field a business delivery requires: site contact name, email address, phone number, end user company, street address and building name, and the loading dock or building level the goods should be delivered to.</p>
+                        </li>
+                        <li>
+                            <h3>Billing address</h3>
+                            <p>In a business context the billing address is often completely different from the delivery site, for example a head office accounts team. QTools captures the billing address separately, with the same level of detail as the shipping address.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Header toolbar</h2>
+                    <p>A single toolbar across the top of the Deal Edit page holds every action a sales representative needs while working on a quote.</p>
+                    <dl class="feature-defs">
+                        <dt>Back</dt>
+                        <dd>Returns to the <a href="deals-page.html">Deals page</a>, where every open quote is listed.</dd>
+                        <dt>Quote title</dt>
+                        <dd>A customisable title for the quote, such as a project name or internal reference.</dd>
+                        <dt>Sales representative</dt>
+                        <dd>Assigns the deal to a member of your sales team, so ownership and reporting stay accurate.</dd>
+                        <dt>Deal to PDF</dt>
+                        <dd>Exports the quote instantly as a professional PDF, ready to send to the customer.</dd>
+                        <dt>Add Product</dt>
+                        <dd>Searches your entire Shopify product catalogue and adds the chosen products to the quote.</dd>
+                        <dt>Create Product</dt>
+                        <dd>Adds a new product to your Shopify catalogue using only the fundamental data a business quote needs. The product is not published to your online store sales channel, which makes quoting one off or special order items fast without cluttering your storefront.</dd>
+                        <dt>Timeline</dt>
+                        <dd>Gathers every update on the deal in one place, including payment information, shipping information, procurement information and any notes added by your sales team.</dd>
+                        <dt>Settings</dt>
+                        <dd>Opens the deal settings described below.</dd>
+                        <dt>Process order</dt>
+                        <dd>Converts an accepted quote into an order and records how the customer will pay. See <a href="#process-order">Processing an order</a>.</dd>
+                        <dt>Lost</dt>
+                        <dd>Marks the deal as lost, keeping your pipeline and win rate reporting accurate.</dd>
+                    </dl>
+                </section>
+
+                <section>
+                    <h2>Deal settings</h2>
+                    <p>The Settings button gives each deal its own configuration, along with export and integration options.</p>
+                    <dl class="feature-defs">
+                        <dt>Default margin</dt>
+                        <dd>The margin applied automatically to new products added to the quote.</dd>
+                        <dt>Default shipping rates</dt>
+                        <dd>The shipping values the quote uses by default.</dd>
+                        <dt>Quote validity</dt>
+                        <dd>How long the quote remains valid. QTools converts this into a "valid until" date printed on the PDF.</dd>
+                        <dt>Contract reference number</dt>
+                        <dd>For government or other special clients who buy under a standing offer arrangement identified by a specific contract number.</dd>
+                        <dt>CRN (customer reference number)</dt>
+                        <dd>A free reference field your client can use for their own internal procurement process.</dd>
+                        <dt>Export deal to CSV</dt>
+                        <dd>Exports all deal information to a spreadsheet that opens in Excel, for external sales reporting.</dd>
+                        <dt>Push to Pipedrive and push to Salesforce</dt>
+                        <dd>Sends the complete quote to Pipedrive or Salesforce using your API keys, so QTools works alongside the CRM systems your business already relies on.</dd>
+                    </dl>
+                </section>
+
+                <section>
+                    <h2>Totals and the quote table</h2>
+                    <p>A totals row sits directly above the quote table so the key figures can be scanned at a glance: overall margin, overall markup, total excluding tax, shipping and the final total including tax.</p>
+                    <p>The quote table lists every product on the deal with the following columns:</p>
+                    <ul>
+                        <li>Product image</li>
+                        <li>Quantity</li>
+                        <li>Supplier</li>
+                        <li>Product title</li>
+                        <li>SKU</li>
+                        <li>Unit cost</li>
+                        <li>Unit price</li>
+                        <li>Margin</li>
+                        <li>Markup</li>
+                        <li>Line total excluding GST</li>
+                    </ul>
+                    <p>Because every line starts from the real unit cost, the sales representative can adjust price, margin or markup and immediately see the effect on profitability for that line and for the whole quote.</p>
+                </section>
+
+                <section>
+                    <h2>Shipping</h2>
+                    <p>The shipping row below the quote table offers two options. The user can enter a custom shipping amount, or pull the recommended rate from the store's shipping app, such as ShipX, through Shopify's CarrierService API. Carrier calculated rates require a Shopify plan that supports the CarrierService API, which is available on the Grow plan and above.</p>
+                </section>
+
+                <section>
+                    <h2>Supplier quote numbers</h2>
+                    <p>For larger orders, sales teams often negotiate special pricing with their suppliers. The supplier quotes section lists every supplier on the deal and provides a field for each supplier's quote number, so the discount that was secured can always be traced back to its source.</p>
+                </section>
+
+                <section id="process-order">
+                    <h2>Processing an order</h2>
+                    <p>When the customer accepts the quote, the Process order button opens a dialog to finalise the sale. The user can:</p>
+                    <ul>
+                        <li>Enter the customer's purchase order (PO) number.</li>
+                        <li>Attach the purchase order document.</li>
+                        <li>Indicate that the customer will pay on a credit account, for example with 30 day payment terms.</li>
+                    </ul>
+                    <p>A purchase order is a formal document from the buyer that requests the goods and commits to paying for them at an agreed later date. Capturing it on the deal gives your accounts team everything they need to extend credit with confidence.</p>
+                    <p>If the customer decides not to proceed, the Lost button marks the deal as lost.</p>
+                </section>
+
+                <section>
+                    <h2>Built on Shopify draft orders</h2>
+                    <p>Every deal in QTools is built on Shopify's native draft order infrastructure, so quotes use your existing products, companies, customers and pricing, and convert into real Shopify orders.</p>
+                </section>
+
+                <section>
+                    <h2>Live carrier shipping rates on every quote</h2>
+                    <p>The shipping row can pull the recommended rate from your shipping app, such as ShipX, through Shopify's CarrierService API, available on the Shopify Grow plan and above. You can also enter a custom shipping amount.</p>
+                </section>
+
+                <section>
+                    <h2>Purchase orders and credit account terms</h2>
+                    <p>Process order lets you record the PO number, attach the purchase order document and mark the order for payment on a credit account, for example 30 day terms.</p>
+                </section>
+
+                <section>
+                    <h2>Pipedrive and Salesforce integration</h2>
+                    <p>You can push the full quote to Pipedrive or Salesforce using your API keys, or export the deal to CSV for Excel.</p>
+                </section>
+
+                <section>
+                    <h2>Quoting products that are not in your store</h2>
+                    <p>Create Product adds a product with only the data a business quote needs, without publishing it to your online store, which makes one off item quotes fast.</p>
+                </section>
+
+                <section class="feature-cta">
+                    <h2>See the Deal Edit page in action</h2>
+                    <p>
+                        <a class="text-link" href="https://qtools.zohobookings.com.au/qtools/#/qtools" target="_blank" rel="noopener">Book an onboarding or support call</a>
+                        <a class="text-link" href="https://admin.shopify.com" target="_blank" rel="noopener">Open Shopify App Store listing</a>
+                    </p>
+                </section>
+            </div>
+        </article>
+    </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="wordmark wordmark--light"><span class="q">Q</span>Tools</span>
+                <p>The quoting engine with features businesses actually need.</p>
+            </div>
+            <nav class="site-footer__links" aria-label="Legal">
+                <a class="footer-btn" href="index.html#">Terms &amp; Conditions</a>
+                <a class="footer-btn" href="privacy.html">Privacy Policy</a>
+                <a class="footer-btn" href="index.html#">Data Policy</a>
+                <a class="footer-btn" href="index.html#">ABN: 15 236 254 207</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
