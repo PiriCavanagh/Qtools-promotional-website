@@ -115,7 +115,11 @@
       "Bash(grep -v -E '\\\\.\\(png|jpg|jpeg|svg|webp|gif|ico|mp4|woff2?\\)$')",
       "Bash(awk '$1<40')",
       "Bash(ls \"/Applications/Google Chrome.app/Contents/MacOS/\" 2>/dev/null; which npx node 2>/dev/null)",
-      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)"
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Bash(perl -pi -e 's|<title>QTools — B2B quoting and CRM for Shopify</title>|<title>Qtools Shopify B2B App</title>|' index.html)",
+      "Bash(perl -pi -e 's|<title>Privacy Policy — QTools</title>|<title>Privacy Policy \\\\| QTools</title>|' privacy.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --window-size=1920,1920 --virtual-time-budget=3000 --screenshot=/private/tmp/claude-501/-Users-piricavanagh-Desktop-Shopify-Qtools-promotional-website/0a10a23f-32f1-4a4e-acad-84ff9b24ccff/scratchpad/v.png file://__TRACKED_VAR__/_v.html)",
+      "Bash(sips -g pixelWidth -g pixelHeight \"quote:invoice design page.png\" \"quote:invoice builder page.png\" \"quote builder image.png\")"
     ]
   }
 }
