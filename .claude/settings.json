@@ -99,7 +99,8 @@
       "Bash(sed -i '' -e 's/max-width: 1500px;/max-width: 1800px;/g' -e 's/max-width:1500px/max-width:1800px/; s/centered 1500px/centered 1800px/' -e 's/\\\\.feature-page__shot { max-width: 1200px;/.feature-page__shot { max-width: 1600px;/' -e 's/nav \\\\.links { display: flex; gap: 28px; flex: 1; }/nav .links { display: flex; gap: 20px; flex: 1; }/' -e 's/opacity: 0\\\\.8; transition: opacity 0\\\\.15s ease; }/opacity: 0.8; transition: opacity 0.15s ease; }/' -e 's/\\\\\\(nav \\\\.links a, nav \\\\.links \\\\.mega-trigger { color: #18181f; font-weight: 600; \\\\\\)font-size: 16px;/\\\\1font-size: 14px;/' -e 's/nav \\\\.nav-email__addr { font-size: 18px; font-weight: 700; }/nav .nav-email__addr { font-size: 14px; font-weight: 700; }/' styling/style.css)",
       "Bash(grep -n \"1500\\\\|1800px\\\\|1600px\\\\|nav .links {\\\\|nav .links a, nav\\\\|nav-email__addr {\" styling/style.css)",
       "Bash(sips -g pixelWidth -g pixelHeight images/AUS.jpg)",
-      "Bash(grep -v \":1$\")"
+      "Bash(grep -v \":1$\")",
+      "Bash(curl -sL https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg)"
     ]
   }
 }
