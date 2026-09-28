@@ -151,31 +151,6 @@
     gap: 32px;
   }
   .brand { display: inline-flex; align-items: center; gap: 10px; }
-  .logo-mark {
-    display: block;
-    width: 36px;
-    height: 36px;
-    object-fit: cover;
-    border: 2px solid #000;
-    border-radius: 8px;
-  }
-  /* Pinned to the true viewport corner (not the centered 1800px .header div),
-     so it sits outside the content column on wide screens instead of lining
-     up with the nav's inner edge. */
-  .logo-mark--fixed {
-    position: fixed;
-    top: 2.5%;
-    right: 2.5%;
-    width: clamp(44px, 5vw, 100px);
-    height: clamp(44px, 5vw, 100px);
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px -6px rgba(24, 24, 31, 0.35);
-    z-index: 1000;
-  }
-  @media (max-width: 900px) {
-    .logo-mark--fixed { width: 44px; height: 44px; top: 10px; right: 10px; }
-  }
   .wordmark {
     font-size: 22px;
     font-weight: 800;
@@ -1939,21 +1914,6 @@
       padding-right: max(96px, calc((min(100%, 1800px) - 1568px) / 2));
     }
   }
-  /* Page title on the left, logo on the right, both inside the feature column. */
-  .feature-page__title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-  .feature-page__title-row h1 { margin: 0; }
-  .feature-page__logo {
-    position: relative;
-    top: -20px;
-    z-index: 1000;
-    display: block;
-    flex-shrink: 0;
-    width: clamp(53px, 6vw, 96px);
-    height: clamp(53px, 6vw, 96px);
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px -6px rgba(24, 24, 31, 0.35);
-  }
   .feature-page h1 { font-size: clamp(32px, 4.4vw, 48px); letter-spacing: -0.03em; margin: 6px 0 16px; }
   .feature-page__lede { font-size: 20px; line-height: 1.6; color: var(--body); }
   .feature-page__shot { margin-top: 48px; margin-bottom: 56px; }
@@ -1979,8 +1939,7 @@
   }
   @media (max-width: 640px) {
     .content-area, .header > div { padding: 0 16px; }
-    .header > div { flex-wrap: wrap; row-gap: 6px; padding-top: 10px; padding-bottom: 10px; padding-right: 64px; }
-    body:not(:has(.logo-mark--fixed)) .header > div { padding-right: 16px; }
+    .header > div { flex-wrap: wrap; row-gap: 6px; padding-top: 10px; padding-bottom: 10px; }
     nav .links { order: 3; flex-basis: 100%; gap: 18px; flex-wrap: wrap; }
     .feature-page__head, .feature-page__body, .feature-page__shot { padding: 0; }
     .feature-page__lede { font-size: 18px; }
