@@ -1,0 +1,4 @@
+# Send every http:// request to the same page on https:// (permanent redirect).
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

@@ -100,7 +100,18 @@
       "Bash(grep -n \"1500\\\\|1800px\\\\|1600px\\\\|nav .links {\\\\|nav .links a, nav\\\\|nav-email__addr {\" styling/style.css)",
       "Bash(sips -g pixelWidth -g pixelHeight images/AUS.jpg)",
       "Bash(grep -v \":1$\")",
-      "Bash(curl -sL https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg)"
+      "Bash(curl -sL https://cdn.jsdelivr.net/npm/simple-icons@13/icons/whatsapp.svg)",
+      "Bash(dig +short qtoolsapp.com A)",
+      "Bash(dig +short www.qtoolsapp.com)",
+      "Bash(dig +short qtoolsapp.com NS)",
+      "Bash(curl -sI --max-time 10 http://qtoolsapp.com/automatic-email-design-page.html)",
+      "Bash(curl -sI --max-time 10 https://qtoolsapp.com/)",
+      "Bash(echo \"exit $?\")",
+      "Bash(openssl s_client -connect qtoolsapp.com:443 -servername qtoolsapp.com)",
+      "Bash(openssl x509 *)",
+      "Bash(openssl s_client -connect www.qtoolsapp.com:443 -servername www.qtoolsapp.com)",
+      "Bash(curl -sI --max-time 10 https://qtoolsapp.com/automatic-email-design-page.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} ssl_verify=%{ssl_verify_result}\\\\n\" https://www.qtoolsapp.com/)"
     ]
   }
 }
